@@ -1,0 +1,64 @@
+\section{Protocol and Factorial Design}
+\label{sec:protocol}
+
+\begin{quote}
+\small\raggedright
+Full machine-readable protocol: \texttt{RESEARCH\_PROTOCOL.md} v6.5 and
+\texttt{STAGE\_CONTRACTS.md}; this section is the paper-facing summary.
+\end{quote}
+
+\subsection{Research questions and gates}
+\begin{description}
+\item[RQ1 (attribution).] Which framing component(s) causally increase attack
+success in \LALMs{}, and are effects robust across language, model, and
+out-of-distribution inputs?
+\item[RQ2 (cross-modal).] Do text and audio renderings of the same input
+diverge in safety judgment, and is the divergence model-dependent?
+\item[RQ3 (detection).] Can a structured, signal-level fusion framework
+discriminate framed attacks in-distribution, and how does it behave under
+adaptive attack and audio degradation?
+\end{description}
+
+We pre-registered two decision gates. \textbf{G1} (attribution established)
+requires a consistent, $\geq$10~pp effect whose bootstrap CI excludes zero under
+the dual-judge caliber with acceptable scoring dispute. \textbf{G2} (defense
+value) requires a significant TPR gain, $\geq$3 contributing branches, and a
+benign false-positive rate $\leq$5\%. As reported in
+Sections~\ref{sec:results} and \ref{sec:discussion}, G1 passes and
+\textbf{G2 does not pass}; the paper therefore presents the attribution and
+mechanism results as primary and the fusion framework as an application-level
+validation with explicit boundary conditions.
+
+\subsection{Factors and manipulation}
+A paired factorial design \citep{fisher1935} varies four framing components
+while holding the harmful request fixed:
+
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{The four framing factors.} Varied in the paired factorial
+design (\S\ref{sec:setup}).}
+\label{tab:factors}
+\begin{tabular}{@{}l@{\hspace{2em}}p{0.30\textwidth}@{\hspace{2em}}p{0.28\textwidth}@{}}
+\toprule
+Factor & Definition & Levels \\
+\midrule
+\Et{} & Narrative text framing (emotional / narrative wording)
+      & neutral vs.\ narrative \\
+\Nfac{} & Narrative structure (event-chain packaging)
+        & direct request vs.\ chained narrative \\
+\Rfac{} & Role assignment (identity + task)
+        & none vs.\ expert role \\
+\Asfac{} & Acoustic style (TTS rendering)
+         & neutral voice vs.\ styled voice \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three templates instantiate each condition (9 templates total); a manipulation
+check on response-level markers confirms each textual factor was delivered
+(mean marker deltas 0.37--0.60, threshold 0.95 keep rate 1.0). We disclose that
+the acoustic factor is implemented via TTS voices (a female neutral voice vs.\ a
+male styled voice), so it confounds speaker identity and gender with prosody.
+We do not claim \Asfac{} isolates prosody, and we verify no systematic length
+difference across \Asfac{} variants (mean difference 1.18 chars, $p=0.24$).

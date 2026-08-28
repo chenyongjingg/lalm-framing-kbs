@@ -1,0 +1,132 @@
+# S29：音频生成确定性大样本复核（GPU1）
+
+- 模型：gemma_4_e4b；抽样 120 格（跨 combo×template 桶均衡）
+- 同设备（GPU1 run1 vs run2）字节一致率：**1.0000**（120/120）
+- 跨设备（GPU1 vs GPU0 存储）字节一致率：**1.0000**（120/120）
+
+## 逐格结果
+| response_id | combo | t | 同设备 | 跨设备 | diff_pos_同 | diff_pos_跨 |
+|---|---|---|---|---|---|---|
+| P1P_gemma_4_e4b_q0225_(0, 0, 0)_styled_audio_t0 | [0, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0057_(0, 0, 0)_styled_audio_t1 | [0, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0135_(0, 0, 0)_styled_audio_t2 | [0, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0278_(0, 0, 1)_styled_audio_t0 | [0, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0152_(0, 0, 1)_neutral_audio_t1 | [0, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0060_(0, 0, 1)_neutral_audio_t2 | [0, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0135_(0, 1, 0)_neutral_audio_t0 | [0, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0063_(0, 1, 0)_neutral_audio_t1 | [0, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0234_(0, 1, 0)_styled_audio_t2 | [0, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0091_(0, 1, 1)_neutral_audio_t0 | [0, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0009_(0, 1, 1)_styled_audio_t1 | [0, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0285_(0, 1, 1)_styled_audio_t2 | [0, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0052_(1, 0, 0)_styled_audio_t0 | [1, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0062_(1, 0, 0)_neutral_audio_t1 | [1, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0020_(1, 0, 0)_neutral_audio_t2 | [1, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0119_(1, 0, 1)_styled_audio_t0 | [1, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0032_(1, 0, 1)_neutral_audio_t1 | [1, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0213_(1, 0, 1)_styled_audio_t2 | [1, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0249_(1, 1, 0)_neutral_audio_t0 | [1, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0019_(1, 1, 0)_styled_audio_t1 | [1, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0084_(1, 1, 0)_styled_audio_t2 | [1, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0178_(1, 1, 1)_styled_audio_t0 | [1, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0277_(1, 1, 1)_neutral_audio_t1 | [1, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0018_(1, 1, 1)_neutral_audio_t2 | [1, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0219_(0, 0, 0)_styled_audio_t0 | [0, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0112_(0, 0, 0)_styled_audio_t1 | [0, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0057_(0, 0, 0)_styled_audio_t2 | [0, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0152_(0, 0, 1)_styled_audio_t0 | [0, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0062_(0, 0, 1)_neutral_audio_t1 | [0, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0062_(0, 0, 1)_styled_audio_t2 | [0, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0019_(0, 1, 0)_styled_audio_t0 | [0, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0217_(0, 1, 0)_styled_audio_t1 | [0, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0073_(0, 1, 0)_neutral_audio_t2 | [0, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0072_(0, 1, 1)_styled_audio_t0 | [0, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0279_(0, 1, 1)_neutral_audio_t1 | [0, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0002_(0, 1, 1)_styled_audio_t2 | [0, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0244_(1, 0, 0)_neutral_audio_t0 | [1, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0132_(1, 0, 0)_neutral_audio_t1 | [1, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0212_(1, 0, 0)_neutral_audio_t2 | [1, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0191_(1, 0, 1)_styled_audio_t0 | [1, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0244_(1, 0, 1)_neutral_audio_t1 | [1, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0118_(1, 0, 1)_styled_audio_t2 | [1, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0072_(1, 1, 0)_neutral_audio_t0 | [1, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0031_(1, 1, 0)_styled_audio_t1 | [1, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0086_(1, 1, 0)_neutral_audio_t2 | [1, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0112_(1, 1, 1)_neutral_audio_t0 | [1, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0272_(1, 1, 1)_styled_audio_t1 | [1, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0150_(1, 1, 1)_neutral_audio_t2 | [1, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0123_(0, 0, 0)_styled_audio_t0 | [0, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0060_(0, 0, 0)_styled_audio_t1 | [0, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0195_(0, 0, 0)_styled_audio_t2 | [0, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0094_(0, 0, 1)_styled_audio_t0 | [0, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0094_(0, 0, 1)_styled_audio_t1 | [0, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0147_(0, 0, 1)_neutral_audio_t2 | [0, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0170_(0, 1, 0)_styled_audio_t0 | [0, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0289_(0, 1, 0)_styled_audio_t1 | [0, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0052_(0, 1, 0)_neutral_audio_t2 | [0, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0221_(0, 1, 1)_styled_audio_t0 | [0, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0115_(0, 1, 1)_styled_audio_t1 | [0, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0217_(0, 1, 1)_styled_audio_t2 | [0, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0001_(1, 0, 0)_styled_audio_t0 | [1, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0218_(1, 0, 0)_neutral_audio_t1 | [1, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0116_(1, 0, 0)_neutral_audio_t2 | [1, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0249_(1, 0, 1)_neutral_audio_t0 | [1, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0182_(1, 0, 1)_neutral_audio_t1 | [1, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0250_(1, 0, 1)_neutral_audio_t2 | [1, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0208_(1, 1, 0)_neutral_audio_t0 | [1, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0202_(1, 1, 0)_neutral_audio_t1 | [1, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0220_(1, 1, 0)_styled_audio_t2 | [1, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0249_(1, 1, 1)_styled_audio_t0 | [1, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0094_(1, 1, 1)_styled_audio_t1 | [1, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0028_(1, 1, 1)_styled_audio_t2 | [1, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0095_(0, 0, 0)_styled_audio_t0 | [0, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0169_(0, 0, 0)_neutral_audio_t1 | [0, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0086_(0, 0, 0)_neutral_audio_t2 | [0, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0229_(0, 0, 1)_neutral_audio_t0 | [0, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0195_(0, 0, 1)_styled_audio_t1 | [0, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0073_(0, 0, 1)_neutral_audio_t2 | [0, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0190_(0, 1, 0)_styled_audio_t0 | [0, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0272_(0, 1, 0)_neutral_audio_t1 | [0, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0032_(0, 1, 0)_styled_audio_t2 | [0, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0111_(0, 1, 1)_styled_audio_t0 | [0, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0112_(0, 1, 1)_neutral_audio_t1 | [0, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0138_(0, 1, 1)_styled_audio_t2 | [0, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0229_(1, 0, 0)_neutral_audio_t0 | [1, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0001_(1, 0, 0)_styled_audio_t1 | [1, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0009_(1, 0, 0)_neutral_audio_t2 | [1, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0133_(1, 0, 1)_neutral_audio_t0 | [1, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0279_(1, 0, 1)_neutral_audio_t1 | [1, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0112_(1, 0, 1)_styled_audio_t2 | [1, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0185_(1, 1, 0)_styled_audio_t0 | [1, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0154_(1, 1, 0)_neutral_audio_t1 | [1, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0285_(1, 1, 0)_styled_audio_t2 | [1, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0234_(1, 1, 1)_styled_audio_t0 | [1, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0132_(1, 1, 1)_styled_audio_t1 | [1, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0208_(1, 1, 1)_styled_audio_t2 | [1, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0101_(0, 0, 0)_neutral_audio_t0 | [0, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0278_(0, 0, 0)_styled_audio_t1 | [0, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0272_(0, 0, 0)_styled_audio_t2 | [0, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0190_(0, 0, 1)_neutral_audio_t0 | [0, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0028_(0, 0, 1)_styled_audio_t1 | [0, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0073_(0, 0, 1)_styled_audio_t2 | [0, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0036_(0, 1, 0)_styled_audio_t0 | [0, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0197_(0, 1, 0)_neutral_audio_t1 | [0, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0277_(0, 1, 0)_styled_audio_t2 | [0, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0213_(0, 1, 1)_styled_audio_t0 | [0, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0072_(0, 1, 1)_styled_audio_t1 | [0, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0033_(0, 1, 1)_neutral_audio_t2 | [0, 1, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0033_(1, 0, 0)_styled_audio_t0 | [1, 0, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0229_(1, 0, 0)_neutral_audio_t1 | [1, 0, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0182_(1, 0, 0)_neutral_audio_t2 | [1, 0, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0135_(1, 0, 1)_neutral_audio_t0 | [1, 0, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0185_(1, 0, 1)_neutral_audio_t1 | [1, 0, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0278_(1, 0, 1)_styled_audio_t2 | [1, 0, 1] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0170_(1, 1, 0)_styled_audio_t0 | [1, 1, 0] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0246_(1, 1, 0)_neutral_audio_t1 | [1, 1, 0] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0221_(1, 1, 0)_styled_audio_t2 | [1, 1, 0] | 2 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0220_(1, 1, 1)_styled_audio_t0 | [1, 1, 1] | 0 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0050_(1, 1, 1)_neutral_audio_t1 | [1, 1, 1] | 1 | ✓ | ✓ | None | None |
+| P1P_gemma_4_e4b_q0197_(1, 1, 1)_styled_audio_t2 | [1, 1, 1] | 2 | ✓ | ✓ | None | None |
+
+## 披露
+> 同一 GPU 上 bf16 + greedy 解码理论应字节一致；跨 GPU 可能存在浮点归约的极小非确定性，逐字节 diff 如实报告。若字节一致率 < 1，披露差异位置分布以证'实践不可察觉'。

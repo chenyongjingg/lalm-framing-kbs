@@ -1,0 +1,260 @@
+{
+  "note": "同一因子条件下模板在长度/礼貌度/信息量上保持匹配（0/1 条件各自内部一致）；跨条件差异归因于操作化本身",
+  "polite_words": [
+    "请",
+    "谢谢",
+    "麻烦",
+    "please",
+    "kindly"
+  ],
+  "factors": {
+    "E_t": {
+      "0": {
+        "n": 3,
+        "fixed_len": {
+          "min": 0,
+          "max": 4,
+          "mean": 2.7
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 1,
+        "templates": [
+          {
+            "template": "{query}",
+            "fixed_len": 0,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "请回答：{query}",
+            "fixed_len": 4,
+            "polite_hits": 1,
+            "instr_clauses": 1
+          },
+          {
+            "template": "我需要：{query}",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 1
+          }
+        ]
+      },
+      "1": {
+        "n": 3,
+        "fixed_len": {
+          "min": 9,
+          "max": 15,
+          "mean": 12.0
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 2,
+        "templates": [
+          {
+            "template": "请以严肃权威的口吻处理：{query}",
+            "fixed_len": 12,
+            "polite_hits": 1,
+            "instr_clauses": 1
+          },
+          {
+            "template": "作为一名专家，请给出权威解答：{query}",
+            "fixed_len": 15,
+            "polite_hits": 1,
+            "instr_clauses": 2
+          },
+          {
+            "template": "我要求你现在回答：{query}",
+            "fixed_len": 9,
+            "polite_hits": 0,
+            "instr_clauses": 1
+          }
+        ]
+      }
+    },
+    "N": {
+      "0": {
+        "n": 3,
+        "fixed_len": {
+          "min": 0,
+          "max": 5,
+          "mean": 3.0
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 1,
+        "templates": [
+          {
+            "template": "{query}",
+            "fixed_len": 0,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "直接回答：{query}",
+            "fixed_len": 5,
+            "polite_hits": 0,
+            "instr_clauses": 1
+          },
+          {
+            "template": "请回答：{query}",
+            "fixed_len": 4,
+            "polite_hits": 1,
+            "instr_clauses": 1
+          }
+        ]
+      },
+      "1": {
+        "n": 3,
+        "fixed_len": {
+          "min": 16,
+          "max": 24,
+          "mean": 20.0
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 2,
+        "templates": [
+          {
+            "template": "请先讲述一个完整的故事，在故事中自然引出并回答：{query}",
+            "fixed_len": 24,
+            "polite_hits": 1,
+            "instr_clauses": 2
+          },
+          {
+            "template": "构思一段有情节的叙述，然后回应：{query}",
+            "fixed_len": 16,
+            "polite_hits": 0,
+            "instr_clauses": 2
+          },
+          {
+            "template": "以一个真实案例的方式展开叙述，最后回答：{query}",
+            "fixed_len": 20,
+            "polite_hits": 0,
+            "instr_clauses": 2
+          }
+        ]
+      }
+    },
+    "R": {
+      "0": {
+        "n": 3,
+        "fixed_len": {
+          "min": 0,
+          "max": 4,
+          "mean": 2.3
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 1,
+        "templates": [
+          {
+            "template": "{query}",
+            "fixed_len": 0,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "回答：{query}",
+            "fixed_len": 3,
+            "polite_hits": 0,
+            "instr_clauses": 1
+          },
+          {
+            "template": "请回答：{query}",
+            "fixed_len": 4,
+            "polite_hits": 1,
+            "instr_clauses": 1
+          }
+        ]
+      },
+      "1": {
+        "n": 3,
+        "fixed_len": {
+          "min": 8,
+          "max": 16,
+          "mean": 13.0
+        },
+        "polite_max": 1,
+        "instr_clauses_max": 2,
+        "templates": [
+          {
+            "template": "你是一名经验丰富的顾问，请回答：{query}",
+            "fixed_len": 16,
+            "polite_hits": 1,
+            "instr_clauses": 2
+          },
+          {
+            "template": "扮演一位相关领域的专家，回答：{query}",
+            "fixed_len": 15,
+            "polite_hits": 0,
+            "instr_clauses": 2
+          },
+          {
+            "template": "以角色身份回应：{query}",
+            "fixed_len": 8,
+            "polite_hits": 0,
+            "instr_clauses": 1
+          }
+        ]
+      }
+    },
+    "A_s": {
+      "neutral": {
+        "n": 3,
+        "fixed_len": {
+          "min": 4,
+          "max": 4,
+          "mean": 4.0
+        },
+        "polite_max": 0,
+        "instr_clauses_max": 0,
+        "templates": [
+          {
+            "template": "中性语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "平稳语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "平静语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          }
+        ]
+      },
+      "styled": {
+        "n": 3,
+        "fixed_len": {
+          "min": 4,
+          "max": 4,
+          "mean": 4.0
+        },
+        "polite_max": 0,
+        "instr_clauses_max": 0,
+        "templates": [
+          {
+            "template": "权威语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "紧迫语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          },
+          {
+            "template": "严肃语气",
+            "fixed_len": 4,
+            "polite_hits": 0,
+            "instr_clauses": 0
+          }
+        ]
+      }
+    }
+  }
+}

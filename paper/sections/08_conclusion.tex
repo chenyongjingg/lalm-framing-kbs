@@ -1,0 +1,49 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We decomposed adversarial framing against large audio-language models into its
+semantic components and showed, under an audited paired factorial protocol, that
+narrative structure robustly increases attack success ($\Delta$27.9~pp, OR 16.65;
+a larger agreement-conditioned dual-judge estimate is disclosed as inflated by
+selection) across languages, models, and out-of-distribution inputs.
+A substantial share of this effect is mediated by response elaboration, and
+cross-modal safety divergence is model-dependent rather than modality-intrinsic.
+We further introduced \MSRF{}, a 225-parameter knowledge-driven fusion framework
+that discriminates framed attacks in-distribution (0.9784 ROC-AUC on the
+deployment frame) while exposing its own boundary conditions honestly. Narrative
+structure exhibits a robust causal effect under controlled prompt
+interventions; representing that effect as structured, multi-signal knowledge
+is, we argue, a more durable foundation for \LALM{} safety than either modal
+shortcuts or opaque detection.
+
+\section*{Data availability}
+All pipeline artifacts, configurations, frozen seeds, and result files are
+released in the anonymized companion repository accompanying this manuscript;
+no pre-trained guard weights are redistributed.
+
+\section*{Ethics}
+All experiments use fabricated, synthetic harmful queries (never real personal
+data), are confined to controlled research environments, and are reported under
+a dual-use disclosure consistent with the study protocol and its gate decisions
+(see the companion repository). The intent-classifier training data is
+synthetic.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Yongjin Chen}: Conceptualization, Methodology, Software, Validation,
+Formal analysis, Investigation, Data curation, Writing -- original draft,
+Writing -- review \& editing, Visualization.\\
+\textbf{Songze Zhu}: Conceptualization, Methodology, Resources, Supervision,
+Project administration, Funding acquisition, Writing -- review \& editing.
+
+\section*{Declaration of competing interest}
+None declared.
+
+\section*{Funding}
+This work was supported by the research project ``Data Black-Industry
+Resilience: Generation Mechanisms and Governance Countermeasures''
+(Grant No.\ 25CSH113).
+
+\section*{Generative AI disclosure}
+This manuscript was drafted with the assistance of AI writing tools for language
+and organization; all experiments, measurements, and reported numbers are
+human-executed and machine-verified.

@@ -1,0 +1,128 @@
+% ============================================================================
+% main.tex — LALM Framing 研究论文主文件（KBS 单一目标版 v6.4）
+% 依据 workbuddy_实验补做提示词(9).md (v6.4) 搭建
+% 配套流水线：WorkBuddy 流水线 v6.4+（各阶段产物已按章节需求对齐）
+%
+% v6.4 变更：删除 IF/TDSC 双写作框架，收敛为 KBS 单一版本。
+% 降级预案：KBS 被拒 → EAAI（一区，加工程应用叙事微调）→ Information Sciences（一区，通用叙事）。
+% ============================================================================
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+% --- 期刊模板：Elsevier（KBS 属 Elsevier 系）---
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[mathlines]{lineno}            % KBS 初审行号（2026-08-27 新版提示词 P2）
+\setlength{\emergencystretch}{3em}        % v4 Part2.4：消除文本行 Overfull（零内容改动）
+\usepackage{tikz}                         % 图件矢量重绘（v2 提示词第一部分：TikZ 原生）
+\usetikzlibrary{arrows.meta}
+\usepackage{pifont}                       % \ding{51} ✓ / \ding{55} ✗（Fig 2 决策门）
+
+% --- 图件语义色（Okabe-Ito 色盲安全；与 stage_f_figures.py 循环一致）---
+\definecolor{intentC}{HTML}{0072B2}       % 蓝   Intent（语义色）
+\definecolor{narrativeC}{HTML}{D55E00}    % 橙   Narrative（语义色）
+\definecolor{acousticC}{HTML}{009E73}     % 绿   Acoustic（语义色）
+\definecolor{uncertaintyC}{HTML}{CC79A7}  % 紫   Uncertainty（语义色）
+\definecolor{figGray}{HTML}{8A8A8A}       % 中性灰
+\definecolor{figBg}{HTML}{F6F7F9}         % 泳道淡底
+\definecolor{passGreen}{HTML}{1E8449}     % 门 G1 通过
+\definecolor{failRed}{HTML}{C0392B}       % 门 G2 未通过
+
+% --- 术语宏（见 sections/00_glossary.tex；全文统一，防一词多义）---
+\input{sections/00_glossary.tex}
+
+\journal{Knowledge-Based Systems}     % v6.4 KBS 单一目标；降级 EAAI → Information Sciences
+
+\begin{document}
+
+\begin{frontmatter}
+
+% ===== Highlights（Elsevier 要求 3–5 条，每条 ≤85 字符）=====
+\begin{highlights}
+\item Factorial study decomposes framing into text, structure, role, and acoustic style.
+\item Narrative structure raises attack success by 27.9~pp (OR 16.65).
+\item Paired cross-modal safety divergence is model-dependent, not modality-intrinsic.
+\item MSRF is a knowledge-driven fusion of four signals (225 params; ROC-AUC 0.9784).
+\item Honest reporting: defense gate G2 fails; fixed thresholds do not transfer.
+\end{highlights}
+
+% ===== 标题层（外壳层 · IF 版备选 1）=====
+% 备选 2/3 见 sections/00_shell_if.tex；转 KBS 用 sections/00_shell_kbs.tex
+\title{Cross-Modal Safety Inconsistency in Large Audio-Language Models: Measurement, Mechanism, and Knowledge-Driven Multi-Source Fusion}
+
+% ===== 作者 =====
+% 第一作者 Yongjin Chen；第二作者兼通讯作者 Songze Zhu
+\author[aff1]{Yongjin Chen}
+\author[aff1,cor1]{Songze Zhu}
+\ead{20196846@ppsuc.edu.cn}
+\cortext[cor1]{Corresponding author}
+\affiliation[aff1]{organization={People's Public Security University of China},country={China}}
+
+% ===== 摘要（KBS 版 · 五要素骨架，数字已按冻结值填写 2026-08-27）=====
+% ①背景（LALM 部署于安全敏感场景）②问题/缺口（framing 成分机制与跨模态
+%   行为未被分解）③方法（受控析因 + PCSD + MSRF）④关键结果（冻结数字）
+%   ⑤意义（知识驱动的结构化风险表征对 LALM 安全的实用价值）
+\begin{abstract}
+Large audio-language models (LALMs) are deployed in safety-sensitive decision
+contexts, yet the safety implications of \emph{adversarial framing} ---
+repackaging a fixed request through narrative, role-play, or acoustic style ---
+remain poorly understood. We treat this as a \emph{knowledge-system} problem
+and propose a knowledge-driven methodology: a safe decision must fuse
+heterogeneous knowledge sources --- request intent, narrative structure,
+acoustic style, and scoring uncertainty --- that current detectors represent
+inconsistently or not at all. In a controlled paired factorial experiment
+($E_t \times N \times R \times A_s$, 24 cells; 16{,}200 response cells; three
+LALMs; two languages), narrative structure ($N$) raises attack success by
+27.9 percentage points (95\% CI [25.0, 30.9]; odds ratio 16.65 [14.10,
+19.67]). The effect is partially---not wholly---length-mediated and robust
+across languages, models, and out-of-distribution anchors; the
+agreement-conditioned dual-judge estimate (38.0~pp) is disclosed as
+selection-inflated. We further
+show paired cross-modal safety divergence (\PCSD) is model-dependent, so
+audio vulnerability is not intrinsic to the modality. We then build \MSRF{}, a
+knowledge-driven multi-source fusion framework that fuses these signal
+families through calibrated out-of-fold scores in an auditable 225-parameter
+layer. It reaches 0.9784 ROC-AUC on the deployment frame (0.9455 $\pm$ 0.030
+cross-validation), outperforming billion-parameter guards, with boundaries
+reported honestly (75.9\% benign false-positive rate; adaptive-attack decay).
+Narrative structure exhibits a robust causal effect under controlled prompt
+interventions; representing that effect as structured, multi-signal knowledge
+is a more durable foundation for LALM safety than either modal shortcuts or
+opaque detection.
+\end{abstract}
+
+% ===== 关键词 =====
+\begin{keyword}
+cross-modal consistency \sep knowledge-driven fusion \sep LALM safety \sep framing attack \sep causal attribution
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers   % 行号自正文起连续（v4 Part2.2；frontmatter 内启用会挤爆首页 vbox）
+
+% ============================================================================
+% 正文（核心躯干 + 外壳层混合；章节按大纲编号）
+% ============================================================================
+\input{sections/01_introduction}        % 三、引言（外壳层，两版差异最大）
+\input{sections/02_related_work}        % 四、相关工作（半外壳层）
+\input{sections/03_methods}             % 五、方法（核心躯干 · 100% 复用）
+\input{sections/04_experimental_setup}  % 四、实验设置（核心躯干 · 100% 复用）
+\input{sections/05_fusion_framework}    % 五、MSRF 独立方法章（2026-08-27 新版提示词 P1 新增）
+\input{sections/05_results}             % 六、实验结果（核心躯干 · 100% 复用）
+\input{sections/06_discussion}          % 七、讨论（半外壳层）
+\input{sections/07_limitations}         % 八、局限与伦理（核心躯干 · 100% 复用）
+\input{sections/08_conclusion}          % 九、结论（半页，两版微调收尾句）
+
+% ===== 参考文献 =====
+\bibliographystyle{elsarticle-harv}
+\bibliography{references}
+
+% ===== 附录（图表清单已在正文内登记；此处预留）=====
+\end{document}

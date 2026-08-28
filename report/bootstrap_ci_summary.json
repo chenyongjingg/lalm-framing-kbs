@@ -1,0 +1,102 @@
+[
+  {
+    "condition": "baseline",
+    "scorer": "judge_big_label",
+    "asr": 2.3,
+    "ci95": [
+      1.91,
+      2.7
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "baseline",
+    "scorer": "dual_judge_label",
+    "asr": 2.14,
+    "ci95": [
+      1.77,
+      2.55
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "baseline",
+    "scorer": "majority_label",
+    "asr": 2.06,
+    "ci95": [
+      1.69,
+      2.45
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "baseline",
+    "scorer": "hb_label",
+    "asr": 5.57,
+    "ci95": [
+      4.96,
+      6.2
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "baseline",
+    "scorer": "sr_label",
+    "asr": 17.96,
+    "ci95": [
+      16.94,
+      19.0
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "storytelling",
+    "scorer": "judge_big_label",
+    "asr": 29.81,
+    "ci95": [
+      28.61,
+      31.04
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "storytelling",
+    "scorer": "dual_judge_label",
+    "asr": 35.11,
+    "ci95": [
+      33.55,
+      36.64
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "storytelling",
+    "scorer": "majority_label",
+    "asr": 33.71,
+    "ci95": [
+      32.18,
+      35.27
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "storytelling",
+    "scorer": "hb_label",
+    "asr": 32.26,
+    "ci95": [
+      31.04,
+      33.52
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  },
+  {
+    "condition": "storytelling",
+    "scorer": "sr_label",
+    "asr": 47.0,
+    "ci95": [
+      45.67,
+      48.33
+    ],
+    "ci_scope": "行级（row-level），单条件 ASR 水平估计；未按 query_id 聚类，非同 query 配对 delta——CI 仅反映 该条件 ASR 抽样误差，不得用于条件间差异推断"
+  }
+]

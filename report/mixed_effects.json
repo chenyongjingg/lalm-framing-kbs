@@ -1,0 +1,187 @@
+{
+  "label_col": "judge_big_label",
+  "n_models": 2,
+  "n_templates": 3,
+  "result": {
+    "fitted": false,
+    "reason": "模型/模板数不足 3（协议 P1F-3 升级条件未满足）"
+  },
+  "note": "描述性统计 + bootstrap CI 仍然产出",
+  "pilot": {
+    "label_col": "dual_judge_label",
+    "label_disclosure": "R2：PILOT 中文数据主效应仅采用 dual_judge 共识口径（zh FNR=0.293 可辩护；harmbench 1.0/strongreject 0.993/gemma 0.96 单口径不作主测量），judge_big/majority 仅作敏感性分析",
+    "result": {
+      "fitted": true,
+      "n_obs": 6142,
+      "n_groups": 150,
+      "formula_used": "label ~ E_t*N*R*A_s + C(model) + C(template_idx) + resp_len",
+      "vc_formula": "{'query_id': '1'}",
+      "method": "BinomialBayesMixedGLM (variational Bayes, BFGS)",
+      "fit_details": "fit_vb(fit_method='BFGS', scale_fe=True)",
+      "fixed_effects": [
+        {
+          "param": "Intercept",
+          "coef": -4.7714,
+          "or": 0.0085,
+          "ci95": [
+            0.0076,
+            0.0094
+          ],
+          "bse": 0.0545,
+          "z": -87.512,
+          "p": 0.0
+        },
+        {
+          "param": "E_t[T.1]",
+          "coef": 0.4134,
+          "or": 1.5119,
+          "ci95": [
+            1.2097,
+            1.8895
+          ],
+          "bse": 0.1138,
+          "z": 3.633,
+          "p": 0.0003
+        },
+        {
+          "param": "N[T.1]",
+          "coef": 0.1847,
+          "or": 1.2029,
+          "ci95": [
+            0.9639,
+            1.5011
+          ],
+          "bse": 0.113,
+          "z": 1.634,
+          "p": 0.1022
+        },
+        {
+          "param": "R[T.1]",
+          "coef": -1.1672,
+          "or": 0.3112,
+          "ci95": [
+            0.2491,
+            0.3889
+          ],
+          "bse": 0.1136,
+          "z": -10.276,
+          "p": 0.0
+        },
+        {
+          "param": "C(model)[T.gemma_4_e4b]",
+          "coef": -0.4685,
+          "or": 0.626,
+          "ci95": [
+            0.5009,
+            0.7823
+          ],
+          "bse": 0.1137,
+          "z": -4.12,
+          "p": 0.0
+        },
+        {
+          "param": "C(template_idx)[T.1]",
+          "coef": 0.5684,
+          "or": 1.7654,
+          "ci95": [
+            1.4022,
+            2.2226
+          ],
+          "bse": 0.1175,
+          "z": 4.837,
+          "p": 0.0
+        },
+        {
+          "param": "C(template_idx)[T.2]",
+          "coef": -0.2181,
+          "or": 0.804,
+          "ci95": [
+            0.6141,
+            1.0527
+          ],
+          "bse": 0.1375,
+          "z": -1.587,
+          "p": 0.1126
+        },
+        {
+          "param": "E_t[T.1]:N[T.1]",
+          "coef": 0.2342,
+          "or": 1.2639,
+          "ci95": [
+            1.0082,
+            1.5845
+          ],
+          "bse": 0.1153,
+          "z": 2.031,
+          "p": 0.0423
+        },
+        {
+          "param": "E_t[T.1]:R[T.1]",
+          "coef": 0.5847,
+          "or": 1.7944,
+          "ci95": [
+            1.4052,
+            2.2914
+          ],
+          "bse": 0.1247,
+          "z": 4.687,
+          "p": 0.0
+        },
+        {
+          "param": "N[T.1]:R[T.1]",
+          "coef": 0.5662,
+          "or": 1.7615,
+          "ci95": [
+            1.4005,
+            2.2155
+          ],
+          "bse": 0.117,
+          "z": 4.839,
+          "p": 0.0
+        },
+        {
+          "param": "E_t[T.1]:N[T.1]:R[T.1]",
+          "coef": -0.5238,
+          "or": 0.5923,
+          "ci95": [
+            0.4468,
+            0.7852
+          ],
+          "bse": 0.1439,
+          "z": -3.641,
+          "p": 0.0003
+        },
+        {
+          "param": "resp_len",
+          "coef": 0.0081,
+          "or": 1.0081,
+          "ci95": [
+            1.0078,
+            1.0084
+          ],
+          "bse": 0.0002,
+          "z": 52.633,
+          "p": 0.0
+        }
+      ],
+      "random_variance": {
+        "query_id": -0.8666
+      }
+    },
+    "length_covariate": {
+      "included": true,
+      "column": "resp_len",
+      "note": "R3：PILOT 混合效应纳入响应长度协变量"
+    },
+    "length_sensitivity": {
+      "param": "N[",
+      "or_with_len": 1.2029,
+      "or_no_len": 2.3721,
+      "delta_or": -1.1692,
+      "sensitive": true,
+      "criterion": "|ΔOR|>0.2 或 OR 跨 1（方向翻转）→ 长度敏感",
+      "note": "ΔOR 显著 → 响应长度共变主效应（代理效应未排除），须如实披露"
+    },
+    "note": "协议 P1P-3：logit(ASR) ~ E_t×N×R×A_s + model + template + len + (1|query)（R3 含长度协变量；R2 中文主效应仅 dual_judge 口径）"
+  }
+}

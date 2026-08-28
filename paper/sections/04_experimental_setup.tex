@@ -1,0 +1,55 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Models and scorers}
+Three \LALMs{} constitute the model matrix: the two primary Gemma-4-family
+models (E4B-it, audio+text; E2B-it, text) and Qwen2-Audio-7B as an architecture
+control that is excluded from primary-effect inference. All Gemma-family models
+run at BF16 with thinking disabled.
+
+Safety judgment uses an audited multi-scorer protocol. Four scorers
+(HarmBench-cls \citep{harmbench}, StrongREJECT \citep{strongreject}, and two
+Gemma-family judges) are validated on a public benchmark (JailBench,
+$n=602$)\footnote{JailBench is an internal validation set, not a public
+benchmark; it is reported here for reproducibility.}; the primary judge
+(judge\_big) reaches 0.8555 accuracy. We define three calibers: \emph{primary}
+(single best judge, full sample), \emph{dual-judge} (two judges agree, else
+abstain), and \emph{majority} (four-vote). We use the \textbf{primary}
+full-sample estimate for headline claims because it is the only caliber free of
+a selection bias we disclose next. We use the \textbf{dual-judge} caliber for
+cross-scorer robustness and for Chinese-language measurement, where single
+scorers fail catastrophically (HarmBench FNR $=$ 1.0; StrongREJECT FNR $=$ 0.99)
+while dual-judge reaches FNR 0.29 with 85.3\% accuracy (the third off-the-shelf
+scorer, the Gemma-family judge, has FNR $=$ 0.96). Because the dual-judge
+and majority calibers are defined only on rows where the two judges agree, and
+agreement correlates with condition (in the confirmatory experiment,
+storytelling rows are included at 57.9\% vs.\ 91.8\% for baseline), these
+calibers systematically inflate the effect estimate ($\Delta$38.0 vs.\ 27.9~pp).
+We report this agreement-conditioning selection bias in
+Section~\ref{sec:results}. We further disclose that all internal scorers are
+Gemma-family (three of the four majority votes; the four-vote majority
+double-counts the E2B family leg), and that agreement with an independent
+cross-family anchor (Qwen2.5-32B-Instruct-AWQ) is high (0.929 on the E4B side;
+0.962 on the full E2B text set), which bounds the same-family risk.
+
+\subsection{Statistical protocol}
+Effects are reported as paired per-query cluster bootstraps \citep{efron1993}
+($B=10{,}000$) with
+95\% CIs, plus a Binomial Bayesian mixed-effects model \citep{bates2015} with
+query random
+intercepts and fixed model/template effects (the mixed-effect upgrade to full
+random structure is not met --- fewer than three models and three templates ---
+and is reported as such; the benchmark-level cross-frame fusion table uses
+$B=2{,}000$). Paired per-query discordance is additionally tested with
+McNemar's test \citep{mcnemar1947} on the baseline-safe/storytelling-harmful
+versus
+baseline-harmful/storytelling-safe cells; the asymmetry is strong across
+languages and models (Chinese $\chi^2{=}34.6$, English $\chi^2{=}30.3$, E2B
+$\chi^2{=}83.2$, E4B $\chi^2{=}91.1$; all $p<0.001$), and the same test is
+applied after 1:1 nearest-neighbor length matching (caliper 0.2 SD). We
+pre-registered TOST equivalence bounds ($\pm$5~pp) \citep{lakens2018},
+O'Brien--Fleming sequential
+alpha spending, and manipulation-check thresholds.
+All generation is deterministic (byte-identical on re-run, 40/40), and decoding
+robustness is verified under sampling ($\Delta$20.7~pp greedy vs.\
+$\Delta$20.8~pp sampled, $n=48$).

@@ -1,0 +1,48 @@
+\section{Limitations}
+\label{sec:limitations}
+
+We report the principal limitations explicitly, each with the direction we
+consider most promising for addressing it.
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Scorer family bias.} All internal scorers are Gemma-family;
+        cross-family anchoring bounds but does not eliminate this. Re-anchoring
+        the protocol with at least one non-Gemma internal scorer to quantify
+        the residual family bias directly is a natural next step.
+  \item \textbf{Chinese-language scoring.} Only the dual-judge caliber is
+        reliable on Chinese inputs; single-scorer Chinese results are not
+        reported. Extending single-scorer Chinese reliability (e.g.,
+        Chinese-native judges or scorer fine-tuning) is future work.
+  \item \textbf{Acoustic factor confound.} \Asfac{} is implemented by voice,
+        confounding speaker identity and gender; acoustic-attack signal is not
+        measured at our sample window ($N=32$). Future work will separate
+        voice identity from prosody (e.g., TTS with matched speaker identity)
+        and enlarge the acoustic window well beyond $N=32$.
+  \item \textbf{Length confound.} The effect is partially---not
+        wholly---length-mediated; within matched length bands a content effect
+        remains, and all three audio-channel estimators are reported.
+        Additional matched-length designs and per-band estimators remain a
+        planned extension.
+  \item \textbf{Detection transfer.} Fixed-threshold detection fails on benign
+        inputs (75.9\% FPR) and decays under adaptive attacks; only
+        in-distribution discrimination and prompt-level robustness are claimed.
+        Adaptive or online recalibration on deployment traffic, and an
+        evaluation under gradient-based adversarial perturbations, are the
+        natural next steps toward threshold transfer.
+  \item \textbf{Out-of-distribution intent.} Attack responses lack the LoRA
+        intent signal. Future work will add a LoRA intent signal at inference
+        time or an explicit out-of-distribution guard on the intent branch.
+  \item \textbf{Baseline coverage.} JailGuard, Cross-modal Information Check,
+        and SALMONN-Guard were not reproducible (unreleased code/weights) and
+        are reported as cited values only, never as measured baselines. We will
+        re-run these baselines on release of their code or weights.
+  \item \textbf{Sequential design.} The pre-registered maximum of 500
+        cells\slash condition was exceeded by design change (v6.2$\rightarrow$v6.5),
+        which we disclose. A cleaner confirmatory design within the original
+        cap is future work.
+  \item \textbf{Missing scorings.} 1.03\% of P0-C responses have deterministic
+        parsing failures, bounded and disclosed. Re-scoring those cells with a
+        robust parser is a planned cleanup.
+\end{enumerate}
+
+No fabricated values appear anywhere in this paper; every number traces to the
+released pipeline artifacts.

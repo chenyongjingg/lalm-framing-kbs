@@ -1,0 +1,94 @@
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Framing and delivery attacks against LALMs}
+Audio-side attacks on \LALMs have recently been shown to succeed via narrative
+delivery \citep{nyhm} and prosody \citep{pjbreak}, and style-aware audio
+jailbreaks \citep{stylebreak} demonstrate that acoustic style alone can steer
+output. Paralinguistic variation, such as speaker emotion, similarly induces
+safety inconsistencies \citep{feng2026emotional}, and a recent taxonomy
+organizes audio jailbreaks into semantic, acoustic, signal, and embedding
+layers, with narrative framing as a semantic-layer threat
+\citep{feng2026audiojailbreaks}. These works establish that framing is a real
+attack surface, but treat delivery as an atomic preset; none decomposes the
+semantic components or measures their causal contributions under control
+\citep{pjbreak,nyhm,stylebreak,feng2026emotional,feng2026audiojailbreaks}.
+Our design differs on exactly this axis:
+where \citet{nyhm} and \citet{stylebreak} compare whole attacks against whole
+defenses, we decompose the ``storytelling'' bundle into four orthogonal
+components (text, structure, role, acoustic style) and attribute success to
+each under a paired control. Where \citet{pjbreak} varies prosody in
+isolation, our acoustic factor is only one of four, and we disclose that it
+confounds speaker identity and gender rather than claiming it isolates prosody
+(Section~\ref{sec:setup}). Text-side research has taxonomized such persuasion
+strategies \citep{wei2024}; our factorial design is the component-level
+complement that quantifies their causal contribution in the audio-language
+setting. The increment over this line of work is the decomposition itself:
+rather than proposing a new delivery variant, we provide a reusable,
+controlled measurement of \emph{which} framing component carries the effect,
+under a paired design that separates structure from text, role, and acoustic
+style.
+
+\subsection{Safety benchmarks and consistency measurement}
+Benchmarks such as HarmBench \citep{harmbench}, Audio Jailbreak
+\citep{audio-jailbreak}, and Omni-SafetyBench \citep{omnisafetybench} evaluate
+whether models or guards are safe on static collections, and Omni-SafetyBench
+further defines a benchmark-level cross-modal consistency score (CMSC).
+Consistency at the benchmark level, however, aggregates outcomes and cannot
+localize per-input divergence between the text and audio rendering of the
+\emph{same} query --- precisely where deployment disagreements originate. We
+therefore define \PCSD{} at the response level as a measurement, not a
+benchmark, and operationalize the distinction in
+Section~\ref{sec:crossmodal} \citep{omnisafetybench}. The increment is
+response-level granularity: \PCSD{} scores the text and audio rendering of
+the \emph{same} input per cell, which a benchmark-level aggregate cannot
+localize, and it is reported as an auxiliary diagnostic signal rather than a
+label.
+
+\subsection{Jailbreak detection and defense}
+Jailbreak behavior in aligned models has been traced to brittle safety-training
+boundaries \citep{jailbroken}, and detection approaches span gradient analysis
+\citep{gradsafe}, input-output safeguards
+\citep{llamaguard,shieldgemma,wildguard}, cross-modality consistency checking
+for multimodal LLMs \citep{crossmodal-info}, confidence- and codebook-based
+detection \citep{chen2025,codebooks}, and audio authenticity verification
+\citep{xie2024fakesound}. These detectors share a single-cue
+design: consistency disagreement \citep{crossmodal-info} or first-token
+confidence \citep{chen2025,codebooks} alone, with no explicit
+packaging-structure signal. Our fusion framework instead combines four mutually
+non-overlapping, interpretable signal families and, unlike prior work, is
+evaluated on both in-distribution discrimination and honest deployment
+boundaries (Section~\ref{sec:fusion-boundary}). On the defense side,
+inference-time refusal steering for \LALMs{} has also been proposed
+\citep{lin2026sarsteer}. Within the
+\emph{Knowledge-Based Systems} scope,
+jailbreak mitigation has been framed as a model-agnostic semantic problem
+\citep{srd} and safety as a subspace-oriented model-fusion objective
+\citep{realignment}; the journal's orientation toward knowledge representation
+and interpretable, decision-support detection is our target
+\citep{srd,realignment}. Relative to this literature, our contribution is
+three-fold: (a) causal attribution of \emph{which} framing component matters (a
+knowledge question, not a classifier question); (b) a fusion framework whose
+branches are mutually non-overlapping, interpretable signal families rather than
+opaque embeddings; and (c) an honest evaluation that separates in-distribution
+discrimination from deployment-level threshold behavior, which most detector
+papers do not report.
+
+\subsection{Knowledge fusion and decision-support systems}
+Within the knowledge-systems tradition, safety-relevant and operational
+decisions are supported by fusing heterogeneous knowledge sources under an
+explicit treatment of uncertainty: belief-theoretic uncertainty reasoning and
+quantification \citep{guo2024survey}, evidential (Dempster--Shafer) fusion of
+multimodal information for reliable decisions \citep{shao2024duallevel},
+multi-criteria fusion over multi-source decision data \citep{xu2025promethee},
+and ensemble decisions over multimodal decision-information systems under
+uncertainty \citep{zhao2025ensemble}. These works share a methodology that
+this paper adopts: represent each source's evidence explicitly, calibrate or
+discount it, and combine it under uncertainty to support a decision --- the
+same structure that \MSRF{} instantiates for LALM safety scoring with four
+mutually non-overlapping signal families \citep{shafer1976}. Our increment
+over this line is twofold: the knowledge sources are \emph{response-level
+signals extracted under a pre-registered causal protocol} rather than generic
+features, and the fused decision is evaluated both for in-distribution
+discrimination and for its honest boundary behavior (fixed-threshold
+transfer), which decision-fusion studies typically do not report.

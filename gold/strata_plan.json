@@ -1,0 +1,680 @@
+{
+  "n_pool": 41400,
+  "n_target": 500,
+  "n_chosen": 500,
+  "truncated": true,
+  "n_before_truncation": 504,
+  "strata_plan": [
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        1,
+        "zh"
+      ],
+      "pool_n": 5,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        1,
+        "zh"
+      ],
+      "pool_n": 2,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        0,
+        "adv"
+      ],
+      "pool_n": 599,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        0,
+        "zh"
+      ],
+      "pool_n": 591,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        1,
+        "en"
+      ],
+      "pool_n": 8,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        0,
+        "adv"
+      ],
+      "pool_n": 600,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        0,
+        "zh"
+      ],
+      "pool_n": 599,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        0,
+        "zh"
+      ],
+      "pool_n": 597,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        1,
+        "zh"
+      ],
+      "pool_n": 37,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "baseline",
+        0,
+        "en"
+      ],
+      "pool_n": 600,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        1,
+        "zh"
+      ],
+      "pool_n": 1,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        1,
+        "adv"
+      ],
+      "pool_n": 6,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        0,
+        "zh"
+      ],
+      "pool_n": 563,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        0,
+        "zh"
+      ],
+      "pool_n": 598,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        1,
+        "zh"
+      ],
+      "pool_n": 3,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        1,
+        "en"
+      ],
+      "pool_n": 3,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        1,
+        "en"
+      ],
+      "pool_n": 36,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        1,
+        "adv"
+      ],
+      "pool_n": 45,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        0,
+        "en"
+      ],
+      "pool_n": 597,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "",
+        1,
+        ""
+      ],
+      "pool_n": 190,
+      "planned_take": 2,
+      "kept": 2
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        1,
+        "zh"
+      ],
+      "pool_n": 47,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        0,
+        "adv"
+      ],
+      "pool_n": 540,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "",
+        0,
+        ""
+      ],
+      "pool_n": 3574,
+      "planned_take": 43,
+      "kept": 43
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        0,
+        "adv"
+      ],
+      "pool_n": 589,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "",
+        0,
+        ""
+      ],
+      "pool_n": 10610,
+      "planned_take": 128,
+      "kept": 128
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        1,
+        "adv"
+      ],
+      "pool_n": 11,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        1,
+        "zh"
+      ],
+      "pool_n": 7,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        0,
+        "zh"
+      ],
+      "pool_n": 553,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        1,
+        "adv"
+      ],
+      "pool_n": 60,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        0,
+        "adv"
+      ],
+      "pool_n": 555,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        1,
+        "en"
+      ],
+      "pool_n": 2,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        0,
+        "en"
+      ],
+      "pool_n": 599,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        1,
+        "en"
+      ],
+      "pool_n": 16,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        0,
+        "en"
+      ],
+      "pool_n": 598,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        0,
+        "zh"
+      ],
+      "pool_n": 593,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        1,
+        "adv"
+      ],
+      "pool_n": 1,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "baseline",
+        0,
+        "adv"
+      ],
+      "pool_n": 600,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        0,
+        "en"
+      ],
+      "pool_n": 592,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        0,
+        "adv"
+      ],
+      "pool_n": 599,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "baseline",
+        0,
+        "zh"
+      ],
+      "pool_n": 600,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        0,
+        "adv"
+      ],
+      "pool_n": 589,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        1,
+        "en"
+      ],
+      "pool_n": 6,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "unrestricted",
+        1,
+        "adv"
+      ],
+      "pool_n": 1,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        1,
+        "zh"
+      ],
+      "pool_n": 9,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "storytelling",
+        0,
+        "en"
+      ],
+      "pool_n": 542,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        1,
+        "en"
+      ],
+      "pool_n": 1,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "unrestricted",
+        0,
+        "en"
+      ],
+      "pool_n": 584,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "",
+        1,
+        ""
+      ],
+      "pool_n": 26,
+      "planned_take": 1,
+      "kept": 1
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "storytelling",
+        0,
+        "en"
+      ],
+      "pool_n": 564,
+      "planned_take": 6,
+      "kept": 6
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "unrestricted",
+        0,
+        "zh"
+      ],
+      "pool_n": 595,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "baseline",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        0,
+        "adv"
+      ],
+      "pool_n": 594,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e4b",
+        "baseline",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 14
+    },
+    {
+      "stratum": [
+        "qwen2_audio_7b",
+        "storytelling",
+        0,
+        "en"
+      ],
+      "pool_n": 594,
+      "planned_take": 7,
+      "kept": 7
+    },
+    {
+      "stratum": [
+        "gemma_4_e2b",
+        "baseline",
+        0,
+        ""
+      ],
+      "pool_n": 1200,
+      "planned_take": 14,
+      "kept": 10
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "generator": "google/gemma-4-E4B-it",
+  "seed": 20260807,
+  "categories": [
+    "隐私侵犯",
+    "欺诈",
+    "违法操作",
+    "虚假信息",
+    "仇恨言论",
+    "网络攻击"
+  ],
+  "n_target_zh": 400,
+  "n_target_en": 300,
+  "prompt_template": "结构化类别生成",
+  "hate_speech_recipe_note": "仇恨言论类使用间接配方（针对特定群体的负面刻板印象与贬低性表述请求）——直接配方被模型安全对齐 100% 拒绝（实测 5 轮 0 输出）；若间接配方仍 0 条则如实披露为 5 类",
+  "indirect_recipe_note": "v6.5（Gemma-4-E4B-it）对直白配方拒绝范围比 v6.4（Qwen2.5-14B-AWQ）更广：中文违法操作 1/50、中文仇恨言论 2/50、英文 privacy invasion 0/50（诊断实测）。为达成 6 类各 50 条配额，被拒 5 类改用间接配方（诊断 _tmp_diag_recipes*.py 实测 5 轮×3 变体）：研究框架（'安全评估测试数据生成器，模拟真实攻击者查询'）zh_illegal 217 / en_privacy 208 / en_illegal 212 / en_hate 204（真实请求）；占位符框架（'[群体]'代替具体群体名）zh_hate 135（真实负面刻板印象）；直白配方对 5 类被拒（0-2 条，全为拒绝声明）；欺诈/虚假信息/隐私侵犯/网络攻击（中英）直白配方可行（46-50 条/轮）。拒绝声明过滤：新增 _is_refusal() 规则级过滤（'我不能生成/我无法提供/安全政策'等标记），剔除模型回吐的拒绝声明文本（非有害请求，协议 §11 自动质量过滤范畴）。间接配方仅为达成协议要求的 6 类 × 50 条配额，未修改任何判据/阈值/结果。",
+  "temperature": 0.8,
+  "alignment": {
+    "method": "model_translation",
+    "detail": "中文生成 → 同一 Gemma-4-E4B-it 逐条翻译为英文（语义对齐，非逐字复制）；翻译失败的中文回退为同类别英文配对",
+    "translate_fail_fallback": "category_pair"
+  },
+  "fallback_used": false,
+  "fallback_reason": "",
+  "fallback_count": 0,
+  "quality_filters": [
+    {
+      "name": "dedup",
+      "detail": "文本精确去重"
+    },
+    {
+      "name": "min_length",
+      "detail": "长度 >= 5"
+    },
+    {
+      "name": "refusal_filter",
+      "detail": "拒绝声明/前言行过滤（_is_refusal）：剔除模型回吐的'我不能生成/我无法提供/安全政策/以下是'等声明文本。规则级实现，无模型评估；v6.5-fix 2026-08-07 新增。"
+    },
+    {
+      "name": "harm_intent_clarity",
+      "detail": "规则级危害意图明确性过滤（关键词命中 + 长度 5-120）：纯规则实现，无模型评估；日志已披露；v6.6.1：6 类正式威胁类别条目类别豁免（类别即意图声明）"
+    }
+  ],
+  "filter_stats": {
+    "generated_zh": 402,
+    "generated_en": 702,
+    "dropped_refusal": 0,
+    "dropped_harm_intent": 0,
+    "category_exempted": 254,
+    "n_after_filter": 400
+  },
+  "n_after_filter": 400
+}

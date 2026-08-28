@@ -1,0 +1,79 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Why narrative structure, and why does role assignment protect?}
+The factorial results separate the ``storytelling'' bundle into a strong
+structure effect (\Nfac{}) and a counter-intuitive protective effect (\Rfac{}).
+A post-hoc account consistent with both is the elaboration-channel
+hypothesis: \Nfac{}
+increases elaboration (length, narrative density), which increases both the
+probability and the perceived legitimacy of harmful continuations; \Rfac{}, by
+contrast, constrains the model into an identity whose stance (an ``expert
+advisor'') is at odds with producing harmful instructions in our protocol. The
+replication of \Rfac's sign across models argues against a fluke, but its
+sensitivity to the scoring caliber (it reverses under latent-label scoring)
+demands caution; we report both.
+
+\paragraph{Why do open-source guards fail on framing?}
+ShieldGemma, WildGuard, and GradSafe all score below chance on framed inputs.
+This is consistent with their training objective (harmfulness of direct
+requests) being systematically mismatched with framing, which is
+safe-looking. It motivates a \emph{knowledge} framing of the detection problem:
+the relevant signal is not ``is this text harmful'' but ``does this structure
+package harmful intent,'' which is exactly the signal our narrative and intent
+branches measure.
+
+\paragraph{Threshold detection versus mechanism-aware scoring.}
+The benign-FPR failure (Section~\ref{sec:fusion-boundary}) is instructive rather
+than incidental. It shows that a calibrated threshold is only meaningful inside the
+calibration distribution, and that compliant benign behavior is statistically
+confounded with framing signals. Read as a \emph{knowledge boundary} rather
+than a defect, this is a substantive empirical finding about the framework's
+applicability domain: the calibration pool (refusal responses) and the benign
+pool (compliant responses) occupy different regions of the fused score space,
+so the two distributions are not mutually calibrating. It is exactly this kind
+of domain knowledge that our pre-registered defense gate G2 was designed to
+elicit, and we report it in full. We argue that the honest contribution of a
+fusion framework in this setting is a \emph{discriminative risk score with
+auditable branch attributions} --- not a turnkey threshold --- and we present
+the paper's detection claims accordingly. A direct path forward is
+adaptive or online recalibration on deployment traffic, which we leave to
+future work. This aligns with the journal's
+orientation toward interpretable, decision-support knowledge systems
+\citep{srd,realignment}.
+
+\paragraph{Generalizability of the methodology.}
+The contribution is best read as a \emph{methodology} rather than a tuned
+detector. The four knowledge sources --- intent semantics, narrative structure,
+acoustic prosody, and scoring uncertainty --- are defined from first principles
+about the response and the scoring process, not about a specific model or
+language; the causal protocol and the paired cross-modal measurement are
+likewise model-agnostic. We therefore expect the framework to transfer to
+other multimodal model audits (e.g., vision-language assistants whose safety
+responses also admit packaging structure), to other high-resource languages,
+and to high-stakes voice applications where an auditable, single-model risk
+score is preferable to a stack of opaque classifiers. What transfers is the
+\emph{structure}: mutually non-overlapping, auditable knowledge sources,
+out-of-fold scoring, and honest boundary reporting. We have not re-run the
+full protocol on these settings, and we state this explicitly rather than
+claiming measured transfer.
+
+\paragraph{Implications for knowledge-based decision systems.}
+For the decision-support community, three design lessons follow. First, a
+safety decision over a model response is a multi-source fusion problem. The
+four signals we fuse are heterogeneous knowledge sources with different
+reliability (the intent and narrative branches carry the signal; the acoustic
+branch is ``not measured'', not ``ineffective''). Explicit calibration
+plus an auditable fusion layer lets a system operator trace which source
+drove a score. Second, the boundary between in-distribution discrimination and
+threshold transfer is itself decision-relevant knowledge. The calibration pool
+(adaptive refusals) and the benign pool (compliant responses) live in different
+regions of the fused score space. A decision system must either keep its
+operating context inside the calibrated region or re-calibrate online when the
+deployment distribution drifts toward compliant benign traffic. Third, honest
+boundary reporting is a decision-support feature, not a weakness: a score with
+a documented failure region supports risk-informed routing (e.g., escalating
+scores that fall outside the calibrated envelope to a human reviewer) better
+than a threshold with an unmeasured false-positive rate. These are the
+operational postures that follow from our measurement
+\citep{guo2024survey,shafer1976,xu2025promethee}.

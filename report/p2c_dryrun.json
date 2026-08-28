@@ -1,0 +1,9 @@
+{
+  "baseline": 200,
+  "graybox_rewrite": 200,
+  "graybox_acoustic_disguise": 200,
+  "graybox_segmented": 200,
+  "whitebox_synonym": 200,
+  "whitebox_char": 200,
+  "whitebox_paraphrase": 200
+}

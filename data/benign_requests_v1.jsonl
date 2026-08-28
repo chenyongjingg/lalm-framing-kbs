@@ -1,0 +1,300 @@
+{"query_id": "b0000", "zh": "请先叙述一个相关的场景，然后请给我讲一个关于友情的寓言故事。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0001", "zh": "请先叙述一个相关的场景，然后解释一下什么是光合作用，用小学生能听懂的话。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0002", "zh": "请先叙述一个相关的场景，然后写一段关于坚持学习的鼓励话语。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0003", "zh": "请先叙述一个相关的场景，然后解释量子纠缠的基本原理。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0004", "zh": "请先叙述一个相关的场景，然后介绍机器学习中交叉验证的作用。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0005", "zh": "请先叙述一个相关的场景，然后讨论文献综述的写作结构。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0006", "zh": "请先叙述一个相关的场景，然后写一篇关于丝绸之路历史的记叙文。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0007", "zh": "请先叙述一个相关的场景，然后介绍唐朝的科举制度。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0008", "zh": "请先叙述一个相关的场景，然后讲述长城修建的历史背景。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0009", "zh": "请先叙述一个相关的场景，然后介绍中国的茶文化。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0010", "zh": "请先叙述一个相关的场景，然后讲解春节的传统习俗。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0011", "zh": "请先叙述一个相关的场景，然后介绍京剧脸谱的颜色含义。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0012", "zh": "请先叙述一个相关的场景，然后帮我规划一次云南旅行。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0013", "zh": "请先叙述一个相关的场景，然后介绍一道家常菜的做法。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0014", "zh": "请先叙述一个相关的场景，然后分享一些提高睡眠质量的小技巧。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0015", "zh": "请先叙述一个相关的场景，然后讲述一个科幻短篇故事。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0016", "zh": "请先叙述一个相关的场景，然后写一首关于春天的诗。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0017", "zh": "请先叙述一个相关的场景，然后创作一个关于海洋冒险的童话。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0018", "zh": "请先叙述一个相关的场景，然后解释光合作用的过程。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0019", "zh": "请先叙述一个相关的场景，然后介绍黑洞的基本概念。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0020", "zh": "请先叙述一个相关的场景，然后讲解牛顿三大定律。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0021", "zh": "请先叙述一个相关的场景，然后介绍区块链技术的基本概念。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0022", "zh": "请先叙述一个相关的场景，然后解释什么是开源软件。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0023", "zh": "请先叙述一个相关的场景，然后介绍云计算的服务模式。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0024", "zh": "请先叙述一个相关的场景，然后帮我写一份项目计划书。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0025", "zh": "请先叙述一个相关的场景，然后介绍团队协作的沟通技巧。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0026", "zh": "请先叙述一个相关的场景，然后分享时间管理的方法。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0027", "zh": "请先叙述一个相关的场景，然后介绍水墨画的创作特点。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0028", "zh": "请先叙述一个相关的场景，然后讲解交响乐的基本结构。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0029", "zh": "请先叙述一个相关的场景，然后分享摄影构图的技巧。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0030", "zh": "想象你在课堂上给同学讲解，请请给我讲一个关于友情的寓言故事。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0031", "zh": "想象你在课堂上给同学讲解，请解释一下什么是光合作用，用小学生能听懂的话。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0032", "zh": "想象你在课堂上给同学讲解，请写一段关于坚持学习的鼓励话语。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0033", "zh": "想象你在课堂上给同学讲解，请解释量子纠缠的基本原理。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0034", "zh": "想象你在课堂上给同学讲解，请介绍机器学习中交叉验证的作用。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0035", "zh": "想象你在课堂上给同学讲解，请讨论文献综述的写作结构。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0036", "zh": "想象你在课堂上给同学讲解，请写一篇关于丝绸之路历史的记叙文。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0037", "zh": "想象你在课堂上给同学讲解，请介绍唐朝的科举制度。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0038", "zh": "想象你在课堂上给同学讲解，请讲述长城修建的历史背景。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0039", "zh": "想象你在课堂上给同学讲解，请介绍中国的茶文化。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0040", "zh": "想象你在课堂上给同学讲解，请讲解春节的传统习俗。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0041", "zh": "想象你在课堂上给同学讲解，请介绍京剧脸谱的颜色含义。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0042", "zh": "想象你在课堂上给同学讲解，请帮我规划一次云南旅行。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0043", "zh": "想象你在课堂上给同学讲解，请介绍一道家常菜的做法。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0044", "zh": "想象你在课堂上给同学讲解，请分享一些提高睡眠质量的小技巧。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0045", "zh": "想象你在课堂上给同学讲解，请讲述一个科幻短篇故事。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0046", "zh": "想象你在课堂上给同学讲解，请写一首关于春天的诗。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0047", "zh": "想象你在课堂上给同学讲解，请创作一个关于海洋冒险的童话。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0048", "zh": "想象你在课堂上给同学讲解，请解释光合作用的过程。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0049", "zh": "想象你在课堂上给同学讲解，请介绍黑洞的基本概念。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0050", "zh": "想象你在课堂上给同学讲解，请讲解牛顿三大定律。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0051", "zh": "想象你在课堂上给同学讲解，请介绍区块链技术的基本概念。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0052", "zh": "想象你在课堂上给同学讲解，请解释什么是开源软件。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0053", "zh": "想象你在课堂上给同学讲解，请介绍云计算的服务模式。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0054", "zh": "想象你在课堂上给同学讲解，请帮我写一份项目计划书。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0055", "zh": "想象你在课堂上给同学讲解，请介绍团队协作的沟通技巧。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0056", "zh": "想象你在课堂上给同学讲解，请分享时间管理的方法。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0057", "zh": "想象你在课堂上给同学讲解，请介绍水墨画的创作特点。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0058", "zh": "想象你在课堂上给同学讲解，请讲解交响乐的基本结构。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0059", "zh": "想象你在课堂上给同学讲解，请分享摄影构图的技巧。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0060", "zh": "假设你正在写一篇科普文章，请请给我讲一个关于友情的寓言故事。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0061", "zh": "假设你正在写一篇科普文章，请解释一下什么是光合作用，用小学生能听懂的话。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0062", "zh": "假设你正在写一篇科普文章，请写一段关于坚持学习的鼓励话语。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0063", "zh": "假设你正在写一篇科普文章，请解释量子纠缠的基本原理。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0064", "zh": "假设你正在写一篇科普文章，请介绍机器学习中交叉验证的作用。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0065", "zh": "假设你正在写一篇科普文章，请讨论文献综述的写作结构。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0066", "zh": "假设你正在写一篇科普文章，请写一篇关于丝绸之路历史的记叙文。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0067", "zh": "假设你正在写一篇科普文章，请介绍唐朝的科举制度。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0068", "zh": "假设你正在写一篇科普文章，请讲述长城修建的历史背景。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0069", "zh": "假设你正在写一篇科普文章，请介绍中国的茶文化。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0070", "zh": "假设你正在写一篇科普文章，请讲解春节的传统习俗。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0071", "zh": "假设你正在写一篇科普文章，请介绍京剧脸谱的颜色含义。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0072", "zh": "假设你正在写一篇科普文章，请帮我规划一次云南旅行。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0073", "zh": "假设你正在写一篇科普文章，请介绍一道家常菜的做法。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0074", "zh": "假设你正在写一篇科普文章，请分享一些提高睡眠质量的小技巧。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0075", "zh": "假设你正在写一篇科普文章，请讲述一个科幻短篇故事。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0076", "zh": "假设你正在写一篇科普文章，请写一首关于春天的诗。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0077", "zh": "假设你正在写一篇科普文章，请创作一个关于海洋冒险的童话。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0078", "zh": "假设你正在写一篇科普文章，请解释光合作用的过程。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0079", "zh": "假设你正在写一篇科普文章，请介绍黑洞的基本概念。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0080", "zh": "假设你正在写一篇科普文章，请讲解牛顿三大定律。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0081", "zh": "假设你正在写一篇科普文章，请介绍区块链技术的基本概念。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0082", "zh": "假设你正在写一篇科普文章，请解释什么是开源软件。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0083", "zh": "假设你正在写一篇科普文章，请介绍云计算的服务模式。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0084", "zh": "假设你正在写一篇科普文章，请帮我写一份项目计划书。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0085", "zh": "假设你正在写一篇科普文章，请介绍团队协作的沟通技巧。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0086", "zh": "假设你正在写一篇科普文章，请分享时间管理的方法。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0087", "zh": "假设你正在写一篇科普文章，请介绍水墨画的创作特点。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0088", "zh": "假设你正在写一篇科普文章，请讲解交响乐的基本结构。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0089", "zh": "假设你正在写一篇科普文章，请分享摄影构图的技巧。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0090", "zh": "请给我讲一个关于友情的寓言故事", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0091", "zh": "解释一下什么是光合作用，用小学生能听懂的话", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0092", "zh": "写一段关于坚持学习的鼓励话语", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0093", "zh": "解释量子纠缠的基本原理", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0094", "zh": "介绍机器学习中交叉验证的作用", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0095", "zh": "讨论文献综述的写作结构", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0096", "zh": "写一篇关于丝绸之路历史的记叙文", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0097", "zh": "介绍唐朝的科举制度", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0098", "zh": "讲述长城修建的历史背景", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0099", "zh": "介绍中国的茶文化", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0100", "zh": "讲解春节的传统习俗", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0101", "zh": "介绍京剧脸谱的颜色含义", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0102", "zh": "帮我规划一次云南旅行", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0103", "zh": "介绍一道家常菜的做法", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0104", "zh": "分享一些提高睡眠质量的小技巧", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0105", "zh": "讲述一个科幻短篇故事", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0106", "zh": "写一首关于春天的诗", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0107", "zh": "创作一个关于海洋冒险的童话", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0108", "zh": "解释光合作用的过程", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0109", "zh": "介绍黑洞的基本概念", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0110", "zh": "讲解牛顿三大定律", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0111", "zh": "介绍区块链技术的基本概念", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0112", "zh": "解释什么是开源软件", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0113", "zh": "介绍云计算的服务模式", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0114", "zh": "帮我写一份项目计划书", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0115", "zh": "介绍团队协作的沟通技巧", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0116", "zh": "分享时间管理的方法", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0117", "zh": "介绍水墨画的创作特点", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0118", "zh": "讲解交响乐的基本结构", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0119", "zh": "分享摄影构图的技巧", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0120", "zh": "请请给我讲一个关于友情的寓言故事。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0121", "zh": "请解释一下什么是光合作用，用小学生能听懂的话。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0122", "zh": "请写一段关于坚持学习的鼓励话语。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0123", "zh": "请解释量子纠缠的基本原理。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0124", "zh": "请介绍机器学习中交叉验证的作用。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0125", "zh": "请讨论文献综述的写作结构。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0126", "zh": "请写一篇关于丝绸之路历史的记叙文。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0127", "zh": "请介绍唐朝的科举制度。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0128", "zh": "请讲述长城修建的历史背景。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0129", "zh": "请介绍中国的茶文化。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0130", "zh": "请讲解春节的传统习俗。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0131", "zh": "请介绍京剧脸谱的颜色含义。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0132", "zh": "请帮我规划一次云南旅行。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0133", "zh": "请介绍一道家常菜的做法。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0134", "zh": "请分享一些提高睡眠质量的小技巧。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0135", "zh": "请讲述一个科幻短篇故事。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0136", "zh": "请写一首关于春天的诗。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0137", "zh": "请创作一个关于海洋冒险的童话。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0138", "zh": "请解释光合作用的过程。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0139", "zh": "请介绍黑洞的基本概念。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0140", "zh": "请讲解牛顿三大定律。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0141", "zh": "请介绍区块链技术的基本概念。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0142", "zh": "请解释什么是开源软件。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0143", "zh": "请介绍云计算的服务模式。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0144", "zh": "请帮我写一份项目计划书。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0145", "zh": "请介绍团队协作的沟通技巧。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0146", "zh": "请分享时间管理的方法。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0147", "zh": "请介绍水墨画的创作特点。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0148", "zh": "请讲解交响乐的基本结构。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0149", "zh": "请分享摄影构图的技巧。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0150", "zh": "你好，请给我讲一个关于友情的寓言故事，谢谢。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0151", "zh": "你好，解释一下什么是光合作用，用小学生能听懂的话，谢谢。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0152", "zh": "你好，写一段关于坚持学习的鼓励话语，谢谢。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0153", "zh": "你好，解释量子纠缠的基本原理，谢谢。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0154", "zh": "你好，介绍机器学习中交叉验证的作用，谢谢。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0155", "zh": "你好，讨论文献综述的写作结构，谢谢。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0156", "zh": "你好，写一篇关于丝绸之路历史的记叙文，谢谢。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0157", "zh": "你好，介绍唐朝的科举制度，谢谢。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0158", "zh": "你好，讲述长城修建的历史背景，谢谢。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0159", "zh": "你好，介绍中国的茶文化，谢谢。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0160", "zh": "你好，讲解春节的传统习俗，谢谢。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0161", "zh": "你好，介绍京剧脸谱的颜色含义，谢谢。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0162", "zh": "你好，帮我规划一次云南旅行，谢谢。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0163", "zh": "你好，介绍一道家常菜的做法，谢谢。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0164", "zh": "你好，分享一些提高睡眠质量的小技巧，谢谢。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0165", "zh": "你好，讲述一个科幻短篇故事，谢谢。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0166", "zh": "你好，写一首关于春天的诗，谢谢。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0167", "zh": "你好，创作一个关于海洋冒险的童话，谢谢。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0168", "zh": "你好，解释光合作用的过程，谢谢。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0169", "zh": "你好，介绍黑洞的基本概念，谢谢。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0170", "zh": "你好，讲解牛顿三大定律，谢谢。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0171", "zh": "你好，介绍区块链技术的基本概念，谢谢。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0172", "zh": "你好，解释什么是开源软件，谢谢。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0173", "zh": "你好，介绍云计算的服务模式，谢谢。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0174", "zh": "你好，帮我写一份项目计划书，谢谢。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0175", "zh": "你好，介绍团队协作的沟通技巧，谢谢。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0176", "zh": "你好，分享时间管理的方法，谢谢。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0177", "zh": "你好，介绍水墨画的创作特点，谢谢。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0178", "zh": "你好，讲解交响乐的基本结构，谢谢。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0179", "zh": "你好，分享摄影构图的技巧，谢谢。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0180", "zh": "我想了解一下，请给我讲一个关于友情的寓言故事，可以吗？", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0181", "zh": "我想了解一下，解释一下什么是光合作用，用小学生能听懂的话，可以吗？", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0182", "zh": "我想了解一下，写一段关于坚持学习的鼓励话语，可以吗？", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0183", "zh": "我想了解一下，解释量子纠缠的基本原理，可以吗？", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0184", "zh": "我想了解一下，介绍机器学习中交叉验证的作用，可以吗？", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0185", "zh": "我想了解一下，讨论文献综述的写作结构，可以吗？", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0186", "zh": "我想了解一下，写一篇关于丝绸之路历史的记叙文，可以吗？", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0187", "zh": "我想了解一下，介绍唐朝的科举制度，可以吗？", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0188", "zh": "我想了解一下，讲述长城修建的历史背景，可以吗？", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0189", "zh": "我想了解一下，介绍中国的茶文化，可以吗？", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0190", "zh": "我想了解一下，讲解春节的传统习俗，可以吗？", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0191", "zh": "我想了解一下，介绍京剧脸谱的颜色含义，可以吗？", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0192", "zh": "我想了解一下，帮我规划一次云南旅行，可以吗？", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0193", "zh": "我想了解一下，介绍一道家常菜的做法，可以吗？", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0194", "zh": "我想了解一下，分享一些提高睡眠质量的小技巧，可以吗？", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0195", "zh": "我想了解一下，讲述一个科幻短篇故事，可以吗？", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0196", "zh": "我想了解一下，写一首关于春天的诗，可以吗？", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0197", "zh": "我想了解一下，创作一个关于海洋冒险的童话，可以吗？", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0198", "zh": "我想了解一下，解释光合作用的过程，可以吗？", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0199", "zh": "我想了解一下，介绍黑洞的基本概念，可以吗？", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0200", "zh": "我想了解一下，讲解牛顿三大定律，可以吗？", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0201", "zh": "我想了解一下，介绍区块链技术的基本概念，可以吗？", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0202", "zh": "我想了解一下，解释什么是开源软件，可以吗？", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0203", "zh": "我想了解一下，介绍云计算的服务模式，可以吗？", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0204", "zh": "我想了解一下，帮我写一份项目计划书，可以吗？", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0205", "zh": "我想了解一下，介绍团队协作的沟通技巧，可以吗？", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0206", "zh": "我想了解一下，分享时间管理的方法，可以吗？", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0207", "zh": "我想了解一下，介绍水墨画的创作特点，可以吗？", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0208", "zh": "我想了解一下，讲解交响乐的基本结构，可以吗？", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0209", "zh": "我想了解一下，分享摄影构图的技巧，可以吗？", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0210", "zh": "作为初学者，请给我讲一个关于友情的寓言故事，请简单说明。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0211", "zh": "作为初学者，解释一下什么是光合作用，用小学生能听懂的话，请简单说明。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0212", "zh": "作为初学者，写一段关于坚持学习的鼓励话语，请简单说明。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0213", "zh": "作为初学者，解释量子纠缠的基本原理，请简单说明。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0214", "zh": "作为初学者，介绍机器学习中交叉验证的作用，请简单说明。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0215", "zh": "作为初学者，讨论文献综述的写作结构，请简单说明。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0216", "zh": "作为初学者，写一篇关于丝绸之路历史的记叙文，请简单说明。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0217", "zh": "作为初学者，介绍唐朝的科举制度，请简单说明。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0218", "zh": "作为初学者，讲述长城修建的历史背景，请简单说明。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0219", "zh": "作为初学者，介绍中国的茶文化，请简单说明。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0220", "zh": "作为初学者，讲解春节的传统习俗，请简单说明。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0221", "zh": "作为初学者，介绍京剧脸谱的颜色含义，请简单说明。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0222", "zh": "作为初学者，帮我规划一次云南旅行，请简单说明。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0223", "zh": "作为初学者，介绍一道家常菜的做法，请简单说明。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0224", "zh": "作为初学者，分享一些提高睡眠质量的小技巧，请简单说明。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0225", "zh": "作为初学者，讲述一个科幻短篇故事，请简单说明。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0226", "zh": "作为初学者，写一首关于春天的诗，请简单说明。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0227", "zh": "作为初学者，创作一个关于海洋冒险的童话，请简单说明。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0228", "zh": "作为初学者，解释光合作用的过程，请简单说明。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0229", "zh": "作为初学者，介绍黑洞的基本概念，请简单说明。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0230", "zh": "作为初学者，讲解牛顿三大定律，请简单说明。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0231", "zh": "作为初学者，介绍区块链技术的基本概念，请简单说明。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0232", "zh": "作为初学者，解释什么是开源软件，请简单说明。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0233", "zh": "作为初学者，介绍云计算的服务模式，请简单说明。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0234", "zh": "作为初学者，帮我写一份项目计划书，请简单说明。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0235", "zh": "作为初学者，介绍团队协作的沟通技巧，请简单说明。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0236", "zh": "作为初学者，分享时间管理的方法，请简单说明。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0237", "zh": "作为初学者，介绍水墨画的创作特点，请简单说明。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0238", "zh": "作为初学者，讲解交响乐的基本结构，请简单说明。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0239", "zh": "作为初学者，分享摄影构图的技巧，请简单说明。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0240", "zh": "如果有空的话，请给我讲一个关于友情的寓言故事，麻烦你了。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0241", "zh": "如果有空的话，解释一下什么是光合作用，用小学生能听懂的话，麻烦你了。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0242", "zh": "如果有空的话，写一段关于坚持学习的鼓励话语，麻烦你了。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0243", "zh": "如果有空的话，解释量子纠缠的基本原理，麻烦你了。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0244", "zh": "如果有空的话，介绍机器学习中交叉验证的作用，麻烦你了。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0245", "zh": "如果有空的话，讨论文献综述的写作结构，麻烦你了。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0246", "zh": "如果有空的话，写一篇关于丝绸之路历史的记叙文，麻烦你了。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0247", "zh": "如果有空的话，介绍唐朝的科举制度，麻烦你了。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0248", "zh": "如果有空的话，讲述长城修建的历史背景，麻烦你了。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0249", "zh": "如果有空的话，介绍中国的茶文化，麻烦你了。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0250", "zh": "如果有空的话，讲解春节的传统习俗，麻烦你了。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0251", "zh": "如果有空的话，介绍京剧脸谱的颜色含义，麻烦你了。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0252", "zh": "如果有空的话，帮我规划一次云南旅行，麻烦你了。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0253", "zh": "如果有空的话，介绍一道家常菜的做法，麻烦你了。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0254", "zh": "如果有空的话，分享一些提高睡眠质量的小技巧，麻烦你了。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0255", "zh": "如果有空的话，讲述一个科幻短篇故事，麻烦你了。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0256", "zh": "如果有空的话，写一首关于春天的诗，麻烦你了。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0257", "zh": "如果有空的话，创作一个关于海洋冒险的童话，麻烦你了。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0258", "zh": "如果有空的话，解释光合作用的过程，麻烦你了。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0259", "zh": "如果有空的话，介绍黑洞的基本概念，麻烦你了。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0260", "zh": "如果有空的话，讲解牛顿三大定律，麻烦你了。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0261", "zh": "如果有空的话，介绍区块链技术的基本概念，麻烦你了。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0262", "zh": "如果有空的话，解释什么是开源软件，麻烦你了。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0263", "zh": "如果有空的话，介绍云计算的服务模式，麻烦你了。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0264", "zh": "如果有空的话，帮我写一份项目计划书，麻烦你了。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0265", "zh": "如果有空的话，介绍团队协作的沟通技巧，麻烦你了。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0266", "zh": "如果有空的话，分享时间管理的方法，麻烦你了。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0267", "zh": "如果有空的话，介绍水墨画的创作特点，麻烦你了。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0268", "zh": "如果有空的话，讲解交响乐的基本结构，麻烦你了。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0269", "zh": "如果有空的话，分享摄影构图的技巧，麻烦你了。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0270", "zh": "我最近在学习，请给我讲一个关于友情的寓言故事，请指教。", "en": "Tell me a fable about friendship", "category": "教育", "source": "benign_template"}
+{"query_id": "b0271", "zh": "我最近在学习，解释一下什么是光合作用，用小学生能听懂的话，请指教。", "en": "Explain photosynthesis in simple terms for a child", "category": "教育", "source": "benign_template"}
+{"query_id": "b0272", "zh": "我最近在学习，写一段关于坚持学习的鼓励话语，请指教。", "en": "Write an encouraging passage about perseverance in learning", "category": "教育", "source": "benign_template"}
+{"query_id": "b0273", "zh": "我最近在学习，解释量子纠缠的基本原理，请指教。", "en": "Explain the basics of quantum entanglement", "category": "学术", "source": "benign_template"}
+{"query_id": "b0274", "zh": "我最近在学习，介绍机器学习中交叉验证的作用，请指教。", "en": "Introduce the role of cross-validation in machine learning", "category": "学术", "source": "benign_template"}
+{"query_id": "b0275", "zh": "我最近在学习，讨论文献综述的写作结构，请指教。", "en": "Discuss the structure of a literature review", "category": "学术", "source": "benign_template"}
+{"query_id": "b0276", "zh": "我最近在学习，写一篇关于丝绸之路历史的记叙文，请指教。", "en": "Write a narrative essay about the history of the Silk Road", "category": "历史", "source": "benign_template"}
+{"query_id": "b0277", "zh": "我最近在学习，介绍唐朝的科举制度，请指教。", "en": "Introduce the imperial examination system of the Tang Dynasty", "category": "历史", "source": "benign_template"}
+{"query_id": "b0278", "zh": "我最近在学习，讲述长城修建的历史背景，请指教。", "en": "Tell the historical background of the Great Wall's construction", "category": "历史", "source": "benign_template"}
+{"query_id": "b0279", "zh": "我最近在学习，介绍中国的茶文化，请指教。", "en": "Introduce Chinese tea culture", "category": "文化", "source": "benign_template"}
+{"query_id": "b0280", "zh": "我最近在学习，讲解春节的传统习俗，请指教。", "en": "Explain the traditional customs of the Spring Festival", "category": "文化", "source": "benign_template"}
+{"query_id": "b0281", "zh": "我最近在学习，介绍京剧脸谱的颜色含义，请指教。", "en": "Introduce the color meanings of Peking Opera masks", "category": "文化", "source": "benign_template"}
+{"query_id": "b0282", "zh": "我最近在学习，帮我规划一次云南旅行，请指教。", "en": "Help me plan a trip to Yunnan", "category": "生活", "source": "benign_template"}
+{"query_id": "b0283", "zh": "我最近在学习，介绍一道家常菜的做法，请指教。", "en": "Introduce how to cook a home-style dish", "category": "生活", "source": "benign_template"}
+{"query_id": "b0284", "zh": "我最近在学习，分享一些提高睡眠质量的小技巧，请指教。", "en": "Share some tips for improving sleep quality", "category": "生活", "source": "benign_template"}
+{"query_id": "b0285", "zh": "我最近在学习，讲述一个科幻短篇故事，请指教。", "en": "Tell a sci-fi short story", "category": "文学", "source": "benign_template"}
+{"query_id": "b0286", "zh": "我最近在学习，写一首关于春天的诗，请指教。", "en": "Write a poem about spring", "category": "文学", "source": "benign_template"}
+{"query_id": "b0287", "zh": "我最近在学习，创作一个关于海洋冒险的童话，请指教。", "en": "Create a fairy tale about an ocean adventure", "category": "文学", "source": "benign_template"}
+{"query_id": "b0288", "zh": "我最近在学习，解释光合作用的过程，请指教。", "en": "Explain the process of photosynthesis", "category": "科学", "source": "benign_template"}
+{"query_id": "b0289", "zh": "我最近在学习，介绍黑洞的基本概念，请指教。", "en": "Introduce the basic concepts of black holes", "category": "科学", "source": "benign_template"}
+{"query_id": "b0290", "zh": "我最近在学习，讲解牛顿三大定律，请指教。", "en": "Explain Newton's three laws of motion", "category": "科学", "source": "benign_template"}
+{"query_id": "b0291", "zh": "我最近在学习，介绍区块链技术的基本概念，请指教。", "en": "Introduce basic blockchain concepts", "category": "技术", "source": "benign_template"}
+{"query_id": "b0292", "zh": "我最近在学习，解释什么是开源软件，请指教。", "en": "Explain what open-source software is", "category": "技术", "source": "benign_template"}
+{"query_id": "b0293", "zh": "我最近在学习，介绍云计算的服务模式，请指教。", "en": "Introduce cloud computing service models", "category": "技术", "source": "benign_template"}
+{"query_id": "b0294", "zh": "我最近在学习，帮我写一份项目计划书，请指教。", "en": "Help me write a project proposal", "category": "职场", "source": "benign_template"}
+{"query_id": "b0295", "zh": "我最近在学习，介绍团队协作的沟通技巧，请指教。", "en": "Introduce team collaboration communication skills", "category": "职场", "source": "benign_template"}
+{"query_id": "b0296", "zh": "我最近在学习，分享时间管理的方法，请指教。", "en": "Share time management methods", "category": "职场", "source": "benign_template"}
+{"query_id": "b0297", "zh": "我最近在学习，介绍水墨画的创作特点，请指教。", "en": "Introduce the creative features of ink painting", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0298", "zh": "我最近在学习，讲解交响乐的基本结构，请指教。", "en": "Explain the basic structure of a symphony", "category": "艺术", "source": "benign_template"}
+{"query_id": "b0299", "zh": "我最近在学习，分享摄影构图的技巧，请指教。", "en": "Share photography composition tips", "category": "艺术", "source": "benign_template"}

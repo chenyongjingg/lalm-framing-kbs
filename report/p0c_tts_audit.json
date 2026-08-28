@@ -1,0 +1,14 @@
+{
+  "transcript_verify": {
+    "method": "transcript CER（可选本地 ASR 后端；cer_threshold 由 config 传入）",
+    "cer_threshold": 0.05,
+    "asr_backend": null,
+    "n_audio": 1800,
+    "status": "not_verified",
+    "reason": "纯本地无本地 ASR（config p0c.tts.asr 未配置）→ 转录逐字一致性未验证，如实披露，不计为已验证。A_s 声学差异由 TTS 音色实现（neutral=女声 Xiaoxiao / styled=男声 Yunxi），混入说话人+性别，非纯净韵律操纵（见 voice_confound 披露）。"
+  },
+  "voice_confound": {
+    "status": "disclosed",
+    "note": "P0-C 音频全部用 tts.voice=zh-CN-XiaoxiaoNeural（女声）；A_s 双音色操作化仅 P1-PILOT 使用（neutral=Xiaoxiao 女声 / styled=Yunxi 男声）。声学差异由 TTS 音色实现 → 差异存在但混入说话人+性别，非纯净韵律操纵；涉及 A_s 的结论须以该混杂披露为限。"
+  }
+}

@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{相关工作定位表（方法类型 × 成分归因 × 模态 × 模型覆盖 × 防御 × 泛化评估）}
+\label{tab:positioning}
+\begin{tabular}{lcccccc}
+\hline
+工作 & 方法类型 & 成分归因 & 模态 & 模型覆盖 & 防御 & 泛化评估 \\
+\hline
+PJ-Break & 攻击方法 & 单因子（delivery） & 音频 & LALM & - & - \\
+Omni-SafetyBench & 基准 & - & 音频+文本 & LALM & 静态一致性 & - \\
+StyleBreak & 攻击方法 & - & 音频 & LALM & - & - \\
+Cross-modal Info Check & 检测先驱 & - & 视觉+文本 & VLM & 双模态核对 & - \\
+Chen et al. (EMNLP 2025) & 检测 & - & 文本 & LLM & 置信度检测 & - \\
+Semantic Codebooks & 检测 & - & 文本 & LLM & 跨语言检测 & - \\
+\hline
+本文 & 归因+检测 & 全析因（E$_t$$\times$N$\times$R$\times$A$_s$） & 音频+文本 & 3 LALM+2 文本 & MSRF 四分支 & 跨攻击族 \\
+\hline
+\end{tabular}
+\end{table}

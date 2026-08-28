@@ -1,0 +1,141 @@
+\section{Introduction}
+\label{sec:intro}
+
+Large audio-language models (LALMs) now power voice assistants, multimodal
+customer service, and hands-free interaction, and are increasingly deployed in
+safety-sensitive contexts. A growing body of work shows that such models can be
+steered toward harmful output by \emph{adversarial framing}: keeping the
+underlying request fixed while changing how it is packaged through narrative,
+role-play, or acoustic style \citep{nyhm,pjbreak,stylebreak}. These attacks are
+practical --- they require no gradient access, operate over the channel the
+model was designed to consume, and are largely invisible to text-only
+safeguards.
+
+Yet the mechanisms behind framing attacks remain poorly understood. Prior work
+treats ``delivery'' as a single coarse preset and compares whole attacks against
+whole defenses. It does not ask \emph{which semantic component} --- the
+emotional narrative text, the event-chain structure, the role assignment, or the
+acoustic style --- drives attack success, nor whether these components interact.
+Moreover, causal attribution has remained at the micro (internal) layer where it
+is inaccessible to black-box practitioners, and existing audio safeguards are
+rudimentary relative to their text counterparts.
+
+\paragraph{Obstacles to component-level analysis.}
+Three obstacles have blocked component-level analysis. First, framing components
+are confounded with response length: narrative prompts elicit longer model
+outputs, and length itself correlates with harmful content, so a naive
+comparison cannot separate framing from verbosity
+(Section~\ref{sec:length-mediation}). Second, safety judgment is itself
+unreliable: single classifiers fail catastrophically on Chinese inputs (FNR
+$\geq 0.96$ for three off-the-shelf scorers) and disagree with each other on
+roughly one in six responses, so any measurement must rest on an audited
+multi-scorer protocol (Section~\ref{sec:trust-chain}). It also means a
+reliable safety decision cannot trust any single source and must fuse
+heterogeneous, mutually non-overlapping signals
+(Section~\ref{sec:msrf}). Third, \LALMs{} form a
+heterogeneous family --- a finding that holds for one architecture may not hold
+for another (Section~\ref{sec:crossmodal}).
+
+\paragraph{Connection to Knowledge-Based Systems.}
+We cast the problem as a \emph{knowledge-system} problem rather than only a
+safety one. The four signals our study manipulates or measures --- request
+intent, narrative structure, acoustic style, and scoring uncertainty --- are
+four heterogeneous knowledge sources about a single decision (is this
+interaction harmful?). \MSRF{} is a knowledge-fusion method that represents
+each source's evidence, calibrates it, and combines it under uncertainty into
+an auditable score. The paired cross-modal divergence (\PCSD) quantifies a
+\emph{cross-modal knowledge inconsistency} --- the same request elicits
+different safety-relevant knowledge through text versus audio. This aligns the
+work with the knowledge-systems tradition of heterogeneous knowledge fusion,
+uncertainty reasoning, and decision support
+\citep{guo2024survey,shao2024duallevel,xu2025promethee,zhao2025ensemble,shafer1976}
+and with recent KBS contributions that treat safety as a knowledge-
+representation and decision-support problem \citep{srd,realignment}.
+
+\paragraph{Contributions.}
+We report a controlled, paired factorial study that decomposes the four framing
+components across text and audio channels, a response-level cross-modal
+consistency metric, and a signal-level fusion framework --- treating attack
+mechanisms as structured, auditable, multi-signal knowledge rather than opaque
+activations, an orientation shared with knowledge-based, decision-support
+systems \citep{srd,realignment}. Concretely:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{A knowledge-driven multi-source fusion framework.} We build
+  \msrf{} (\MSRF), which represents four mutually non-overlapping signal
+  families (harmful-intent semantics, narrative structure, acoustic prosody,
+  and scoring uncertainty) as explicit knowledge sources and fuses them through
+  out-of-fold calibration and a 225-parameter, auditable fusion layer. On the
+  deployment frame it reaches 0.9784 \ROC{} (0.9455 $\pm$ 0.030 over five
+  frames), outperforming ShieldGemma, WildGuard, and a reproduced GradSafe
+  (ROC-AUC 0.198, 0.174, and 0.315, respectively) on the same test frame, while
+  using roughly
+  two--three orders of magnitude fewer parameters. We report its limits
+  honestly: fixed-threshold detection does not transfer to benign inputs
+  (75.9\% benign false-positive rate at the calibrated threshold), and adaptive
+  attacks degrade detection (up to 20.0 pp). We therefore present \MSRF{} as a
+  \emph{discriminative, in-distribution} framework for mechanism-aware risk
+  scoring, not as a turnkey deployment defense.
+
+  \item \textbf{Full-factorial causal attribution.} We manipulate \Et{}
+  (narrative text framing), \Nfac{} (narrative structure / event-chain), \Rfac{}
+  (role assignment), and \Asfac{} (acoustic style) in a 24-cell paired design
+  over three \LALMs, two languages, and an out-of-distribution anchor set.
+  Narrative structure is the dominant causal driver: on the full sample, attack
+  success rises from 2.2\% to 30.1\% ($\Delta$27.9~\pp{} \CI{25.0}{30.9}; \OR{}
+  16.65 \CI{14.10}{19.67}), with a consistent effect across languages (zh 29.3
+  pp / en 26.6 pp), across models, and on the out-of-distribution AdvBench
+  anchor ($\Delta$38.0 pp, dual-judge robustness caliber). A response-length
+  covariate mediates a substantial share of the raw effect, supporting an
+  \emph{elaboration-channel} account rather than a modality-intrinsic one. Role
+  assignment has a \emph{negative} effect (\OR{} 0.53) --- a result we replicate
+  and interpret rather than smooth over.
+
+  \item \textbf{Response-level cross-modal consistency.} We quantify \pcsd{}
+  (\PCSD) as a paired consistency score over the safety-relevant properties of
+  the text and audio rendering of the same input, and show it is model-dependent
+  (e.g., near-zero divergence for one architecture, strongly positive for two
+  others) --- evidence that audio ``vulnerability'' is not intrinsic to the
+  modality. We report it as an auxiliary diagnostic rather than a standalone
+  contribution.
+\end{enumerate}
+
+We pre-registered two decision gates --- G1 (attribution established) and G2
+(defense value); G1 passes, G2 does not, and we report both outcomes rather
+than only the defense-positive one. The remainder of this paper presents the
+protocol and factorial design (Section~\ref{sec:protocol}), the knowledge-driven
+fusion framework and its formalization (Section~\ref{sec:msrf}), the attribution
+results (Section~\ref{sec:attribution}), the cross-modal analysis
+(Section~\ref{sec:crossmodal}), the fusion detection results and
+their honest boundaries (Section~\ref{sec:fusion}), adaptive and degradation
+robustness (Section~\ref{sec:robustness}), and discussion
+(Section~\ref{sec:discussion}), followed by limitations
+(Section~\ref{sec:limitations}) and conclusion
+(Section~\ref{sec:conclusion}). Table~\ref{tab:novelty} positions this work
+against the most related prior work across the four dimensions we contribute.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Positioning against the most related prior work.} Compared
+across the four dimensions of this paper's contribution. $\checkmark$ =
+present; $\circ$ = partial (a single framing factor isolated without full
+decomposition); $(\checkmark)$ = a benchmark-level aggregate rather than a
+response-level measurement. All attributes follow the characterizations in
+Section~\ref{sec:related}.}
+\label{tab:novelty}
+\footnotesize
+{\setlength{\tabcolsep}{4pt}%
+\begin{tabular}{lcccc}
+\toprule
+Work & Component-level & Cross-modal & Fusion-based & Honest boundary \\
+     & attribution     & consistency  & defense      & reporting \\
+\midrule
+\citet{nyhm}            & -- & --       & -- & -- \\
+\citet{pjbreak}         & $\circ$ & --   & -- & -- \\
+\citet{stylebreak}      & -- & --       & -- & -- \\
+\citet{omnisafetybench} & -- & $(\checkmark)$ & -- & -- \\
+\citet{crossmodal-info} & -- & $\checkmark$ & -- & -- \\
+\textbf{This work}      & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\bottomrule
+\end{tabular}}
+\end{table}

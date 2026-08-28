@@ -1,0 +1,248 @@
+{
+  "stage": "S20c",
+  "date": "2026-08-14",
+  "purpose": "E4B 文本 dual_judge 口径跨生成器复现：S20 跨生成器当时仅 qwen32单腿，S20b 补齐 E4B 文本 judge 腿后，在 R2 共识口径上双重复现",
+  "e4b_text_effects": {
+    "E_t": {
+      "dual": {
+        "n0": 1452,
+        "n1": 1460,
+        "pos0": 0.0503,
+        "pos1": 0.0932,
+        "delta": 0.0429,
+        "ci95": [
+          0.0197,
+          0.0674
+        ],
+        "name": "e4b_dual"
+      },
+      "judge_big": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.0444,
+        "pos1": 0.0939,
+        "delta": 0.0494,
+        "ci95": [
+          0.0278,
+          0.0717
+        ],
+        "name": "e4b_judge_big"
+      },
+      "judge_small": {
+        "n0": 1789,
+        "n1": 1792,
+        "pos0": 0.2258,
+        "pos1": 0.2439,
+        "delta": 0.018,
+        "ci95": [
+          -0.0176,
+          0.0551
+        ],
+        "name": "e4b_judge_small"
+      },
+      "qwen32": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.05,
+        "pos1": 0.1628,
+        "delta": 0.1128,
+        "ci95": [
+          0.0822,
+          0.1456
+        ],
+        "name": "e4b_qwen32"
+      }
+    },
+    "N": {
+      "dual": {
+        "n0": 1484,
+        "n1": 1428,
+        "pos0": 0.0425,
+        "pos1": 0.1022,
+        "delta": 0.0598,
+        "ci95": [
+          0.038,
+          0.084
+        ],
+        "name": "e4b_dual"
+      },
+      "judge_big": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.0417,
+        "pos1": 0.0967,
+        "delta": 0.055,
+        "ci95": [
+          0.0355,
+          0.0767
+        ],
+        "name": "e4b_judge_big"
+      },
+      "judge_small": {
+        "n0": 1783,
+        "n1": 1798,
+        "pos0": 0.1974,
+        "pos1": 0.272,
+        "delta": 0.0745,
+        "ci95": [
+          0.0529,
+          0.098
+        ],
+        "name": "e4b_judge_small"
+      },
+      "qwen32": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.0767,
+        "pos1": 0.1361,
+        "delta": 0.0594,
+        "ci95": [
+          0.0406,
+          0.0783
+        ],
+        "name": "e4b_qwen32"
+      }
+    },
+    "R": {
+      "dual": {
+        "n0": 1533,
+        "n1": 1379,
+        "pos0": 0.0698,
+        "pos1": 0.074,
+        "delta": 0.0042,
+        "ci95": [
+          -0.0142,
+          0.0225
+        ],
+        "name": "e4b_dual"
+      },
+      "judge_big": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.0739,
+        "pos1": 0.0644,
+        "delta": -0.0094,
+        "ci95": [
+          -0.025,
+          0.0044
+        ],
+        "name": "e4b_judge_big"
+      },
+      "judge_small": {
+        "n0": 1785,
+        "n1": 1796,
+        "pos0": 0.1882,
+        "pos1": 0.2812,
+        "delta": 0.0929,
+        "ci95": [
+          0.0648,
+          0.1227
+        ],
+        "name": "e4b_judge_small"
+      },
+      "qwen32": {
+        "n0": 1800,
+        "n1": 1800,
+        "pos0": 0.12,
+        "pos1": 0.0928,
+        "delta": -0.0272,
+        "ci95": [
+          -0.0456,
+          -0.01
+        ],
+        "name": "e4b_qwen32"
+      }
+    }
+  },
+  "cross_generator_agreement": {
+    "dual": {
+      "n_pairs": 2587,
+      "agreement": 0.9405,
+      "pass_0_80": true
+    },
+    "judge_big": {
+      "n_pairs": 3600,
+      "agreement": 0.9161,
+      "pass_0_80": true
+    },
+    "judge_small": {
+      "n_pairs": 3557,
+      "agreement": 0.8147,
+      "pass_0_80": true
+    },
+    "qwen32": {
+      "n_pairs": 3600,
+      "agreement": 0.8878,
+      "pass_0_80": true
+    }
+  },
+  "sign_alignment": {
+    "E_t": {
+      "dual": {
+        "e2b_delta": 0.0275,
+        "e4b_delta": 0.0429,
+        "same_sign": true
+      },
+      "judge_big": {
+        "e2b_delta": 0.0361,
+        "e4b_delta": 0.0494,
+        "same_sign": true
+      },
+      "judge_small": {
+        "e2b_delta": -0.0066,
+        "e4b_delta": 0.018,
+        "same_sign": false
+      },
+      "qwen32": {
+        "e2b_delta": 0.0961,
+        "e4b_delta": 0.1128,
+        "same_sign": true
+      }
+    },
+    "N": {
+      "dual": {
+        "e2b_delta": 0.0561,
+        "e4b_delta": 0.0598,
+        "same_sign": true
+      },
+      "judge_big": {
+        "e2b_delta": 0.0528,
+        "e4b_delta": 0.055,
+        "same_sign": true
+      },
+      "judge_small": {
+        "e2b_delta": 0.0438,
+        "e4b_delta": 0.0745,
+        "same_sign": true
+      },
+      "qwen32": {
+        "e2b_delta": 0.0506,
+        "e4b_delta": 0.0594,
+        "same_sign": true
+      }
+    },
+    "R": {
+      "dual": {
+        "e2b_delta": -0.0066,
+        "e4b_delta": 0.0042,
+        "same_sign": false
+      },
+      "judge_big": {
+        "e2b_delta": -0.0172,
+        "e4b_delta": -0.0094,
+        "same_sign": true
+      },
+      "judge_small": {
+        "e2b_delta": 0.0832,
+        "e4b_delta": 0.0929,
+        "same_sign": true
+      },
+      "qwen32": {
+        "e2b_delta": -0.0328,
+        "e4b_delta": -0.0272,
+        "same_sign": true
+      }
+    }
+  },
+  "note": "E4B-dual 侧 N/E_t 显著同向 → 协议 RQ 效应在两次独立生成 + 共识口径双重复现；R 符号分裂（长度混杂）亦跨生成器复现。"
+}

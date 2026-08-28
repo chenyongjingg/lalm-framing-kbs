@@ -1,0 +1,61 @@
+{
+  "stage": "S17",
+  "date": "2026-08-15",
+  "purpose": "E4B 音频跨族一致率：qwen32 强锚预评分 vs 权威 dual_judge 共识，判据 ≥0.80，对照 S9 音频 120 样本 0.8427",
+  "n_audio_meta": 7125,
+  "n_judge_big": 7070,
+  "n_judge_small": 7070,
+  "n_qwen32": 7116,
+  "n_dual_consensus": 5536,
+  "n_overlap": 5536,
+  "n_agree": 4931,
+  "overall_agreement": 0.8907,
+  "criterion": 0.8,
+  "passed": true,
+  "s9_audio_120_baseline": 0.8427,
+  "vs_s9_baseline": 0.048,
+  "strata": {
+    "by_E_t": {
+      "0": {
+        "n": 2806,
+        "agree": 2619,
+        "rate": 0.9334
+      },
+      "1": {
+        "n": 2730,
+        "agree": 2312,
+        "rate": 0.8469
+      }
+    },
+    "by_template": {
+      "0": {
+        "n": 1794,
+        "agree": 1603,
+        "rate": 0.8935
+      },
+      "1": {
+        "n": 1811,
+        "agree": 1615,
+        "rate": 0.8918
+      },
+      "2": {
+        "n": 1931,
+        "agree": 1713,
+        "rate": 0.8871
+      }
+    },
+    "by_label": {
+      "0": {
+        "n": 4231,
+        "agree": 3691,
+        "rate": 0.8724
+      },
+      "1": {
+        "n": 1305,
+        "agree": 1240,
+        "rate": 0.9502
+      }
+    }
+  },
+  "disclosure": "一致性在权威 dual_judge 共识（big==small）与 qwen32 均非空的重叠行上计算；不一致格与单判非空格排除。qwen32 覆盖 7116/当前 audio 全量（S17a catch-up 后）。E4B 仍在生成至 10800，最终权威评分以 capstone 为准。"
+}

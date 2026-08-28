@@ -1,0 +1,171 @@
+{
+  "stage": "S1",
+  "n_zh_cells": 60,
+  "n_responses": 120,
+  "scorers": [
+    "harmbench",
+    "strongreject",
+    "judge_big",
+    "judge_small",
+    "cross_check",
+    "shieldgemma"
+  ],
+  "seed": 20260812,
+  "dry": false,
+  "smoke": false,
+  "pairwise": [
+    {
+      "scorer_a": "harmbench",
+      "scorer_b": "strongreject",
+      "n_valid": 120,
+      "agreement": 0.8166666666666667,
+      "cohens_kappa": 0.6333333333333333
+    },
+    {
+      "scorer_a": "harmbench",
+      "scorer_b": "judge_big",
+      "n_valid": 120,
+      "agreement": 0.725,
+      "cohens_kappa": 0.44999999999999996
+    },
+    {
+      "scorer_a": "harmbench",
+      "scorer_b": "judge_small",
+      "n_valid": 118,
+      "agreement": 0.788135593220339,
+      "cohens_kappa": 0.576271186440678
+    },
+    {
+      "scorer_a": "harmbench",
+      "scorer_b": "cross_check",
+      "n_valid": 119,
+      "agreement": 0.6722689075630253,
+      "cohens_kappa": 0.3480825958702066
+    },
+    {
+      "scorer_a": "harmbench",
+      "scorer_b": "shieldgemma",
+      "n_valid": 120,
+      "agreement": 0.44166666666666665,
+      "cohens_kappa": -0.1166666666666667
+    },
+    {
+      "scorer_a": "strongreject",
+      "scorer_b": "judge_big",
+      "n_valid": 120,
+      "agreement": 0.6416666666666667,
+      "cohens_kappa": 0.35143288084464563
+    },
+    {
+      "scorer_a": "strongreject",
+      "scorer_b": "judge_small",
+      "n_valid": 118,
+      "agreement": 0.847457627118644,
+      "cohens_kappa": 0.6982954545454545
+    },
+    {
+      "scorer_a": "strongreject",
+      "scorer_b": "cross_check",
+      "n_valid": 119,
+      "agreement": 0.7899159663865546,
+      "cohens_kappa": 0.507531865585168
+    },
+    {
+      "scorer_a": "strongreject",
+      "scorer_b": "shieldgemma",
+      "n_valid": 120,
+      "agreement": 0.3416666666666667,
+      "cohens_kappa": -0.09166282818977427
+    },
+    {
+      "scorer_a": "judge_big",
+      "scorer_b": "judge_small",
+      "n_valid": 118,
+      "agreement": 0.7203389830508474,
+      "cohens_kappa": 0.42785777255362906
+    },
+    {
+      "scorer_a": "judge_big",
+      "scorer_b": "cross_check",
+      "n_valid": 119,
+      "agreement": 0.44537815126050423,
+      "cohens_kappa": 0.14611872146118723
+    },
+    {
+      "scorer_a": "judge_big",
+      "scorer_b": "shieldgemma",
+      "n_valid": 120,
+      "agreement": 0.6833333333333333,
+      "cohens_kappa": -0.051175656984785114
+    },
+    {
+      "scorer_a": "judge_small",
+      "scorer_b": "cross_check",
+      "n_valid": 117,
+      "agreement": 0.6581196581196581,
+      "cohens_kappa": 0.33447098976109213
+    },
+    {
+      "scorer_a": "judge_small",
+      "scorer_b": "shieldgemma",
+      "n_valid": 118,
+      "agreement": 0.4661016949152542,
+      "cohens_kappa": -0.11789473684210508
+    },
+    {
+      "scorer_a": "cross_check",
+      "scorer_b": "shieldgemma",
+      "n_valid": 119,
+      "agreement": 0.13445378151260504,
+      "cohens_kappa": -0.10195091252359982
+    }
+  ],
+  "dual_judge": {
+    "dispute_rate": 0.29166666666666663,
+    "n_agreed": 85,
+    "n": 120
+  },
+  "dawid_skene": {
+    "converged": false,
+    "n_iter": 100,
+    "per_scorer": {
+      "harmbench": {
+        "sensitivity": 0.7642,
+        "specificity": 0.9694,
+        "error_rate": 0.1332
+      },
+      "strongreject": {
+        "sensitivity": 0.9637,
+        "specificity": 1.0,
+        "error_rate": 0.0181
+      },
+      "judge_big": {
+        "sensitivity": 0.4298,
+        "specificity": 1.0,
+        "error_rate": 0.2851
+      },
+      "judge_small": {
+        "sensitivity": 0.7488,
+        "specificity": 1.0,
+        "error_rate": 0.1256
+      },
+      "cross_check": {
+        "sensitivity": 1.0,
+        "specificity": 0.4859,
+        "error_rate": 0.257
+      },
+      "shieldgemma": {
+        "sensitivity": 0.013,
+        "specificity": 0.8612,
+        "error_rate": 0.5629
+      }
+    },
+    "latent_pos_rate": 0.6333
+  },
+  "criterion": {
+    "n_dual_consensus": 85,
+    "agreement_dual_vs_hetero": 0.5059,
+    "pass_0_80": false,
+    "verdict": "评分器敏感——zh 仅用 dual_judge"
+  }
+}

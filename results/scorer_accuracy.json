@@ -1,0 +1,106 @@
+{
+  "generated_by": "paper/_make_scorer_accuracy.py",
+  "generated_at": "2026-08-28T11:27:49.296634+00:00",
+  "source": "gates/P0_scorers.json (P0 scorer gate, pipeline-generated)",
+  "cross_checked_against": "report/scorer_validation_on_public_benchmarks.md",
+  "ground_truth": "human-annotated (P0 public-benchmark validation, 2026-08-11)",
+  "english_public_benchmark": {
+    "benchmark": "JailBench (JalmBench text_behaviors val set); human-annotated",
+    "note": "formal validation set; gemma/judge_small drop 6 rows (n=596)",
+    "harmbench": {
+      "acc": 0.8239,
+      "recall": 0.9634,
+      "fpr": 0.2918,
+      "fnr": 0.0366,
+      "n": 602,
+      "n_dropped": 0
+    },
+    "strongreject": {
+      "acc": 0.7342,
+      "recall": 0.7766,
+      "fpr": 0.3009,
+      "fnr": 0.2234,
+      "n": 602,
+      "n_dropped": 0
+    },
+    "gemma": {
+      "acc": 0.7634,
+      "recall": 0.8561,
+      "fpr": 0.3138,
+      "fnr": 0.1439,
+      "n": 596,
+      "n_dropped": 6
+    },
+    "judge_big": {
+      "acc": 0.8555,
+      "recall": 0.9377,
+      "fpr": 0.2128,
+      "fnr": 0.0623,
+      "n": 602,
+      "n_dropped": 0
+    },
+    "judge_small": {
+      "acc": 0.7634,
+      "recall": 0.8561,
+      "fpr": 0.3138,
+      "fnr": 0.1439,
+      "n": 596,
+      "n_dropped": 6
+    }
+  },
+  "chinese_probe": {
+    "note": "disclosure metric only: request-as-input, empty generation, 150 benign + 150 harmful; formal validation is the English benchmark above",
+    "harmbench": {
+      "acc": 0.5,
+      "fpr": 0.0,
+      "fnr": 1.0,
+      "n_benign": 150,
+      "n_harmful": 150
+    },
+    "strongreject": {
+      "acc": 0.3467,
+      "fpr": 0.3133,
+      "fnr": 0.9933,
+      "n_benign": 150,
+      "n_harmful": 150
+    },
+    "gemma": {
+      "acc": 0.4367,
+      "fpr": 0.1667,
+      "fnr": 0.96,
+      "n_benign": 150,
+      "n_harmful": 150
+    },
+    "dual_judge": {
+      "acc": 0.8533,
+      "fpr": 0.0,
+      "fnr": 0.2933,
+      "n_benign": 150,
+      "n_harmful": 150
+    }
+  },
+  "dual_judge": {
+    "agreement_rate": 0.8384,
+    "n": 198,
+    "dispute_rate": 0.1616
+  },
+  "cross_validation": {
+    "cross_check": {
+      "acc": 0.6312,
+      "recall": 0.9927,
+      "fpr": 0.6687,
+      "fnr": 0.0073,
+      "n": 602,
+      "n_dropped": 0
+    }
+  },
+  "quantization": {
+    "harmbench": "8bit (LLM.int8; v6.5.3 死锁修复, 原4bit)",
+    "strongreject": "bf16 (Gemma-4-E4B-it; 官方 QAT 404 → BF16 直载)",
+    "gemma_judge": "bf16 (Gemma-4-E2B-it; 官方 QAT 404 → BF16 直载)",
+    "judge_big": "bf16 (Gemma-4-E4B-it; 官方 QAT 404 → BF16 直载)",
+    "judge_small": "bf16 (Gemma-4-E2B-it; 官方 QAT 404 → BF16 直载)",
+    "cross_check": "bf16 (Qwen2.5-3B-Instruct; 异构交叉验证, 不参与主推断)",
+    "note": "v6.5 §0 量化建议统一官方 QAT 4-bit；google/gemma-4-E4B-it-qat / -E2B-it-qat 仓库 404 实测不存在 → 按协议加载失败 2 次即放弃 → BF16 直载并披露"
+  }
+}

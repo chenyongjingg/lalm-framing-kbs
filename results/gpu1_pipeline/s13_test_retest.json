@@ -1,0 +1,50 @@
+{
+  "stage": "S13",
+  "date": "2026-08-14",
+  "n_sampled": 300,
+  "sampling": "按 (E_t, template) 轮转确定性抽样（E2B 响应）",
+  "test_retest": {
+    "qwen32": {
+      "n": 300,
+      "self_agreement": 1.0,
+      "kappa": 1.0,
+      "kappa_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_flips": 0,
+      "pass_0_95": true,
+      "verdict": "稳定"
+    },
+    "judge_small": {
+      "n": 300,
+      "self_agreement": 1.0,
+      "kappa": 1.0,
+      "kappa_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_flips": 0,
+      "pass_0_95": true,
+      "verdict": "稳定"
+    },
+    "judge_big": {
+      "n": 300,
+      "self_agreement": 1.0,
+      "kappa": 1.0,
+      "kappa_ci95": [
+        1.0,
+        1.0
+      ],
+      "n_flips": 0,
+      "pass_0_95": true,
+      "verdict": "稳定"
+    },
+    "cross_family_on_sample": {
+      "n": 204,
+      "agreement_dual_vs_qwen32": 0.9069,
+      "pass_0_80": true
+    }
+  },
+  "note": "test-retest 自一致率锚定跨族一致率的噪声上限：评分器自身不稳定则一致率部分来自噪声。≥0.95 表明跨族一致率主要反映评分器间真实差异。"
+}

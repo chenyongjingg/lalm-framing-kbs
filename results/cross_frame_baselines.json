@@ -1,0 +1,485 @@
+{
+  "purpose": "跨 5 个独立 GroupShuffleSplit 测试帧的外部基线 ROC（纯 CPU 复评既有分数，零新推理）",
+  "method": "每帧 te_idx 取自 msrf_evaluation.json seed_detail；ShieldGemma/WildGuard 用 responses/P2B 全量 16200 打分按 idx 对齐；GradSafe 代理每帧训练子集拟合、测试子集评分（v6.6.1 无泄漏口径）；融合指标直接复用 multi_frame_roc.json。",
+  "validation": {
+    "matched": true,
+    "seed0_ref": {
+      "shieldgemma": 0.19831213439559847,
+      "wildguard": 0.17374757551638606,
+      "gradsafe_proxy": 0.9652352232070414,
+      "gradsafe_real": 0.31521281363738224
+    },
+    "seed0_ours": {
+      "shieldgemma": 0.1983,
+      "wildguard": 0.1737,
+      "gradsafe_proxy": 0.9652,
+      "gradsafe_real": 0.3152
+    },
+    "diff": {
+      "shieldgemma": 0.0,
+      "wildguard": 0.0,
+      "gradsafe_proxy": 0.0,
+      "gradsafe_real": 0.0
+    }
+  },
+  "n_all": 16200,
+  "sg_corrupt": 0,
+  "sg_invalid": 0,
+  "wg_corrupt": 0,
+  "wg_invalid": 0,
+  "frames": [
+    {
+      "seed": 20260811,
+      "deployment_frame": false,
+      "test_n": 3863,
+      "te_pos_rate": 0.036,
+      "fusion": {
+        "roc_auc": 0.9784,
+        "pr_auc": 0.6119,
+        "tpr_at_fpr5": 0.8345,
+        "ece": 0.0299,
+        "best_lr": "5e-05",
+        "test_n": 3863,
+        "deployment_frame": true
+      },
+      "shieldgemma": {
+        "n_eval": 3863,
+        "metrics": {
+          "auprc": 0.1733,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8799,
+          "n_pos": 139,
+          "n_neg": 3724
+        },
+        "roc_auc": 0.1983,
+        "roc_ci": [
+          0.1582,
+          0.1983,
+          0.2375
+        ],
+        "n_pos": 139
+      },
+      "wildguard": {
+        "n_eval": 3863,
+        "metrics": {
+          "auprc": 0.1552,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8926,
+          "n_pos": 139,
+          "n_neg": 3724
+        },
+        "roc_auc": 0.1737,
+        "roc_ci": [
+          0.1339,
+          0.1737,
+          0.2113
+        ],
+        "n_pos": 139
+      },
+      "gradsafe_proxy": {
+        "n_eval": 3863,
+        "metrics": {
+          "auprc": 0.5998,
+          "tpr_at_fpr5": 0.6403,
+          "benign_fpr": 0.1079,
+          "ece": 0.0857,
+          "n_pos": 139,
+          "n_neg": 3724
+        },
+        "roc_auc": 0.9652,
+        "roc_ci": [
+          0.9568,
+          0.9652,
+          0.9723
+        ],
+        "n_pos": 139
+      },
+      "gradsafe_real": {
+        "n_eval": 3863,
+        "metrics": {
+          "auprc": 0.0239,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.9989,
+          "ece": 0.1388,
+          "n_pos": 139,
+          "n_neg": 3724
+        },
+        "roc_auc": 0.3152,
+        "roc_ci": [
+          0.2683,
+          0.3152,
+          0.368
+        ],
+        "n_pos": 139
+      }
+    },
+    {
+      "seed": 20260812,
+      "deployment_frame": false,
+      "test_n": 2198,
+      "te_pos_rate": 0.2261,
+      "fusion": {
+        "roc_auc": 0.8909,
+        "pr_auc": 0.6804,
+        "tpr_at_fpr5": 0.4608,
+        "ece": 0.0318,
+        "best_lr": "0.0003",
+        "test_n": 2198,
+        "deployment_frame": false
+      },
+      "shieldgemma": {
+        "n_eval": 2198,
+        "metrics": {
+          "auprc": 0.4376,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.6765,
+          "n_pos": 497,
+          "n_neg": 1701
+        },
+        "roc_auc": 0.3718,
+        "roc_ci": [
+          0.35,
+          0.3718,
+          0.3937
+        ],
+        "n_pos": 497
+      },
+      "wildguard": {
+        "n_eval": 2198,
+        "metrics": {
+          "auprc": 0.5489,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.8289,
+          "ece": 0.6415,
+          "n_pos": 497,
+          "n_neg": 1701
+        },
+        "roc_auc": 0.502,
+        "roc_ci": [
+          0.4836,
+          0.502,
+          0.521
+        ],
+        "n_pos": 497
+      },
+      "gradsafe_proxy": {
+        "n_eval": 2198,
+        "metrics": {
+          "auprc": 0.6493,
+          "tpr_at_fpr5": 0.3602,
+          "benign_fpr": 0.2516,
+          "ece": 0.0666,
+          "n_pos": 497,
+          "n_neg": 1701
+        },
+        "roc_auc": 0.8582,
+        "roc_ci": [
+          0.8416,
+          0.8582,
+          0.8731
+        ],
+        "n_pos": 497
+      },
+      "gradsafe_real": {
+        "n_eval": 0,
+        "note": "真实 GradSafe 仅 seed0 帧有推理产物；跨帧需 GPU 重推理（待 P2-C 完成后排队）"
+      }
+    },
+    {
+      "seed": 20260813,
+      "deployment_frame": false,
+      "test_n": 3323,
+      "te_pos_rate": 0.059,
+      "fusion": {
+        "roc_auc": 0.9447,
+        "pr_auc": 0.475,
+        "tpr_at_fpr5": 0.6071,
+        "ece": 0.0094,
+        "best_lr": "0.0003",
+        "test_n": 3323,
+        "deployment_frame": false
+      },
+      "shieldgemma": {
+        "n_eval": 3323,
+        "metrics": {
+          "auprc": 0.2435,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8212,
+          "n_pos": 196,
+          "n_neg": 3127
+        },
+        "roc_auc": 0.2754,
+        "roc_ci": [
+          0.2402,
+          0.2754,
+          0.3111
+        ],
+        "n_pos": 196
+      },
+      "wildguard": {
+        "n_eval": 3323,
+        "metrics": {
+          "auprc": 0.249,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8038,
+          "n_pos": 196,
+          "n_neg": 3127
+        },
+        "roc_auc": 0.2898,
+        "roc_ci": [
+          0.2553,
+          0.2898,
+          0.3272
+        ],
+        "n_pos": 196
+      },
+      "gradsafe_proxy": {
+        "n_eval": 3323,
+        "metrics": {
+          "auprc": 0.366,
+          "tpr_at_fpr5": 0.4082,
+          "benign_fpr": 0.2427,
+          "ece": 0.0552,
+          "n_pos": 196,
+          "n_neg": 3127
+        },
+        "roc_auc": 0.9076,
+        "roc_ci": [
+          0.8942,
+          0.9076,
+          0.92
+        ],
+        "n_pos": 196
+      },
+      "gradsafe_real": {
+        "n_eval": 0,
+        "note": "真实 GradSafe 仅 seed0 帧有推理产物；跨帧需 GPU 重推理（待 P2-C 完成后排队）"
+      }
+    },
+    {
+      "seed": 20260814,
+      "deployment_frame": false,
+      "test_n": 4242,
+      "te_pos_rate": 0.0648,
+      "fusion": {
+        "roc_auc": 0.9667,
+        "pr_auc": 0.7015,
+        "tpr_at_fpr5": 0.7891,
+        "ece": 0.0398,
+        "best_lr": "5e-05",
+        "test_n": 4242,
+        "deployment_frame": false
+      },
+      "shieldgemma": {
+        "n_eval": 4242,
+        "metrics": {
+          "auprc": 0.5002,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.9294,
+          "ece": 0.8692,
+          "n_pos": 275,
+          "n_neg": 3967
+        },
+        "roc_auc": 0.5007,
+        "roc_ci": [
+          0.4842,
+          0.5007,
+          0.515
+        ],
+        "n_pos": 275
+      },
+      "wildguard": {
+        "n_eval": 4242,
+        "metrics": {
+          "auprc": 0.5279,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.9153,
+          "ece": 0.856,
+          "n_pos": 275,
+          "n_neg": 3967
+        },
+        "roc_auc": 0.5351,
+        "roc_ci": [
+          0.5264,
+          0.5351,
+          0.5425
+        ],
+        "n_pos": 275
+      },
+      "gradsafe_proxy": {
+        "n_eval": 4242,
+        "metrics": {
+          "auprc": 0.6073,
+          "tpr_at_fpr5": 0.6691,
+          "benign_fpr": 0.2102,
+          "ece": 0.078,
+          "n_pos": 275,
+          "n_neg": 3967
+        },
+        "roc_auc": 0.9508,
+        "roc_ci": [
+          0.9425,
+          0.9508,
+          0.9585
+        ],
+        "n_pos": 275
+      },
+      "gradsafe_real": {
+        "n_eval": 0,
+        "note": "真实 GradSafe 仅 seed0 帧有推理产物；跨帧需 GPU 重推理（待 P2-C 完成后排队）"
+      }
+    },
+    {
+      "seed": 20260815,
+      "deployment_frame": false,
+      "test_n": 3149,
+      "te_pos_rate": 0.0854,
+      "fusion": {
+        "roc_auc": 0.947,
+        "pr_auc": 0.5555,
+        "tpr_at_fpr5": 0.5539,
+        "ece": 0.0182,
+        "best_lr": "0.001",
+        "test_n": 3149,
+        "deployment_frame": false
+      },
+      "shieldgemma": {
+        "n_eval": 3149,
+        "metrics": {
+          "auprc": 0.332,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8412,
+          "n_pos": 269,
+          "n_neg": 2880
+        },
+        "roc_auc": 0.3263,
+        "roc_ci": [
+          0.295,
+          0.3263,
+          0.3566
+        ],
+        "n_pos": 269
+      },
+      "wildguard": {
+        "n_eval": 3149,
+        "metrics": {
+          "auprc": 0.3793,
+          "tpr_at_fpr5": 0.0,
+          "benign_fpr": 0.0,
+          "ece": 0.8231,
+          "n_pos": 269,
+          "n_neg": 2880
+        },
+        "roc_auc": 0.3827,
+        "roc_ci": [
+          0.3538,
+          0.3827,
+          0.4111
+        ],
+        "n_pos": 269
+      },
+      "gradsafe_proxy": {
+        "n_eval": 3149,
+        "metrics": {
+          "auprc": 0.4524,
+          "tpr_at_fpr5": 0.4126,
+          "benign_fpr": 0.2316,
+          "ece": 0.0345,
+          "n_pos": 269,
+          "n_neg": 2880
+        },
+        "roc_auc": 0.9128,
+        "roc_ci": [
+          0.901,
+          0.9128,
+          0.924
+        ],
+        "n_pos": 269
+      },
+      "gradsafe_real": {
+        "n_eval": 0,
+        "note": "真实 GradSafe 仅 seed0 帧有推理产物；跨帧需 GPU 重推理（待 P2-C 完成后排队）"
+      }
+    }
+  ],
+  "summary": {
+    "n_frames": 5,
+    "fusion_wins_every_frame": true,
+    "best_baseline_per_frame": [
+      {
+        "seed": 20260811,
+        "best_key": "gradsafe_proxy",
+        "best_roc": 0.9652
+      },
+      {
+        "seed": 20260812,
+        "best_key": "gradsafe_proxy",
+        "best_roc": 0.8582
+      },
+      {
+        "seed": 20260813,
+        "best_key": "gradsafe_proxy",
+        "best_roc": 0.9076
+      },
+      {
+        "seed": 20260814,
+        "best_key": "gradsafe_proxy",
+        "best_roc": 0.9508
+      },
+      {
+        "seed": 20260815,
+        "best_key": "gradsafe_proxy",
+        "best_roc": 0.9128
+      }
+    ],
+    "margins": [
+      {
+        "seed": 20260811,
+        "fusion_roc": 0.9784,
+        "best_baseline_roc": 0.9652,
+        "best_key": "gradsafe_proxy",
+        "margin": 0.0132000000000001
+      },
+      {
+        "seed": 20260812,
+        "fusion_roc": 0.8909,
+        "best_baseline_roc": 0.8582,
+        "best_key": "gradsafe_proxy",
+        "margin": 0.03270000000000006
+      },
+      {
+        "seed": 20260813,
+        "fusion_roc": 0.9447,
+        "best_baseline_roc": 0.9076,
+        "best_key": "gradsafe_proxy",
+        "margin": 0.03710000000000002
+      },
+      {
+        "seed": 20260814,
+        "fusion_roc": 0.9667,
+        "best_baseline_roc": 0.9508,
+        "best_key": "gradsafe_proxy",
+        "margin": 0.015900000000000025
+      },
+      {
+        "seed": 20260815,
+        "fusion_roc": 0.947,
+        "best_baseline_roc": 0.9128,
+        "best_key": "gradsafe_proxy",
+        "margin": 0.03420000000000001
+      }
+    ]
+  },
+  "honest_caveats": [
+    "PR-AUC 依赖各帧正例率（pos_rate 逐帧披露）；跨帧对比以 ROC-AUC 与 TPR@FPR5 为主。",
+    "GradSafe 代理与 MSRF 共用分支特征空间，非独立开源分类器，论文须与真实推理基线区分标注。",
+    "GradSafe 真实仅 seed0 帧有产物（0.3152）；跨帧未测，论文不得做真实 GradSafe 的跨帧断言。",
+    "ShieldGemma/WildGuard 为二元 unsafe 打分，ROC 为二分类分数阶梯，跨帧可比。"
+  ]
+}

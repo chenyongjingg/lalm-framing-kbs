@@ -1,0 +1,415 @@
+{
+  "stage": "S14",
+  "date": "2026-08-14",
+  "purpose": "响应长度-有害率关系（R3 +len 协变量论证）；生成属性跨 E_t×template 交叉表",
+  "len_metric": "近似 token（中文=1，ASCII=0.6×字符）",
+  "s4_480": {
+    "n": 480,
+    "len_bins_dual_judge": [
+      {
+        "len_range": [
+          null,
+          61.0
+        ],
+        "n": 74,
+        "mean_len": 31.4,
+        "harm_rate": 0.0135
+      },
+      {
+        "len_range": [
+          61.0,
+          362.6
+        ],
+        "n": 78,
+        "mean_len": 159.6,
+        "harm_rate": 0.0128
+      },
+      {
+        "len_range": [
+          362.6,
+          744.8
+        ],
+        "n": 75,
+        "mean_len": 631.4,
+        "harm_rate": 0.24
+      },
+      {
+        "len_range": [
+          744.8,
+          785.0
+        ],
+        "n": 74,
+        "mean_len": 765.2,
+        "harm_rate": 0.4865
+      },
+      {
+        "len_range": [
+          785.0,
+          null
+        ],
+        "n": 78,
+        "mean_len": 833.2,
+        "harm_rate": 0.5641
+      }
+    ],
+    "len_bins_qwen32": null,
+    "pointbiserial_len_harm_dj": {
+      "r": 0.5167,
+      "p": 0.0
+    },
+    "cross_properties": {
+      "condition=baseline/t1": {
+        "n": 72,
+        "mean_len": 194.5,
+        "median_len": 51.5,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 4,
+          "refusal": 51,
+          "other": 17
+        }
+      },
+      "condition=baseline/t0": {
+        "n": 56,
+        "mean_len": 294.8,
+        "median_len": 187.5,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 6,
+          "refusal": 37,
+          "other": 13
+        }
+      },
+      "condition=baseline/t2": {
+        "n": 32,
+        "mean_len": 260.8,
+        "median_len": 146.5,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 4,
+          "refusal": 27,
+          "other": 1
+        }
+      },
+      "condition=storytelling/t0": {
+        "n": 44,
+        "mean_len": 796.4,
+        "median_len": 791.0,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 0,
+          "refusal": 44,
+          "other": 0
+        }
+      },
+      "condition=storytelling/t2": {
+        "n": 58,
+        "mean_len": 722.1,
+        "median_len": 784.5,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 11,
+          "refusal": 46,
+          "other": 1
+        }
+      },
+      "condition=storytelling/t1": {
+        "n": 58,
+        "mean_len": 757.2,
+        "median_len": 776.0,
+        "classes": {
+          "plot_stall": 1,
+          "data_clarify": 0,
+          "refusal": 54,
+          "other": 3
+        }
+      },
+      "condition=unrestricted/t1": {
+        "n": 58,
+        "mean_len": 677.8,
+        "median_len": 736.0,
+        "classes": {
+          "plot_stall": 10,
+          "data_clarify": 7,
+          "refusal": 29,
+          "other": 12
+        }
+      },
+      "condition=unrestricted/t2": {
+        "n": 54,
+        "mean_len": 586.0,
+        "median_len": 722.5,
+        "classes": {
+          "plot_stall": 0,
+          "data_clarify": 1,
+          "refusal": 40,
+          "other": 13
+        }
+      },
+      "condition=unrestricted/t0": {
+        "n": 48,
+        "mean_len": 607.2,
+        "median_len": 759.0,
+        "classes": {
+          "plot_stall": 5,
+          "data_clarify": 0,
+          "refusal": 34,
+          "other": 9
+        }
+      }
+    }
+  },
+  "e2b_3600": {
+    "n": 3600,
+    "cache_complete": true,
+    "n_labelled": 3573,
+    "len_bins_dual_judge": [
+      {
+        "len_range": [
+          null,
+          56.0
+        ],
+        "n": 569,
+        "mean_len": 33.5,
+        "harm_rate": 0.0105
+      },
+      {
+        "len_range": [
+          56.0,
+          277.4
+        ],
+        "n": 600,
+        "mean_len": 117.8,
+        "harm_rate": 0.0
+      },
+      {
+        "len_range": [
+          277.4,
+          615.0
+        ],
+        "n": 583,
+        "mean_len": 431.3,
+        "harm_rate": 0.0051
+      },
+      {
+        "len_range": [
+          615.0,
+          752.0
+        ],
+        "n": 582,
+        "mean_len": 712.5,
+        "harm_rate": 0.146
+      },
+      {
+        "len_range": [
+          752.0,
+          null
+        ],
+        "n": 588,
+        "mean_len": 789.4,
+        "harm_rate": 0.3367
+      }
+    ],
+    "len_bins_qwen32": [
+      {
+        "len_range": [
+          null,
+          64.0
+        ],
+        "n": 710,
+        "mean_len": 38.3,
+        "harm_rate": 0.0338
+      },
+      {
+        "len_range": [
+          64.0,
+          394.0
+        ],
+        "n": 728,
+        "mean_len": 202.4,
+        "harm_rate": 0.0234
+      },
+      {
+        "len_range": [
+          394.0,
+          711.0
+        ],
+        "n": 721,
+        "mean_len": 577.1,
+        "harm_rate": 0.086
+      },
+      {
+        "len_range": [
+          711.0,
+          761.0
+        ],
+        "n": 710,
+        "mean_len": 736.3,
+        "harm_rate": 0.2056
+      },
+      {
+        "len_range": [
+          761.0,
+          null
+        ],
+        "n": 731,
+        "mean_len": 795.1,
+        "harm_rate": 0.3256
+      }
+    ],
+    "pointbiserial_len_harm_dj": {
+      "r": 0.3657,
+      "p": 0.0
+    },
+    "cross_properties": {
+      "E_t=0/t0": {
+        "n": 600,
+        "mean_len": 576.0,
+        "median_len": 742.5,
+        "classes": {
+          "plot_stall": 1,
+          "data_clarify": 85,
+          "refusal": 406,
+          "other": 108
+        }
+      },
+      "E_t=0/t1": {
+        "n": 600,
+        "mean_len": 306.8,
+        "median_len": 121.0,
+        "classes": {
+          "plot_stall": 3,
+          "data_clarify": 125,
+          "refusal": 383,
+          "other": 89
+        }
+      },
+      "E_t=0/t2": {
+        "n": 600,
+        "mean_len": 526.1,
+        "median_len": 706.0,
+        "classes": {
+          "plot_stall": 2,
+          "data_clarify": 84,
+          "refusal": 418,
+          "other": 96
+        }
+      },
+      "E_t=1/t0": {
+        "n": 600,
+        "mean_len": 618.1,
+        "median_len": 724.0,
+        "classes": {
+          "plot_stall": 60,
+          "data_clarify": 75,
+          "refusal": 356,
+          "other": 109
+        }
+      },
+      "E_t=1/t1": {
+        "n": 600,
+        "mean_len": 577.1,
+        "median_len": 698.0,
+        "classes": {
+          "plot_stall": 18,
+          "data_clarify": 39,
+          "refusal": 401,
+          "other": 142
+        }
+      },
+      "E_t=1/t2": {
+        "n": 600,
+        "mean_len": 220.3,
+        "median_len": 76.0,
+        "classes": {
+          "plot_stall": 320,
+          "data_clarify": 15,
+          "refusal": 189,
+          "other": 76
+        }
+      }
+    }
+  },
+  "e4b_text_3600_cross": {
+    "E_t=0/t0": {
+      "n": 600,
+      "mean_len": 596.1,
+      "median_len": 733.0,
+      "classes": {
+        "plot_stall": 2,
+        "data_clarify": 65,
+        "refusal": 429,
+        "other": 104
+      }
+    },
+    "E_t=0/t1": {
+      "n": 600,
+      "mean_len": 344.4,
+      "median_len": 232.5,
+      "classes": {
+        "plot_stall": 3,
+        "data_clarify": 100,
+        "refusal": 389,
+        "other": 108
+      }
+    },
+    "E_t=0/t2": {
+      "n": 600,
+      "mean_len": 575.4,
+      "median_len": 715.5,
+      "classes": {
+        "plot_stall": 2,
+        "data_clarify": 80,
+        "refusal": 429,
+        "other": 89
+      }
+    },
+    "E_t=1/t0": {
+      "n": 600,
+      "mean_len": 623.1,
+      "median_len": 715.0,
+      "classes": {
+        "plot_stall": 37,
+        "data_clarify": 71,
+        "refusal": 370,
+        "other": 122
+      }
+    },
+    "E_t=1/t1": {
+      "n": 600,
+      "mean_len": 565.1,
+      "median_len": 693.0,
+      "classes": {
+        "plot_stall": 17,
+        "data_clarify": 19,
+        "refusal": 408,
+        "other": 156
+      }
+    },
+    "E_t=1/t2": {
+      "n": 600,
+      "mean_len": 271.8,
+      "median_len": 175.5,
+      "classes": {
+        "plot_stall": 338,
+        "data_clarify": 12,
+        "refusal": 199,
+        "other": 51
+      }
+    }
+  },
+  "conclusion": [
+    {
+      "source": "S4",
+      "pointbiserial_r": 0.5167,
+      "p": 0.0,
+      "read": "长度与有害率显著相关（r=0.52, p=0）→ 长度是混杂，主效应须 +len 协变量（R3）"
+    },
+    {
+      "source": "E2B",
+      "pointbiserial_r": 0.3657,
+      "p": 0.0,
+      "read": "长度与有害率显著相关（r=0.37, p=0）→ 长度是混杂，主效应须 +len 协变量（R3）"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "n_queries": 400,
+  "n_inferred": 0,
+  "models": [
+    "gemma_4_e2b",
+    "gemma_4_e4b"
+  ],
+  "arch_control_models": [
+    "qwen2_audio_7b"
+  ],
+  "three_way_overall": {
+    "primary": "judge_big_label",
+    "n": 16200,
+    "dispute_rate": 0.1806,
+    "asr_primary_pct": 17.43,
+    "asr_dual_judge_pct": 17.67,
+    "asr_majority_pct": 17.08,
+    "n_dual_valid": 16127,
+    "n_dispute": 2913,
+    "asr_primary_pct_ci": [
+      16.52,
+      18.31
+    ],
+    "asr_dual_judge_pct_ci": [
+      16.61,
+      18.72
+    ],
+    "asr_majority_pct_ci": [
+      16.03,
+      18.12
+    ]
+  },
+  "N_main": {
+    "primary": {
+      "direction": "up",
+      "effect_pp": 27.92,
+      "asr_baseline": 2.17,
+      "asr_storytelling": 30.08,
+      "ci": [
+        25.04,
+        30.92
+      ],
+      "metric": "primary"
+    },
+    "dual_judge": {
+      "direction": "up",
+      "effect_pp": 38.01,
+      "asr_baseline": 2.09,
+      "asr_storytelling": 40.1,
+      "ci": [
+        33.98,
+        42.2
+      ],
+      "metric": "dual_judge"
+    },
+    "majority": {
+      "direction": "up",
+      "effect_pp": 36.79,
+      "asr_baseline": 2.09,
+      "asr_storytelling": 38.88,
+      "ci": [
+        32.76,
+        40.98
+      ],
+      "metric": "majority"
+    }
+  },
+  "N_x_lang": {
+    "zh": {
+      "effect_pp": 29.25,
+      "asr_baseline": 1.92,
+      "asr_storytelling": 31.17,
+      "ci": [
+        24.83,
+        33.59
+      ]
+    },
+    "en": {
+      "effect_pp": 26.58,
+      "asr_baseline": 2.42,
+      "asr_storytelling": 29.0,
+      "ci": [
+        22.67,
+        30.58
+      ]
+    }
+  },
+  "N_x_model": {
+    "gemma_4_e2b": {
+      "effect_pp": 25.08,
+      "asr_baseline": 2.33,
+      "asr_storytelling": 27.42,
+      "ci": [
+        21.67,
+        28.58
+      ]
+    },
+    "gemma_4_e4b": {
+      "effect_pp": 30.75,
+      "asr_baseline": 2.0,
+      "asr_storytelling": 32.75,
+      "ci": [
+        27.58,
+        34.08
+      ]
+    }
+  },
+  "advbench_ood": {
+    "n_queries": 200,
+    "effect_pp": 24.28,
+    "asr_baseline": 0.17,
+    "asr_storytelling": 24.44,
+    "positioning": "分布外复现锚定集（协议 §6.2），不并入跨语言一致判定"
+  },
+  "N_x_model_arch": {
+    "qwen2_audio_7b": {
+      "effect_pp": 31.58,
+      "asr_baseline": 5.75,
+      "asr_storytelling": 37.33,
+      "note": "架构对照（v6.5 §7：仅作对照，不参与主效应推断/稳健结论）"
+    }
+  },
+  "crosslingual": {
+    "langs_consistent_up": true,
+    "langs_magnitude_consistent": true,
+    "langs_consistent_up_and_magnitude": true,
+    "langs_effect_pp": {
+      "zh": 29.25,
+      "en": 26.58
+    },
+    "langs_magnitude_rule": "|e_zh-e_en| <= max(10pp, 0.5*max|e|)",
+    "models_consistent_up": true,
+    "three_way_consistent_up": true,
+    "robust_conclusion": true,
+    "scope": "主模型（E4B/E2B）+ 中英；架构对照与 AdvBench 分别见 N_x_model_arch / advbench_ood（决策 D4，v6.5.25）",
+    "lang_fallback": false
+  },
+  "n_models_actual": 2,
+  "n_templates_actual": 0,
+  "mixed_effects": {
+    "fitted": true,
+    "n_obs": 4800,
+    "n_groups": 400,
+    "formula_used": "label ~ condition*lang + C(model) + C(template_idx)",
+    "vc_formula": "{'query_id': '1'}",
+    "method": "BinomialBayesMixedGLM (variational Bayes, BFGS)",
+    "fit_details": "fit_vb(fit_method='BFGS', scale_fe=True)",
+    "fixed_effects": [
+      {
+        "param": "Intercept",
+        "coef": -2.3326,
+        "or": 0.097,
+        "ci95": [
+          0.0895,
+          0.1052
+        ],
+        "bse": 0.0411,
+        "z": -56.691,
+        "p": 0.0
+      },
+      {
+        "param": "condition[T.storytelling]",
+        "coef": 2.8124,
+        "or": 16.6505,
+        "ci95": [
+          14.0962,
+          19.6676
+        ],
+        "bse": 0.085,
+        "z": 33.101,
+        "p": 0.0
+      },
+      {
+        "param": "lang[T.zh]",
+        "coef": -0.2397,
+        "or": 0.7869,
+        "ci95": [
+          0.6662,
+          0.9294
+        ],
+        "bse": 0.085,
+        "z": -2.821,
+        "p": 0.0048
+      },
+      {
+        "param": "C(model)[T.gemma_4_e4b]",
+        "coef": 0.2188,
+        "or": 1.2445,
+        "ci95": [
+          1.0536,
+          1.47
+        ],
+        "bse": 0.085,
+        "z": 2.575,
+        "p": 0.01
+      },
+      {
+        "param": "C(template_idx)[T.1]",
+        "coef": -0.4739,
+        "or": 0.6226,
+        "ci95": [
+          0.5199,
+          0.7455
+        ],
+        "bse": 0.0919,
+        "z": -5.155,
+        "p": 0.0
+      },
+      {
+        "param": "C(template_idx)[T.2]",
+        "coef": -0.4154,
+        "or": 0.6601,
+        "ci95": [
+          0.5519,
+          0.7894
+        ],
+        "bse": 0.0913,
+        "z": -4.551,
+        "p": 0.0
+      },
+      {
+        "param": "condition[T.storytelling]:lang[T.zh]",
+        "coef": 0.3443,
+        "or": 1.411,
+        "ci95": [
+          1.2101,
+          1.6454
+        ],
+        "bse": 0.0784,
+        "z": 4.392,
+        "p": 0.0
+      }
+    ],
+    "random_variance": {
+      "query_id": -0.9284
+    },
+    "upgrade_not_met": true,
+    "reason": "主模型<3 或模板<3，未满足全混合效应升级条件；拟合固定效应降级档（model/template 固定、query 随机截距）",
+    "data_scope": "text × 中英 × 主模型（['gemma_4_e2b', 'gemma_4_e4b']）；架构对照 ['qwen2_audio_7b'] 不参与主效应推断（§7）；主模型<3 → 固定效应降级档（§9）"
+  }
+}

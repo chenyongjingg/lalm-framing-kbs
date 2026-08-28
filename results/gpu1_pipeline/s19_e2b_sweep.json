@@ -1,0 +1,285 @@
+{
+  "stage": "S19",
+  "date": "2026-08-14",
+  "purpose": "E2B 全量 4 标注源 × 8 聚合口径下 E_t 主效应敏感性矩阵；检验叙事框架效应是否跨测量选择稳健",
+  "n_rows": 3600,
+  "label_sources": {
+    "judge_big": 3600,
+    "judge_small": 3573,
+    "qwen32": 3600,
+    "cross_check": 3598
+  },
+  "protocols": {
+    "dual_judge_consensus": {
+      "n_e0": 1442,
+      "n_e1": 1480,
+      "pos_rate_e0": 0.086,
+      "pos_rate_e1": 0.1135,
+      "delta": 0.0275,
+      "delta_ci95": [
+        0.0038,
+        0.0515
+      ],
+      "fisher_or": 1.361,
+      "fisher_p": 0.013604
+    },
+    "judge_big": {
+      "n_e0": 1800,
+      "n_e1": 1800,
+      "pos_rate_e0": 0.0756,
+      "pos_rate_e1": 0.1117,
+      "delta": 0.0361,
+      "delta_ci95": [
+        0.0167,
+        0.0572
+      ],
+      "fisher_or": 1.538,
+      "fisher_p": 0.000241
+    },
+    "judge_small": {
+      "n_e0": 1789,
+      "n_e1": 1784,
+      "pos_rate_e0": 0.2571,
+      "pos_rate_e1": 0.2506,
+      "delta": -0.0066,
+      "delta_ci95": [
+        -0.0395,
+        0.0265
+      ],
+      "fisher_or": 0.9659,
+      "fisher_p": 0.672442
+    },
+    "qwen32": {
+      "n_e0": 1800,
+      "n_e1": 1800,
+      "pos_rate_e0": 0.0872,
+      "pos_rate_e1": 0.1833,
+      "delta": 0.0961,
+      "delta_ci95": [
+        0.0661,
+        0.1289
+      ],
+      "fisher_or": 2.3493,
+      "fisher_p": 0.0
+    },
+    "cross_check": {
+      "n_e0": 1799,
+      "n_e1": 1799,
+      "pos_rate_e0": 0.6859,
+      "pos_rate_e1": 0.7621,
+      "delta": 0.0762,
+      "delta_ci95": [
+        0.0437,
+        0.1091
+      ],
+      "fisher_or": 1.4667,
+      "fisher_p": 0.0
+    },
+    "DS3_b_s_qw": {
+      "n_e0": 1800,
+      "n_e1": 1800,
+      "pos_rate_e0": 0.0917,
+      "pos_rate_e1": 0.1533,
+      "delta": 0.0617,
+      "delta_ci95": [
+        0.0361,
+        0.0889
+      ],
+      "fisher_or": 1.7946,
+      "fisher_p": 0.0
+    },
+    "DS4_b_s_qw_cc": {
+      "n_e0": 1800,
+      "n_e1": 1800,
+      "pos_rate_e0": 0.2678,
+      "pos_rate_e1": 0.3028,
+      "delta": 0.035,
+      "delta_ci95": [
+        -0.0028,
+        0.0722
+      ],
+      "fisher_or": 1.1875,
+      "fisher_p": 0.022088
+    },
+    "majority_3of4": {
+      "n_e0": 1482,
+      "n_e1": 1527,
+      "pos_rate_e0": 0.1107,
+      "pos_rate_e1": 0.1781,
+      "delta": 0.0675,
+      "delta_ci95": [
+        0.0371,
+        0.1002
+      ],
+      "fisher_or": 1.7418,
+      "fisher_p": 0.0
+    }
+  },
+  "sign_consistent_across_protocols": false,
+  "n_protocols_ci_excl0": 6,
+  "n_protocols_ci": 8,
+  "pairwise_agreement": {
+    "judge_big↔judge_small": {
+      "n": 3573,
+      "agreement": 0.8178,
+      "kappa": 0.3907,
+      "kappa_ci95": [
+        0.3555,
+        0.4259
+      ]
+    },
+    "judge_big↔qwen32": {
+      "n": 3600,
+      "agreement": 0.9361,
+      "kappa": 0.6861,
+      "kappa_ci95": [
+        0.647,
+        0.724
+      ]
+    },
+    "judge_big↔cross_check": {
+      "n": 3598,
+      "agreement": 0.3691,
+      "kappa": 0.075,
+      "kappa_ci95": [
+        0.0665,
+        0.0843
+      ]
+    },
+    "judge_small↔qwen32": {
+      "n": 3573,
+      "agreement": 0.82,
+      "kappa": 0.4366,
+      "kappa_ci95": [
+        0.4014,
+        0.4708
+      ]
+    },
+    "judge_small↔cross_check": {
+      "n": 3571,
+      "agreement": 0.5281,
+      "kappa": 0.2258,
+      "kappa_ci95": [
+        0.2089,
+        0.2435
+      ]
+    },
+    "qwen32↔cross_check": {
+      "n": 3598,
+      "agreement": 0.4091,
+      "kappa": 0.1093,
+      "kappa_ci95": [
+        0.0982,
+        0.121
+      ]
+    }
+  },
+  "dispute_arbitration": {
+    "n_disputed_b_neq_s": 651,
+    "qwen32_agrees_big": 533,
+    "qwen32_agrees_small": 118,
+    "cross_check_agrees_big": 42,
+    "cross_check_agrees_small": 609,
+    "qw_and_cc_agree_each_other": 140
+  },
+  "template_stratified": {
+    "dual_judge_consensus": {
+      "t0": {
+        "n_e0": 484,
+        "n_e1": 466,
+        "pos_e0": 0.1136,
+        "pos_e1": 0.1845,
+        "delta": 0.0709
+      },
+      "t1": {
+        "n_e0": 504,
+        "n_e1": 459,
+        "pos_e0": 0.0913,
+        "pos_e1": 0.1351,
+        "delta": 0.0438
+      },
+      "t2": {
+        "n_e0": 454,
+        "n_e1": 555,
+        "pos_e0": 0.0507,
+        "pos_e1": 0.036,
+        "delta": -0.0146
+      }
+    },
+    "DS4_b_s_qw_cc": {
+      "t0": {
+        "n_e0": 600,
+        "n_e1": 600,
+        "pos_e0": 0.285,
+        "pos_e1": 0.395,
+        "delta": 0.11
+      },
+      "t1": {
+        "n_e0": 600,
+        "n_e1": 600,
+        "pos_e0": 0.2367,
+        "pos_e1": 0.365,
+        "delta": 0.1283
+      },
+      "t2": {
+        "n_e0": 600,
+        "n_e1": 600,
+        "pos_e0": 0.2817,
+        "pos_e1": 0.1483,
+        "delta": -0.1333
+      }
+    },
+    "majority_3of4": {
+      "t0": {
+        "n_e0": 499,
+        "n_e1": 494,
+        "pos_e0": 0.1403,
+        "pos_e1": 0.2652,
+        "delta": 0.1249
+      },
+      "t1": {
+        "n_e0": 516,
+        "n_e1": 488,
+        "pos_e0": 0.1124,
+        "pos_e1": 0.2193,
+        "delta": 0.1069
+      },
+      "t2": {
+        "n_e0": 467,
+        "n_e1": 545,
+        "pos_e0": 0.0771,
+        "pos_e1": 0.0624,
+        "delta": -0.0147
+      }
+    }
+  },
+  "ds3": {
+    "converged": true,
+    "sens": [
+      0.7324,
+      0.9031,
+      0.8961
+    ],
+    "spec": [
+      0.9982,
+      0.8378,
+      0.974
+    ]
+  },
+  "ds4": {
+    "converged": false,
+    "sens": [
+      0.3164,
+      0.8344,
+      0.4523,
+      0.9966
+    ],
+    "spec": [
+      1.0,
+      0.9881,
+      0.998,
+      0.3906
+    ]
+  },
+  "note": "若 sign_consistent=True 且多数口径 CI 不含 0：叙事框架主效应跨评分/聚合稳健。cross_check 为弱锚（3B 宽松），其单腿口径预期与强评分器分歧，如实披露。"
+}

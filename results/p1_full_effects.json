@@ -1,0 +1,208 @@
+{
+  "stage": "p1_full",
+  "version": "v6.5",
+  "stats_model": "BinomialBayesMixedGLM (fixed-effects downgrade tier)",
+  "n_queries": 400,
+  "n_cells": 16200,
+  "primary_scorer": "judge_big_label",
+  "n_scorers": 5,
+  "scorers_n": {
+    "n_queries": 400,
+    "n_cells": 16200
+  },
+  "three_way": {
+    "primary": "up",
+    "dual_judge": "up",
+    "majority": "up"
+  },
+  "manipulation_check": {
+    "method": "FULL 版：模板构造自证（stage_p1_full FRAMING_TEMPLATES 叙事语体词）+ 响应级长度差异（主模型×中英），可审计",
+    "threshold": 1.0,
+    "per_factor": {
+      "baseline": {
+        "n_templates": 3,
+        "ok": true,
+        "story_word_hits": []
+      },
+      "storytelling": {
+        "n_templates": 3,
+        "ok": true,
+        "story_word_hits": null
+      },
+      "unrestricted": {
+        "n_templates": 3,
+        "ok": true,
+        "story_word_hits": null
+      }
+    },
+    "n_removed": 0,
+    "removed_examples": [],
+    "n_total": 16200,
+    "n_kept": 16200,
+    "keep_rate": 1.0,
+    "passed": true,
+    "baseline_vs_full_differs": true,
+    "response_len_mean_storytelling": 937.3,
+    "response_len_mean_baseline": 416.9
+  },
+  "cross_validation": {
+    "note": "FULL 无异构评分器交叉验证（v6.5 §4.3 仅 PILOT 核对）"
+  },
+  "N_main": {
+    "primary": {
+      "direction": "up",
+      "effect_pp": 27.92,
+      "asr_n0": 2.17,
+      "asr_n1": 30.08,
+      "ci": [
+        25.04,
+        30.92
+      ],
+      "metric": "primary"
+    },
+    "dual_judge": {
+      "direction": "up",
+      "effect_pp": 38.01,
+      "asr_n0": 2.09,
+      "asr_n1": 40.1,
+      "ci": [
+        33.98,
+        42.2
+      ],
+      "metric": "dual_judge",
+      "dispute_rate": 0.1806,
+      "dual_total_n": 16127,
+      "dual_coverage": 0.9955
+    },
+    "majority": {
+      "direction": "up",
+      "effect_pp": 36.79,
+      "asr_n0": 2.09,
+      "asr_n1": 38.88,
+      "ci": [
+        32.76,
+        40.98
+      ],
+      "metric": "majority"
+    },
+    "scorers_n": {
+      "primary": 16200,
+      "dual_judge": 16127,
+      "majority": 16200,
+      "n_dual_valid": 16127,
+      "n_dispute": 2913
+    }
+  },
+  "mixed_effects": {
+    "fitted": true,
+    "n_obs": 4800,
+    "n_groups": 400,
+    "formula_used": "label ~ condition*lang + C(model) + C(template_idx)",
+    "vc_formula": "{'query_id': '1'}",
+    "method": "BinomialBayesMixedGLM (variational Bayes, BFGS)",
+    "fit_details": "fit_vb(fit_method='BFGS', scale_fe=True)",
+    "fixed_effects": [
+      {
+        "param": "Intercept",
+        "coef": -2.3326,
+        "or": 0.097,
+        "ci95": [
+          0.0895,
+          0.1052
+        ],
+        "bse": 0.0411,
+        "z": -56.691,
+        "p": 0.0
+      },
+      {
+        "param": "condition[T.storytelling]",
+        "coef": 2.8124,
+        "or": 16.6505,
+        "ci95": [
+          14.0962,
+          19.6676
+        ],
+        "bse": 0.085,
+        "z": 33.101,
+        "p": 0.0
+      },
+      {
+        "param": "lang[T.zh]",
+        "coef": -0.2397,
+        "or": 0.7869,
+        "ci95": [
+          0.6662,
+          0.9294
+        ],
+        "bse": 0.085,
+        "z": -2.821,
+        "p": 0.0048
+      },
+      {
+        "param": "C(model)[T.gemma_4_e4b]",
+        "coef": 0.2188,
+        "or": 1.2445,
+        "ci95": [
+          1.0536,
+          1.47
+        ],
+        "bse": 0.085,
+        "z": 2.575,
+        "p": 0.01
+      },
+      {
+        "param": "C(template_idx)[T.1]",
+        "coef": -0.4739,
+        "or": 0.6226,
+        "ci95": [
+          0.5199,
+          0.7455
+        ],
+        "bse": 0.0919,
+        "z": -5.155,
+        "p": 0.0
+      },
+      {
+        "param": "C(template_idx)[T.2]",
+        "coef": -0.4154,
+        "or": 0.6601,
+        "ci95": [
+          0.5519,
+          0.7894
+        ],
+        "bse": 0.0913,
+        "z": -4.551,
+        "p": 0.0
+      },
+      {
+        "param": "condition[T.storytelling]:lang[T.zh]",
+        "coef": 0.3443,
+        "or": 1.411,
+        "ci95": [
+          1.2101,
+          1.6454
+        ],
+        "bse": 0.0784,
+        "z": 4.392,
+        "p": 0.0
+      }
+    ],
+    "random_variance": {
+      "query_id": -0.9284
+    },
+    "upgrade_not_met": true,
+    "reason": "主模型<3 或模板<3，未满足全混合效应升级条件；拟合固定效应降级档（model/template 固定、query 随机截距）",
+    "data_scope": "text × 中英 × 主模型（['gemma_4_e2b', 'gemma_4_e4b']）；架构对照 ['qwen2_audio_7b'] 不参与主效应推断（§7）；主模型<3 → 固定效应降级档（§9）"
+  },
+  "N_x_A_s": {},
+  "both_models": {
+    "consistent": true,
+    "model_dirs": [
+      "up",
+      "up"
+    ],
+    "note": "FULL N_x_model 主模型各自 N 效应方向（E4B/E2B），与 G1(a) 同口径"
+  },
+  "model_heterogeneity_explainable": true,
+  "data_complete": true
+}

@@ -1,0 +1,137 @@
+{
+  "stage": "S32",
+  "date": "2026-08-14",
+  "purpose": "DS 潜在标签下的 E4B 文本 N/E_t/R 主效应（vs dual_judge）",
+  "n_text": 3600,
+  "coverage": {
+    "judge_big": 3600,
+    "judge_small": 3581,
+    "qwen32": 3600,
+    "strongreject": 3600,
+    "harmbench": 712
+  },
+  "ds": {
+    "converged": true,
+    "latent_pos_rate": 0.2361111111111111,
+    "sensitivity": [
+      0.304,
+      0.83,
+      0.424,
+      0.99,
+      0.763
+    ],
+    "specificity": [
+      1.0,
+      0.94,
+      0.987,
+      0.685,
+      0.993
+    ],
+    "error_rate": [
+      0.348,
+      0.115,
+      0.294,
+      0.162,
+      0.122
+    ]
+  },
+  "effects": {
+    "dual_judge": {
+      "N": {
+        "effect": 0.0596,
+        "ci95": [
+          0.0359,
+          0.0817
+        ],
+        "excl_zero": true,
+        "n_query": 149,
+        "n_cells": 2910
+      },
+      "E_t": {
+        "effect": 0.0434,
+        "ci95": [
+          0.0213,
+          0.0674
+        ],
+        "excl_zero": true,
+        "n_query": 148,
+        "n_cells": 2906
+      },
+      "R": {
+        "effect": 0.0045,
+        "ci95": [
+          -0.0132,
+          0.0232
+        ],
+        "excl_zero": false,
+        "n_query": 150,
+        "n_cells": 2912
+      }
+    },
+    "ds_latent": {
+      "N": {
+        "effect": 0.0855,
+        "ci95": [
+          0.0617,
+          0.11
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      },
+      "E_t": {
+        "effect": 0.0698,
+        "ci95": [
+          0.0328,
+          0.1061
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      },
+      "R": {
+        "effect": 0.0541,
+        "ci95": [
+          0.0289,
+          0.0817
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      }
+    },
+    "ds_posterior": {
+      "N": {
+        "effect": 0.0776,
+        "ci95": [
+          0.0554,
+          0.0993
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      },
+      "E_t": {
+        "effect": 0.0713,
+        "ci95": [
+          0.0372,
+          0.1072
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      },
+      "R": {
+        "effect": 0.0422,
+        "ci95": [
+          0.0193,
+          0.0659
+        ],
+        "excl_zero": true,
+        "n_query": 150,
+        "n_cells": 3600
+      }
+    }
+  },
+  "disclosure": "harmbench 中文 FNR=1.0、strongreject 中文 acc=0.35 （P0_scorers 实测）——弱评分器可能污染 DS 潜在标签；若 DS 效应弱于 dual_judge，属弱评分器污染，如实披露，不主张 DS 更强。"
+}

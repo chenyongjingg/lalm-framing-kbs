@@ -1,0 +1,264 @@
+{
+  "stage": "S35",
+  "date": "2026-08-15",
+  "purpose": "judge_small 强制解码验证 + null 格打标：首 token 0/1 argmax 与自由生成一致率（协议稳定性）→ null 格强制标签 与独立评分器对照 + N/E_t 效应第 6 敏感性场景",
+  "method": "GemmaJudgeScorer 同一 prompt；generate(max_new_tokens=1, output_scores=True)；argmax(logits('0'), logits('1'))",
+  "main": {
+    "n_cells": 3600,
+    "freegen_covered": 3573,
+    "freegen_null": 27,
+    "forced_all": 3600,
+    "forced_vs_freegen": {
+      "n": 3573,
+      "agreement": 0.9952,
+      "kappa": 0.9923,
+      "spearman": 0.9696
+    },
+    "forced_vs_freegen_agreement_raw": 0.9952,
+    "forced_vs_judge_big": {
+      "n": 3600,
+      "agreement": 0.8103,
+      "kappa": 0.726,
+      "spearman": -0.0781
+    },
+    "forced_vs_qwen32": {
+      "n": 3600,
+      "agreement": 0.8131,
+      "kappa": 0.7221,
+      "spearman": -0.0312
+    },
+    "forced_vs_cross_check": {
+      "n": 3598,
+      "agreement": 0.5345,
+      "kappa": -0.1815,
+      "spearman": 0.2058
+    },
+    "strata": {
+      "E_t=0": {
+        "n": 1789,
+        "agreement": 0.9927,
+        "kappa": 0.9882,
+        "spearman": 0.9751
+      },
+      "E_t=1": {
+        "n": 1784,
+        "agreement": 0.9978,
+        "kappa": 0.9964,
+        "spearman": 0.9886
+      },
+      "N=0": {
+        "n": 1777,
+        "agreement": 0.9921,
+        "kappa": 0.9877,
+        "spearman": 0.9546
+      },
+      "N=1": {
+        "n": 1796,
+        "agreement": 0.9983,
+        "kappa": 0.9972,
+        "spearman": 0.9866
+      }
+    },
+    "abs_margin_agree": {
+      "n": 3556,
+      "mean": 8.825,
+      "median": 8.0
+    },
+    "abs_margin_disagree": {
+      "n": 17,
+      "mean": 5.1027,
+      "median": 5.625
+    },
+    "null_profile": {
+      "n": 27,
+      "forced_label_dist": {
+        "0": 1,
+        "1": 26
+      },
+      "N_dist": {
+        "0": 23,
+        "1": 4
+      },
+      "forced_vs_judge_big": {
+        "agree": 8,
+        "denom": 27,
+        "rate": 0.2963
+      },
+      "forced_vs_qwen32": {
+        "agree": 10,
+        "denom": 27,
+        "rate": 0.3704
+      },
+      "forced_vs_cross_check_e2b": {
+        "agree": 24,
+        "denom": 27,
+        "rate": 0.8889
+      },
+      "judge_big_harmful_rate_on_nulls": 0.3333
+    },
+    "sensitivity": {
+      "scope": "dual_judge 共识（judge_big==judge_small），论文权威口径；N_effect=E_t=0 上 N0 vs N1；Et_effect@N=0 为主行（对齐 S34），另附 N=1 与 pooled",
+      "N_effect": {
+        "exclude": {
+          "effect": 0.0568,
+          "ci95": [
+            0.0323,
+            0.0822
+          ],
+          "excl_zero": true,
+          "n_query": 145
+        },
+        "forced_fill": {
+          "effect": 0.0555,
+          "ci95": [
+            0.0314,
+            0.0814
+          ],
+          "excl_zero": true,
+          "n_query": 145
+        }
+      },
+      "Et_effect_N0": {
+        "exclude": {
+          "effect": 0.0285,
+          "ci95": [
+            0.0013,
+            0.0538
+          ],
+          "excl_zero": true,
+          "n_query": 148
+        },
+        "forced_fill": {
+          "effect": 0.0347,
+          "ci95": [
+            0.008,
+            0.0605
+          ],
+          "excl_zero": true,
+          "n_query": 148
+        }
+      },
+      "Et_effect_N1": {
+        "exclude": {
+          "effect": 0.0273,
+          "ci95": [
+            -0.0005,
+            0.0558
+          ],
+          "excl_zero": false,
+          "n_query": 147
+        },
+        "forced_fill": {
+          "effect": 0.0285,
+          "ci95": [
+            0.0004,
+            0.0567
+          ],
+          "excl_zero": true,
+          "n_query": 147
+        }
+      },
+      "Et_effect_pooled": {
+        "exclude": {
+          "effect": 0.0273,
+          "ci95": [
+            0.0034,
+            0.0518
+          ],
+          "excl_zero": true,
+          "n_query": 150
+        },
+        "forced_fill": {
+          "effect": 0.0308,
+          "ci95": [
+            0.0073,
+            0.0551
+          ],
+          "excl_zero": true,
+          "n_query": 150
+        }
+      },
+      "disclosure": "口径修正（2026-08-16）：初始脚本敏感性用 judge_small 单评分器口径，与 S34 的 dual_judge 权威口径不可比；已改为 dual_judge 共识口径重算，与 S34 5 场景表逐一对齐。"
+    },
+    "null_margin_diag": {
+      "n": 27,
+      "mean": 4.248,
+      "median": 4.062,
+      "min": 0.055,
+      "below5": 18,
+      "population_median_abs_margin": 7.875
+    }
+  },
+  "s28": {
+    "n_cells": 1200,
+    "freegen_covered": 1189,
+    "freegen_null": 11,
+    "forced_all": 1200,
+    "forced_vs_freegen": {
+      "n": 1189,
+      "agreement": 0.9992,
+      "kappa": 0.9985,
+      "spearman": 0.9962
+    },
+    "forced_vs_freegen_agreement_raw": 0.9992,
+    "forced_vs_judge_big": {
+      "n": 1200,
+      "agreement": 0.7875,
+      "kappa": 0.6342,
+      "spearman": 0.499
+    },
+    "forced_vs_strongreject": {
+      "n": 1200,
+      "agreement": 0.685,
+      "kappa": 0.3544,
+      "spearman": 0.2005
+    },
+    "forced_vs_harmbench": {
+      "n": 1200,
+      "agreement": 0.7942,
+      "kappa": 0.6281,
+      "spearman": 0.2346
+    },
+    "abs_margin_agree": {
+      "n": 1188,
+      "mean": 9.0269,
+      "median": 7.8125
+    },
+    "abs_margin_disagree": {
+      "n": 1,
+      "mean": 6.2246,
+      "median": 6.2246
+    },
+    "null_profile": {
+      "n": 11,
+      "forced_label_dist": {
+        "0": 0,
+        "1": 11
+      },
+      "forced_vs_judge_big": {
+        "agree": 5,
+        "denom": 11,
+        "rate": 0.4545
+      },
+      "forced_vs_strongreject": {
+        "agree": 8,
+        "denom": 11,
+        "rate": 0.7273
+      },
+      "forced_vs_harmbench": {
+        "agree": 5,
+        "denom": 11,
+        "rate": 0.4545
+      }
+    },
+    "null_margin_diag": {
+      "n": 11,
+      "mean": 5.29,
+      "median": 5.094,
+      "min": 2.938,
+      "below5": 5,
+      "population_median_abs_margin": 7.75
+    }
+  },
+  "disclosure": "强制解码=首 token argmax(logits('0'),logits('1'))，与自由生成是独立评分模式；一致率=协议稳定性判据。强制标签写独立新文件，未改写任何生产缓存。E2B 主链 index 制 / S28 rid 制已归一。CI=query 聚类 bootstrap。"
+}

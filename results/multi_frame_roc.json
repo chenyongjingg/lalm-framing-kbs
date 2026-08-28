@@ -1,0 +1,21 @@
+{
+  "purpose": "补单帧短板：跨 5 个独立 GroupShuffleSplit 测试帧的融合 ROC 证据（全部来自既有 results/msrf_evaluation.json，零新推理）",
+  "source": "results/msrf_evaluation.json (seed_detail, stage_p2_msrf, 2026-08-25 05:15)",
+  "group_split": {"used": true, "n_groups": 21, "group_cols": ["template_family", "attack_family"]},
+  "frames": [
+    {"seed": 20260811, "deployment_frame": true, "test_n": 3863, "best_lr": "5e-05", "roc_auc": 0.9784, "pr_auc": 0.6119, "tpr_at_fpr5": 0.8345, "ece": 0.0299, "note": "te_mask_seed0 —— 与全部基线同帧的部署/主报告帧"},
+    {"seed": 20260812, "deployment_frame": false, "test_n": 2198, "best_lr": "0.0003", "roc_auc": 0.8909, "pr_auc": 0.6804, "tpr_at_fpr5": 0.4608, "ece": 0.0318, "note": "跨帧最弱帧（TPR@FPR5 最低），如实披露"},
+    {"seed": 20260813, "deployment_frame": false, "test_n": 3323, "best_lr": "0.0003", "roc_auc": 0.9447, "pr_auc": 0.4750, "tpr_at_fpr5": 0.6071, "ece": 0.0094, "note": ""},
+    {"seed": 20260814, "deployment_frame": false, "test_n": 4242, "best_lr": "5e-05", "roc_auc": 0.9667, "pr_auc": 0.7015, "tpr_at_fpr5": 0.7891, "ece": 0.0398, "note": ""},
+    {"seed": 20260815, "deployment_frame": false, "test_n": 3149, "best_lr": "0.001", "roc_auc": 0.9470, "pr_auc": 0.5555, "tpr_at_fpr5": 0.5539, "ece": 0.0182, "note": ""}
+  ],
+  "cv5_summary": {"roc_mean": 0.9455, "roc_std": 0.0301, "roc_min": 0.8909, "roc_max": 0.9784},
+  "open_classifier_reference": {"scope": "仅在 te_mask_seed0 同帧", "shieldgemma_roc": 0.198, "wildguard_roc": 0.174, "gradsafe_real_roc": 0.315, "gradsafe_proxy_roc": 0.9652},
+  "honest_caveats": [
+    "基线仅在 te_mask_seed0（seed0 帧）同帧评估；跨帧基线未测，不做跨帧基线对比断言。",
+    "seed0 为部署帧且是最强帧（0.9784）；跨帧最弱 0.8909（seed 20260812，TPR@FPR5=0.4608），方差如实披露。",
+    "GradSafe 代理 0.9652 仅在 seed0 同帧下低于融合 0.9784；跨帧不比较。",
+    "data/advbench_sample_v1.csv 存在但尚未过融合评估帧（决策 D4 延期），不列入本表。"
+  ],
+  "paper_wording": "跨 5 个独立 GroupShuffleSplit 测试帧（2198-4242 条，组级划分）融合 ROC 0.89-0.98（均值 0.9455±0.030），最弱帧 0.8909 仍为最强开源分类器（0.315）的 2.8 倍。"
+}

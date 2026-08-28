@@ -1,0 +1,501 @@
+{
+  "stage": "S4",
+  "n_cells": 240,
+  "n_zh_extra": 120,
+  "n_en": 60,
+  "n_adv": 60,
+  "n_responses": 480,
+  "scorers": [
+    "harmbench",
+    "strongreject",
+    "judge_big",
+    "judge_small",
+    "cross_check",
+    "shieldgemma"
+  ],
+  "zh_total_disjoint": 180,
+  "dry": false,
+  "smoke": false,
+  "per_lang": [
+    {
+      "lang": "zh",
+      "n_responses": 240,
+      "n_zh_cells_s1_extra": 120,
+      "pairwise": [
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "strongreject",
+          "n_valid": 240,
+          "agreement": 0.8708333333333333,
+          "cohens_kappa": 0.7405857740585775
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_big",
+          "n_valid": 240,
+          "agreement": 0.8208333333333333,
+          "cohens_kappa": 0.6120300751879699
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_small",
+          "n_valid": 238,
+          "agreement": 0.8277310924369747,
+          "cohens_kappa": 0.6449312277126846
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "cross_check",
+          "n_valid": 237,
+          "agreement": 0.6413502109704642,
+          "cohens_kappa": 0.3462599383417168
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "shieldgemma",
+          "n_valid": 240,
+          "agreement": 0.5333333333333333,
+          "cohens_kappa": -0.05329153605015654
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_big",
+          "n_valid": 240,
+          "agreement": 0.7666666666666667,
+          "cohens_kappa": 0.5279241306638568
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_small",
+          "n_valid": 238,
+          "agreement": 0.8151260504201681,
+          "cohens_kappa": 0.628599801390268
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "cross_check",
+          "n_valid": 237,
+          "agreement": 0.6877637130801688,
+          "cohens_kappa": 0.38798157453936355
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "shieldgemma",
+          "n_valid": 240,
+          "agreement": 0.4625,
+          "cohens_kappa": -0.09368376430690967
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "judge_small",
+          "n_valid": 238,
+          "agreement": 0.8067226890756303,
+          "cohens_kappa": 0.5791173304628633
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "cross_check",
+          "n_valid": 237,
+          "agreement": 0.4978902953586498,
+          "cohens_kappa": 0.19725044829647342
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "shieldgemma",
+          "n_valid": 240,
+          "agreement": 0.6875,
+          "cohens_kappa": 0.08998988877654182
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "cross_check",
+          "n_valid": 236,
+          "agreement": 0.635593220338983,
+          "cohens_kappa": 0.33442644454646814
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "shieldgemma",
+          "n_valid": 238,
+          "agreement": 0.5294117647058824,
+          "cohens_kappa": -0.06966292134831471
+        },
+        {
+          "scorer_a": "cross_check",
+          "scorer_b": "shieldgemma",
+          "n_valid": 237,
+          "agreement": 0.2320675105485232,
+          "cohens_kappa": -0.12597890779993737
+        }
+      ],
+      "dual_judge": {
+        "dispute_rate": 0.19327731092436973,
+        "n_agreed": 192,
+        "n": 238
+      },
+      "dawid_skene": {
+        "converged": true,
+        "n_iter": 20,
+        "per_scorer": {
+          "harmbench": {
+            "sensitivity": 0.9061,
+            "specificity": 0.959,
+            "error_rate": 0.0675
+          },
+          "strongreject": {
+            "sensitivity": 0.9583,
+            "specificity": 0.8738,
+            "error_rate": 0.0839
+          },
+          "judge_big": {
+            "sensitivity": 0.6237,
+            "specificity": 1.0,
+            "error_rate": 0.1882
+          },
+          "judge_small": {
+            "sensitivity": 0.8391,
+            "specificity": 0.9155,
+            "error_rate": 0.1227
+          },
+          "cross_check": {
+            "sensitivity": 1.0,
+            "specificity": 0.4054,
+            "error_rate": 0.2973
+          },
+          "shieldgemma": {
+            "sensitivity": 0.1343,
+            "specificity": 0.8233,
+            "error_rate": 0.5212
+          }
+        },
+        "latent_pos_rate": 0.4375
+      },
+      "criterion": {
+        "n_dual_consensus": 192,
+        "agreement_dual_vs_hetero": 0.4844,
+        "pass_0_80": false,
+        "verdict": "评分器敏感"
+      }
+    },
+    {
+      "lang": "en",
+      "n_responses": 120,
+      "n_zh_cells_s1_extra": null,
+      "pairwise": [
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "strongreject",
+          "n_valid": 120,
+          "agreement": 0.8583333333333333,
+          "cohens_kappa": 0.7179203539823008
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_big",
+          "n_valid": 120,
+          "agreement": 0.6416666666666667,
+          "cohens_kappa": 0.2769058295964128
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_small",
+          "n_valid": 118,
+          "agreement": 0.864406779661017,
+          "cohens_kappa": 0.7288914417001724
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "cross_check",
+          "n_valid": 118,
+          "agreement": 0.711864406779661,
+          "cohens_kappa": 0.42914058053500276
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.44166666666666665,
+          "cohens_kappa": -0.13048368953880757
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_big",
+          "n_valid": 120,
+          "agreement": 0.6,
+          "cohens_kappa": 0.29961089494163423
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_small",
+          "n_valid": 118,
+          "agreement": 0.864406779661017,
+          "cohens_kappa": 0.7276399307559146
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "cross_check",
+          "n_valid": 118,
+          "agreement": 0.8135593220338984,
+          "cohens_kappa": 0.5653047555257872
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.31666666666666665,
+          "cohens_kappa": -0.14312267657992575
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "judge_small",
+          "n_valid": 118,
+          "agreement": 0.6949152542372882,
+          "cohens_kappa": 0.39521640091116184
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "cross_check",
+          "n_valid": 118,
+          "agreement": 0.4576271186440678,
+          "cohens_kappa": 0.16163410301953818
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.6833333333333333,
+          "cohens_kappa": -0.040145985401459555
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "cross_check",
+          "n_valid": 117,
+          "agreement": 0.7350427350427351,
+          "cohens_kappa": 0.46242774566474004
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "shieldgemma",
+          "n_valid": 118,
+          "agreement": 0.4322033898305085,
+          "cohens_kappa": -0.12141843971631212
+        },
+        {
+          "scorer_a": "cross_check",
+          "scorer_b": "shieldgemma",
+          "n_valid": 118,
+          "agreement": 0.1864406779661017,
+          "cohens_kappa": -0.15591836734693873
+        }
+      ],
+      "dual_judge": {
+        "dispute_rate": 0.30508474576271183,
+        "n_agreed": 82,
+        "n": 118
+      },
+      "dawid_skene": {
+        "converged": true,
+        "n_iter": 16,
+        "per_scorer": {
+          "harmbench": {
+            "sensitivity": 0.8494,
+            "specificity": 1.0,
+            "error_rate": 0.0753
+          },
+          "strongreject": {
+            "sensitivity": 1.0,
+            "specificity": 0.8707,
+            "error_rate": 0.0647
+          },
+          "judge_big": {
+            "sensitivity": 0.4031,
+            "specificity": 1.0,
+            "error_rate": 0.2985
+          },
+          "judge_small": {
+            "sensitivity": 0.8658,
+            "specificity": 0.9794,
+            "error_rate": 0.0774
+          },
+          "cross_check": {
+            "sensitivity": 1.0,
+            "specificity": 0.5234,
+            "error_rate": 0.2383
+          },
+          "shieldgemma": {
+            "sensitivity": 0.0627,
+            "specificity": 0.7695,
+            "error_rate": 0.5839
+          }
+        },
+        "latent_pos_rate": 0.5667
+      },
+      "criterion": {
+        "n_dual_consensus": 82,
+        "agreement_dual_vs_hetero": 0.5244,
+        "pass_0_80": false,
+        "verdict": "评分器敏感"
+      }
+    },
+    {
+      "lang": "adv",
+      "n_responses": 120,
+      "n_zh_cells_s1_extra": null,
+      "pairwise": [
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "strongreject",
+          "n_valid": 120,
+          "agreement": 0.9,
+          "cohens_kappa": 0.6896551724137933
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_big",
+          "n_valid": 120,
+          "agreement": 0.9,
+          "cohens_kappa": 0.625
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "judge_small",
+          "n_valid": 120,
+          "agreement": 0.875,
+          "cohens_kappa": 0.6186440677966102
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "cross_check",
+          "n_valid": 120,
+          "agreement": 0.6166666666666667,
+          "cohens_kappa": 0.28125000000000006
+        },
+        {
+          "scorer_a": "harmbench",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.6916666666666667,
+          "cohens_kappa": -0.047169811320754935
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_big",
+          "n_valid": 120,
+          "agreement": 0.9,
+          "cohens_kappa": 0.6808510638297873
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "judge_small",
+          "n_valid": 120,
+          "agreement": 0.9416666666666667,
+          "cohens_kappa": 0.8389570552147239
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "cross_check",
+          "n_valid": 120,
+          "agreement": 0.6833333333333333,
+          "cohens_kappa": 0.39873417721518994
+        },
+        {
+          "scorer_a": "strongreject",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.6416666666666667,
+          "cohens_kappa": -0.06788079470198644
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "judge_small",
+          "n_valid": 120,
+          "agreement": 0.875,
+          "cohens_kappa": 0.608355091383812
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "cross_check",
+          "n_valid": 120,
+          "agreement": 0.6,
+          "cohens_kappa": 0.25233644859813087
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.7083333333333334,
+          "cohens_kappa": -0.02639296187683307
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "cross_check",
+          "n_valid": 120,
+          "agreement": 0.6916666666666667,
+          "cohens_kappa": 0.41362916006339145
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.6333333333333333,
+          "cohens_kappa": -0.07623318385650243
+        },
+        {
+          "scorer_a": "cross_check",
+          "scorer_b": "shieldgemma",
+          "n_valid": 120,
+          "agreement": 0.4083333333333333,
+          "cohens_kappa": -0.11459968602825737
+        }
+      ],
+      "dual_judge": {
+        "dispute_rate": 0.125,
+        "n_agreed": 105,
+        "n": 120
+      },
+      "dawid_skene": {
+        "converged": false,
+        "n_iter": 100,
+        "per_scorer": {
+          "harmbench": {
+            "sensitivity": 0.5968,
+            "specificity": 0.9928,
+            "error_rate": 0.2052
+          },
+          "strongreject": {
+            "sensitivity": 0.8628,
+            "specificity": 1.0,
+            "error_rate": 0.0686
+          },
+          "judge_big": {
+            "sensitivity": 0.5547,
+            "specificity": 1.0,
+            "error_rate": 0.2227
+          },
+          "judge_small": {
+            "sensitivity": 0.8935,
+            "specificity": 1.0,
+            "error_rate": 0.0533
+          },
+          "cross_check": {
+            "sensitivity": 1.0,
+            "specificity": 0.6168,
+            "error_rate": 0.1916
+          },
+          "shieldgemma": {
+            "sensitivity": 0.1235,
+            "specificity": 0.7831,
+            "error_rate": 0.5467
+          }
+        },
+        "latent_pos_rate": 0.2667
+      },
+      "criterion": {
+        "n_dual_consensus": 105,
+        "agreement_dual_vs_hetero": 0.5333,
+        "pass_0_80": false,
+        "verdict": "评分器敏感"
+      }
+    }
+  ]
+}

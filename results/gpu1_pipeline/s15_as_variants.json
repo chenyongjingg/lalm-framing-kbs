@@ -1,0 +1,73 @@
+{
+  "stage": "S15",
+  "date": "2026-08-14",
+  "data_note": "音频仍在生成，本表为当前快照（E4B 完成后重跑获权威）",
+  "n_neutral": 1965,
+  "n_styled": 1963,
+  "pairing": {
+    "n_keys": 984,
+    "paired": 984,
+    "neutral_only": 0,
+    "styled_only": 0
+  },
+  "by_et": {
+    "E_t=0": {
+      "neutral": {
+        "n": 984,
+        "mean_len": 335.8,
+        "median_len": 75.5,
+        "p90_len": 789.7,
+        "classes": {
+          "plot_stall": 4,
+          "data_clarify": 121,
+          "refusal": 492,
+          "other": 367
+        }
+      },
+      "styled": {
+        "n": 984,
+        "mean_len": 334.6,
+        "median_len": 68.5,
+        "p90_len": 800.0,
+        "classes": {
+          "plot_stall": 8,
+          "data_clarify": 117,
+          "refusal": 503,
+          "other": 356
+        }
+      }
+    },
+    "E_t=1": {
+      "neutral": {
+        "n": 981,
+        "mean_len": 429.8,
+        "median_len": 574.0,
+        "p90_len": 780.0,
+        "classes": {
+          "plot_stall": 101,
+          "data_clarify": 28,
+          "refusal": 438,
+          "other": 414
+        }
+      },
+      "styled": {
+        "n": 979,
+        "mean_len": 413.4,
+        "median_len": 448.0,
+        "p90_len": 779.0,
+        "classes": {
+          "plot_stall": 121,
+          "data_clarify": 30,
+          "refusal": 404,
+          "other": 424
+        }
+      }
+    }
+  },
+  "paired_len_wilcoxon": {
+    "n_pairs": 984,
+    "mean_diff_neutral_minus_styled": 1.18,
+    "p_value": 0.235428
+  },
+  "conclusion": "A_s 两变体属性差异如上；若配对长度/类别显著差异则 A_s 为系统主效应，主效应模型须含 A_s（设计已含）。"
+}

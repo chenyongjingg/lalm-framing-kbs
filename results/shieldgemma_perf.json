@@ -1,0 +1,8 @@
+{
+  "model": "google/shieldgemma-9b",
+  "n_measured": 16200,
+  "latency_mean_s": 0.198,
+  "latency_median_s": 0.197,
+  "latency_p95_s": 0.208,
+  "peak_vram_gb": 6.7
+}

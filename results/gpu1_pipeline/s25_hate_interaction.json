@@ -1,0 +1,56 @@
+{
+  "stage": "S25",
+  "date": "2026-08-14",
+  "purpose": "N/E_t × 仇恨言论 交互正式检验：交互量 = Δ(仇恨言论) − Δ(非仇恨言论)，分层有放回 bootstrap（B=2000），双生成器",
+  "interactions": {
+    "E2B": {
+      "N": {
+        "interaction": 0.1349,
+        "ci95": [
+          0.032,
+          0.2364
+        ],
+        "p_two_sided": 0.011,
+        "n_hate_q": 14,
+        "n_other_q": 136,
+        "excl_zero": true
+      },
+      "E_t": {
+        "interaction": 0.014,
+        "ci95": [
+          -0.12,
+          0.1383
+        ],
+        "p_two_sided": 0.808,
+        "n_hate_q": 14,
+        "n_other_q": 136,
+        "excl_zero": false
+      }
+    },
+    "E4B_text": {
+      "N": {
+        "interaction": 0.3115,
+        "ci95": [
+          0.2434,
+          0.378
+        ],
+        "p_two_sided": 0.0,
+        "n_hate_q": 14,
+        "n_other_q": 136,
+        "excl_zero": true
+      },
+      "E_t": {
+        "interaction": 0.2758,
+        "ci95": [
+          0.1735,
+          0.3739
+        ],
+        "p_two_sided": 0.0,
+        "n_hate_q": 14,
+        "n_other_q": 136,
+        "excl_zero": true
+      }
+    }
+  },
+  "note": "交互量 CI 排除 0（双侧 p<0.05）→ 仇恨言论显著调节该维效应。仇恨言论仅 14 查询（336 单元），探索性定位。"
+}

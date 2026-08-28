@@ -1,0 +1,387 @@
+{
+  "stage": "S37",
+  "date": "2026-08-16",
+  "purpose": "ShieldGemma-9B 独立评分家族：交叉一致矩阵 + N/E_t 效应复现（测量稳健性）",
+  "method": "ShieldGemmaScorer（4bit bnb, yes=1/no=0）评分 E2B 主链 3600 + S28 1200；效应=query 聚类 bootstrap B=42",
+  "disclosure": "ShieldGemma 与 Gemma-4 评分器同 Google 家族——异构训练成立、跨家族不成立。label=回答「对话是否不安全」（yes→1 有害/no→0 安全），与论文有害合规口径方向一致但绝对基率可能不同。",
+  "main": {
+    "n_cells": 3600,
+    "shieldgemma_parsed": 3600,
+    "shieldgemma_none": 0,
+    "shieldgemma_harmful_rate": 0.1658,
+    "distribution_collapse": false,
+    "matrix": {
+      "judge_big_vs_judge_small": {
+        "n": 3573,
+        "agreement": 0.8178,
+        "kappa": 0.7401,
+        "spearman": 0.4092
+      },
+      "judge_big_vs_qwen32": {
+        "n": 3600,
+        "agreement": 0.9361,
+        "kappa": 0.9198,
+        "spearman": 0.8263
+      },
+      "judge_big_vs_cross_check": {
+        "n": 3598,
+        "agreement": 0.3691,
+        "kappa": -0.9843,
+        "spearman": 0.0691
+      },
+      "judge_big_vs_strongreject": {
+        "n": 3600,
+        "agreement": 0.6189,
+        "kappa": 0.2748,
+        "spearman": 0.1413
+      },
+      "judge_big_vs_harmbench": {
+        "n": 3600,
+        "agreement": 0.765,
+        "kappa": 0.6398,
+        "spearman": 0.3194
+      },
+      "judge_big_vs_shieldgemma": {
+        "n": 3600,
+        "agreement": 0.8283,
+        "kappa": 0.7775,
+        "spearman": 0.6005
+      },
+      "judge_big_vs_forced": {
+        "n": 3600,
+        "agreement": 0.8103,
+        "kappa": 0.726,
+        "spearman": -0.0781
+      },
+      "judge_small_vs_qwen32": {
+        "n": 3573,
+        "agreement": 0.82,
+        "kappa": 0.7356,
+        "spearman": 0.4509
+      },
+      "judge_small_vs_cross_check": {
+        "n": 3571,
+        "agreement": 0.5281,
+        "kappa": -0.2082,
+        "spearman": 0.197
+      },
+      "judge_small_vs_strongreject": {
+        "n": 3573,
+        "agreement": 0.7394,
+        "kappa": 0.4959,
+        "spearman": 0.4542
+      },
+      "judge_small_vs_harmbench": {
+        "n": 3573,
+        "agreement": 0.8192,
+        "kappa": 0.695,
+        "spearman": 0.598
+      },
+      "judge_small_vs_shieldgemma": {
+        "n": 3573,
+        "agreement": 0.6812,
+        "kappa": 0.5207,
+        "spearman": 0.2358
+      },
+      "judge_small_vs_forced": {
+        "n": 3573,
+        "agreement": 0.9952,
+        "kappa": 0.9923,
+        "spearman": 0.9696
+      },
+      "qwen32_vs_cross_check": {
+        "n": 3598,
+        "agreement": 0.4091,
+        "kappa": -0.7553,
+        "spearman": 0.064
+      },
+      "qwen32_vs_strongreject": {
+        "n": 3600,
+        "agreement": 0.6394,
+        "kappa": 0.3105,
+        "spearman": 0.1724
+      },
+      "qwen32_vs_harmbench": {
+        "n": 3600,
+        "agreement": 0.7717,
+        "kappa": 0.6414,
+        "spearman": 0.3871
+      },
+      "qwen32_vs_shieldgemma": {
+        "n": 3600,
+        "agreement": 0.8044,
+        "kappa": 0.7371,
+        "spearman": 0.5974
+      },
+      "qwen32_vs_forced": {
+        "n": 3600,
+        "agreement": 0.8131,
+        "kappa": 0.7221,
+        "spearman": -0.0312
+      },
+      "cross_check_vs_strongreject": {
+        "n": 3598,
+        "agreement": 0.716,
+        "kappa": 0.4156,
+        "spearman": 0.3953
+      },
+      "cross_check_vs_harmbench": {
+        "n": 3598,
+        "agreement": 0.587,
+        "kappa": 0.0074,
+        "spearman": 0.266
+      },
+      "cross_check_vs_shieldgemma": {
+        "n": 3598,
+        "agreement": 0.2596,
+        "kappa": -1.1135,
+        "spearman": -0.1953
+      },
+      "cross_check_vs_forced": {
+        "n": 3598,
+        "agreement": 0.5345,
+        "kappa": -0.1815,
+        "spearman": 0.2058
+      },
+      "strongreject_vs_harmbench": {
+        "n": 3600,
+        "agreement": 0.8017,
+        "kappa": 0.6125,
+        "spearman": 0.5945
+      },
+      "strongreject_vs_shieldgemma": {
+        "n": 3600,
+        "agreement": 0.4667,
+        "kappa": -0.0237,
+        "spearman": -0.1179
+      },
+      "strongreject_vs_forced": {
+        "n": 3600,
+        "agreement": 0.7375,
+        "kappa": 0.4902,
+        "spearman": 0.3023
+      },
+      "harmbench_vs_shieldgemma": {
+        "n": 3600,
+        "agreement": 0.6178,
+        "kappa": 0.3888,
+        "spearman": 0.1267
+      },
+      "harmbench_vs_forced": {
+        "n": 3600,
+        "agreement": 0.8125,
+        "kappa": 0.6815,
+        "spearman": 0.1975
+      },
+      "shieldgemma_vs_forced": {
+        "n": 3600,
+        "agreement": 0.6753,
+        "kappa": 0.5066,
+        "spearman": -0.1827
+      }
+    },
+    "shieldgemma_rates_by_condition": {
+      "E0_N0": {
+        "n": 900,
+        "harm": 160,
+        "rate": 0.1778
+      },
+      "E0_N1": {
+        "n": 900,
+        "harm": 128,
+        "rate": 0.1422
+      },
+      "E1_N0": {
+        "n": 900,
+        "harm": 158,
+        "rate": 0.1756
+      },
+      "E1_N1": {
+        "n": 900,
+        "harm": 151,
+        "rate": 0.1678
+      }
+    },
+    "effects": {
+      "N_effect_Et0": {
+        "shieldgemma": {
+          "effect": -0.0361,
+          "ci95": [
+            -0.0566,
+            -0.0156
+          ],
+          "excl_zero": true,
+          "n_query": 150
+        },
+        "dual_judge": {
+          "effect": 0.0584,
+          "ci95": [
+            0.0348,
+            0.0832
+          ],
+          "excl_zero": true,
+          "n_query": 145
+        }
+      },
+      "Et_effect_N0": {
+        "shieldgemma": {
+          "effect": -0.0038,
+          "ci95": [
+            -0.0354,
+            0.0211
+          ],
+          "excl_zero": false,
+          "n_query": 150
+        },
+        "dual_judge": {
+          "effect": 0.0298,
+          "ci95": [
+            0.005,
+            0.0567
+          ],
+          "excl_zero": true,
+          "n_query": 148
+        }
+      },
+      "Et_effect_N1": {
+        "shieldgemma": {
+          "effect": 0.0253,
+          "ci95": [
+            0.0067,
+            0.0444
+          ],
+          "excl_zero": true,
+          "n_query": 150
+        },
+        "dual_judge": {
+          "effect": 0.0277,
+          "ci95": [
+            0.0094,
+            0.0478
+          ],
+          "excl_zero": true,
+          "n_query": 147
+        }
+      },
+      "Et_effect_pooled": {
+        "shieldgemma": {
+          "effect": 0.0122,
+          "ci95": [
+            -0.0033,
+            0.0326
+          ],
+          "excl_zero": false,
+          "n_query": 150
+        },
+        "dual_judge": {
+          "effect": 0.0261,
+          "ci95": [
+            0.0004,
+            0.0473
+          ],
+          "excl_zero": true,
+          "n_query": 150
+        }
+      }
+    }
+  },
+  "s28": {
+    "n_cells": 1200,
+    "shieldgemma_parsed": 1200,
+    "shieldgemma_none": 0,
+    "shieldgemma_harmful_rate": 0.3175,
+    "distribution_collapse": false,
+    "matrix": {
+      "judge_small_vs_judge_big": {
+        "n": 1189,
+        "agreement": 0.7914,
+        "kappa": 0.6437,
+        "spearman": 0.1992
+      },
+      "judge_small_vs_strongreject": {
+        "n": 1189,
+        "agreement": 0.6838,
+        "kappa": 0.3518,
+        "spearman": 0.3923
+      },
+      "judge_small_vs_harmbench": {
+        "n": 1189,
+        "agreement": 0.7965,
+        "kappa": 0.6341,
+        "spearman": 0.6142
+      },
+      "judge_small_vs_forced": {
+        "n": 1189,
+        "agreement": 0.9992,
+        "kappa": 0.9985,
+        "spearman": 0.9962
+      },
+      "judge_small_vs_shieldgemma": {
+        "n": 1189,
+        "agreement": 0.6888,
+        "kappa": 0.4401,
+        "spearman": 0.0873
+      },
+      "judge_big_vs_strongreject": {
+        "n": 1200,
+        "agreement": 0.5708,
+        "kappa": 0.0998,
+        "spearman": 0.0016
+      },
+      "judge_big_vs_harmbench": {
+        "n": 1200,
+        "agreement": 0.815,
+        "kappa": 0.6931,
+        "spearman": 0.1483
+      },
+      "judge_big_vs_forced": {
+        "n": 1200,
+        "agreement": 0.7875,
+        "kappa": 0.6342,
+        "spearman": 0.499
+      },
+      "judge_big_vs_shieldgemma": {
+        "n": 1200,
+        "agreement": 0.79,
+        "kappa": 0.6511,
+        "spearman": 0.613
+      },
+      "strongreject_vs_harmbench": {
+        "n": 1200,
+        "agreement": 0.6625,
+        "kappa": 0.3036,
+        "spearman": 0.3796
+      },
+      "strongreject_vs_forced": {
+        "n": 1200,
+        "agreement": 0.685,
+        "kappa": 0.3544,
+        "spearman": 0.2005
+      },
+      "strongreject_vs_shieldgemma": {
+        "n": 1200,
+        "agreement": 0.4658,
+        "kappa": -0.1018,
+        "spearman": -0.0917
+      },
+      "harmbench_vs_forced": {
+        "n": 1200,
+        "agreement": 0.7942,
+        "kappa": 0.6281,
+        "spearman": 0.2346
+      },
+      "harmbench_vs_shieldgemma": {
+        "n": 1200,
+        "agreement": 0.7183,
+        "kappa": 0.5034,
+        "spearman": 0.0632
+      },
+      "forced_vs_shieldgemma": {
+        "n": 1200,
+        "agreement": 0.6858,
+        "kappa": 0.4318,
+        "spearman": 0.3461
+      }
+    }
+  }
+}

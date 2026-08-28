@@ -1,0 +1,1937 @@
+{
+  "stage": "S29",
+  "date": "2026-08-14",
+  "purpose": "音频生成确定性大样本复核（stage_p0c._lalm_audio_one gemma_4 分支，GPU1 重跑两次 + 跨设备 vs GPU0 存储）",
+  "model": "gemma_4_e4b",
+  "n_cells": 120,
+  "n_error": 0,
+  "same_device_byte_eq": 1.0,
+  "same_device_n": 120,
+  "same_device_eq_n": 120,
+  "cross_device_byte_eq": 1.0,
+  "cross_device_n": 120,
+  "cross_device_eq_n": 120,
+  "per_cell": [
+    {
+      "response_id": "P1P_gemma_4_e4b_q0225_(0, 0, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0225",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 15,
+      "len_stored": 15
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0057_(0, 0, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0057",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0135_(0, 0, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0135",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 184,
+      "len_stored": 184
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0278_(0, 0, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0278",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 980,
+      "len_stored": 980
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0152_(0, 0, 1)_neutral_audio_t1",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0152",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 56,
+      "len_stored": 56
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0060_(0, 0, 1)_neutral_audio_t2",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0060",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 21,
+      "len_stored": 21
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0135_(0, 1, 0)_neutral_audio_t0",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0135",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 222,
+      "len_stored": 222
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0063_(0, 1, 0)_neutral_audio_t1",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0063",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 21,
+      "len_stored": 21
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0234_(0, 1, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0234",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 778,
+      "len_stored": 778
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0091_(0, 1, 1)_neutral_audio_t0",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0091",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 861,
+      "len_stored": 861
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0009_(0, 1, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0009",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 23,
+      "len_stored": 23
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0285_(0, 1, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0285",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 934,
+      "len_stored": 934
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0052_(1, 0, 0)_styled_audio_t0",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0052",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 450,
+      "len_stored": 450
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0062_(1, 0, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0062",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 469,
+      "len_stored": 469
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0020_(1, 0, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0020",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 12,
+      "len_stored": 12
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0119_(1, 0, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0119",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 817,
+      "len_stored": 817
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0032_(1, 0, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0032",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 899,
+      "len_stored": 899
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0213_(1, 0, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0213",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 43,
+      "len_stored": 43
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0249_(1, 1, 0)_neutral_audio_t0",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0249",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 712,
+      "len_stored": 712
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0019_(1, 1, 0)_styled_audio_t1",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0019",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 530,
+      "len_stored": 530
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0084_(1, 1, 0)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0084",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 46,
+      "len_stored": 46
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0178_(1, 1, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0178",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 787,
+      "len_stored": 787
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0277_(1, 1, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0277",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 894,
+      "len_stored": 894
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0018_(1, 1, 1)_neutral_audio_t2",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0018",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 15,
+      "len_stored": 15
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0219_(0, 0, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0219",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 20,
+      "len_stored": 20
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0112_(0, 0, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0112",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 11,
+      "len_stored": 11
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0057_(0, 0, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0057",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0152_(0, 0, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0152",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 915,
+      "len_stored": 915
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0062_(0, 0, 1)_neutral_audio_t1",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0062",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0062_(0, 0, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0062",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0019_(0, 1, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0019",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 17,
+      "len_stored": 17
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0217_(0, 1, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0217",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 17,
+      "len_stored": 17
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0073_(0, 1, 0)_neutral_audio_t2",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0073",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 851,
+      "len_stored": 851
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0072_(0, 1, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0072",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 985,
+      "len_stored": 985
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0279_(0, 1, 1)_neutral_audio_t1",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0279",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 985,
+      "len_stored": 985
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0002_(0, 1, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0002",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 572,
+      "len_stored": 572
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0244_(1, 0, 0)_neutral_audio_t0",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0244",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 88,
+      "len_stored": 88
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0132_(1, 0, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0132",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 780,
+      "len_stored": 780
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0212_(1, 0, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0212",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 20,
+      "len_stored": 20
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0191_(1, 0, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0191",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 771,
+      "len_stored": 771
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0244_(1, 0, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0244",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 814,
+      "len_stored": 814
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0118_(1, 0, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0118",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 43,
+      "len_stored": 43
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0072_(1, 1, 0)_neutral_audio_t0",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0072",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 844,
+      "len_stored": 844
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0031_(1, 1, 0)_styled_audio_t1",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0031",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 751,
+      "len_stored": 751
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0086_(1, 1, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0086",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 1962,
+      "len_stored": 1962
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0112_(1, 1, 1)_neutral_audio_t0",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0112",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 853,
+      "len_stored": 853
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0272_(1, 1, 1)_styled_audio_t1",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0272",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 849,
+      "len_stored": 849
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0150_(1, 1, 1)_neutral_audio_t2",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0150",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 698,
+      "len_stored": 698
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0123_(0, 0, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0123",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 540,
+      "len_stored": 540
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0060_(0, 0, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0060",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 24,
+      "len_stored": 24
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0195_(0, 0, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0195",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 792,
+      "len_stored": 792
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0094_(0, 0, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0094",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 2071,
+      "len_stored": 2071
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0094_(0, 0, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0094",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 878,
+      "len_stored": 878
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0147_(0, 0, 1)_neutral_audio_t2",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0147",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 38,
+      "len_stored": 38
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0170_(0, 1, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0170",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 815,
+      "len_stored": 815
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0289_(0, 1, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0289",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 17,
+      "len_stored": 17
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0052_(0, 1, 0)_neutral_audio_t2",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0052",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 26,
+      "len_stored": 26
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0221_(0, 1, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0221",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 574,
+      "len_stored": 574
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0115_(0, 1, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0115",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 237,
+      "len_stored": 237
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0217_(0, 1, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0217",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 45,
+      "len_stored": 45
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0001_(1, 0, 0)_styled_audio_t0",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0001",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 17,
+      "len_stored": 17
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0218_(1, 0, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0218",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 733,
+      "len_stored": 733
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0116_(1, 0, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0116",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 17,
+      "len_stored": 17
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0249_(1, 0, 1)_neutral_audio_t0",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0249",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 8,
+      "len_stored": 8
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0182_(1, 0, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0182",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 735,
+      "len_stored": 735
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0250_(1, 0, 1)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0250",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 15,
+      "len_stored": 15
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0208_(1, 1, 0)_neutral_audio_t0",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0208",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 777,
+      "len_stored": 777
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0202_(1, 1, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0202",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 1193,
+      "len_stored": 1193
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0220_(1, 1, 0)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0220",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 796,
+      "len_stored": 796
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0249_(1, 1, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0249",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 796,
+      "len_stored": 796
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0094_(1, 1, 1)_styled_audio_t1",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0094",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 2046,
+      "len_stored": 2046
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0028_(1, 1, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0028",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 21,
+      "len_stored": 21
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0095_(0, 0, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0095",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0169_(0, 0, 0)_neutral_audio_t1",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0169",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 20,
+      "len_stored": 20
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0086_(0, 0, 0)_neutral_audio_t2",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0086",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 830,
+      "len_stored": 830
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0229_(0, 0, 1)_neutral_audio_t0",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0229",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 884,
+      "len_stored": 884
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0195_(0, 0, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0195",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 776,
+      "len_stored": 776
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0073_(0, 0, 1)_neutral_audio_t2",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0073",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 176,
+      "len_stored": 176
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0190_(0, 1, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0190",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 803,
+      "len_stored": 803
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0272_(0, 1, 0)_neutral_audio_t1",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0272",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 11,
+      "len_stored": 11
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0032_(0, 1, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0032",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 11,
+      "len_stored": 11
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0111_(0, 1, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0111",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 937,
+      "len_stored": 937
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0112_(0, 1, 1)_neutral_audio_t1",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0112",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 2311,
+      "len_stored": 2311
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0138_(0, 1, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0138",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 101,
+      "len_stored": 101
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0229_(1, 0, 0)_neutral_audio_t0",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0229",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 65,
+      "len_stored": 65
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0001_(1, 0, 0)_styled_audio_t1",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0001",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 694,
+      "len_stored": 694
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0009_(1, 0, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0009",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 23,
+      "len_stored": 23
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0133_(1, 0, 1)_neutral_audio_t0",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0133",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 19,
+      "len_stored": 19
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0279_(1, 0, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0279",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 867,
+      "len_stored": 867
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0112_(1, 0, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0112",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 20,
+      "len_stored": 20
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0185_(1, 1, 0)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0185",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 824,
+      "len_stored": 824
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0154_(1, 1, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0154",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 802,
+      "len_stored": 802
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0285_(1, 1, 0)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0285",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 750,
+      "len_stored": 750
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0234_(1, 1, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0234",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 824,
+      "len_stored": 824
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0132_(1, 1, 1)_styled_audio_t1",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0132",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 823,
+      "len_stored": 823
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0208_(1, 1, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0208",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 10,
+      "len_stored": 10
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0101_(0, 0, 0)_neutral_audio_t0",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0101",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 70,
+      "len_stored": 70
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0278_(0, 0, 0)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0278",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 22,
+      "len_stored": 22
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0272_(0, 0, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0272",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 27,
+      "len_stored": 27
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0190_(0, 0, 1)_neutral_audio_t0",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0190",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 2077,
+      "len_stored": 2077
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0028_(0, 0, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0028",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 21,
+      "len_stored": 21
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0073_(0, 0, 1)_styled_audio_t2",
+      "combo": [
+        0,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0073",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 56,
+      "len_stored": 56
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0036_(0, 1, 0)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0036",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 392,
+      "len_stored": 392
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0197_(0, 1, 0)_neutral_audio_t1",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0197",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 19,
+      "len_stored": 19
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0277_(0, 1, 0)_styled_audio_t2",
+      "combo": [
+        0,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0277",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 1065,
+      "len_stored": 1065
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0213_(0, 1, 1)_styled_audio_t0",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0213",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 858,
+      "len_stored": 858
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0072_(0, 1, 1)_styled_audio_t1",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0072",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 932,
+      "len_stored": 932
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0033_(0, 1, 1)_neutral_audio_t2",
+      "combo": [
+        0,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0033",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 124,
+      "len_stored": 124
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0033_(1, 0, 0)_styled_audio_t0",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0033",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 7,
+      "len_stored": 7
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0229_(1, 0, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0229",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 691,
+      "len_stored": 691
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0182_(1, 0, 0)_neutral_audio_t2",
+      "combo": [
+        1,
+        0,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0182",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 21,
+      "len_stored": 21
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0135_(1, 0, 1)_neutral_audio_t0",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0135",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 31,
+      "len_stored": 31
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0185_(1, 0, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0185",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 833,
+      "len_stored": 833
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0278_(1, 0, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        0,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0278",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 10,
+      "len_stored": 10
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0170_(1, 1, 0)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 0,
+      "query_id": "q0170",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 739,
+      "len_stored": 739
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0246_(1, 1, 0)_neutral_audio_t1",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 1,
+      "query_id": "q0246",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 788,
+      "len_stored": 788
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0221_(1, 1, 0)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        0
+      ],
+      "template_idx": 2,
+      "query_id": "q0221",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 10,
+      "len_stored": 10
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0220_(1, 1, 1)_styled_audio_t0",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 0,
+      "query_id": "q0220",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 765,
+      "len_stored": 765
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0050_(1, 1, 1)_neutral_audio_t1",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 1,
+      "query_id": "q0050",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 277,
+      "len_stored": 277
+    },
+    {
+      "response_id": "P1P_gemma_4_e4b_q0197_(1, 1, 1)_styled_audio_t2",
+      "combo": [
+        1,
+        1,
+        1
+      ],
+      "template_idx": 2,
+      "query_id": "q0197",
+      "same_dev_eq": true,
+      "cross_dev_eq": true,
+      "diff_pos_same": null,
+      "diff_pos_cross": null,
+      "len_run1": 64,
+      "len_stored": 64
+    }
+  ],
+  "disclosure": "同一 GPU 上 bf16 + greedy 解码理论应字节一致；跨 GPU 可能存在浮点归约的极小非确定性，逐字节 diff 如实报告。若字节一致率 < 1，披露差异位置分布以证'实践不可察觉'。"
+}

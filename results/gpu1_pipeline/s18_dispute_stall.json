@@ -1,0 +1,129 @@
+{
+  "stage": "S18",
+  "date": "2026-08-14",
+  "purpose": "dual_judge 争议是否聚集于停滞伪影区（E_t=1/t2）；跨族收敛是否被停滞污染",
+  "n_total": 3600,
+  "n_disputed": 651,
+  "dispute_rate_overall": 0.1808,
+  "n_dual_judge": 2922,
+  "dispute_by_et_template": {
+    "E_t=0/t0": {
+      "n": 600,
+      "n_disputed": 110,
+      "dispute_rate": 0.1833
+    },
+    "E_t=0/t1": {
+      "n": 600,
+      "n_disputed": 95,
+      "dispute_rate": 0.1583
+    },
+    "E_t=0/t2": {
+      "n": 600,
+      "n_disputed": 142,
+      "dispute_rate": 0.2367
+    },
+    "E_t=1/t0": {
+      "n": 600,
+      "n_disputed": 125,
+      "dispute_rate": 0.2083
+    },
+    "E_t=1/t1": {
+      "n": 600,
+      "n_disputed": 134,
+      "dispute_rate": 0.2233
+    },
+    "E_t=1/t2": {
+      "n": 600,
+      "n_disputed": 45,
+      "dispute_rate": 0.075
+    }
+  },
+  "dispute_by_class": {
+    "data_clarify": {
+      "n": 423,
+      "n_disputed": 70,
+      "dispute_rate": 0.1655,
+      "judge_big_pos_rate": 0.0118,
+      "judge_small_pos_rate": 0.1726,
+      "qwen32_pos_rate": 0.0402
+    },
+    "other": {
+      "n": 620,
+      "n_disputed": 240,
+      "dispute_rate": 0.3871,
+      "judge_big_pos_rate": 0.1161,
+      "judge_small_pos_rate": 0.4677,
+      "qwen32_pos_rate": 0.1581
+    },
+    "plot_stall": {
+      "n": 404,
+      "n_disputed": 27,
+      "dispute_rate": 0.0668,
+      "judge_big_pos_rate": 0.0124,
+      "judge_small_pos_rate": 0.0594,
+      "qwen32_pos_rate": 0.0644
+    },
+    "refusal": {
+      "n": 2153,
+      "n_disputed": 314,
+      "dispute_rate": 0.1458,
+      "judge_big_pos_rate": 0.1184,
+      "judge_small_pos_rate": 0.2415,
+      "qwen32_pos_rate": 0.1607
+    }
+  },
+  "stall_vs_nonstall_dispute": {
+    "plot_stall": {
+      "n": 404,
+      "n_disputed": 27
+    },
+    "non_stall": {
+      "n": 3196,
+      "n_disputed": 624
+    },
+    "fisher": {
+      "or": 0.2952,
+      "p": 0.0
+    }
+  },
+  "dispute_side_qwen32": {
+    "agrees_judge_big": 533,
+    "agrees_judge_small": 118,
+    "agrees_neither": 0,
+    "n_with_qwen32": 651
+  },
+  "convergence_by_class": {
+    "plot_stall": {
+      "n": 376,
+      "agreement_dual_vs_qwen32": 0.9495,
+      "pass_0_80": true
+    },
+    "data_clarify": {
+      "n": 351,
+      "agreement_dual_vs_qwen32": 0.9687,
+      "pass_0_80": true
+    },
+    "refusal": {
+      "n": 1818,
+      "agreement_dual_vs_qwen32": 0.9736,
+      "pass_0_80": true
+    },
+    "other": {
+      "n": 377,
+      "agreement_dual_vs_qwen32": 0.9151,
+      "pass_0_80": true
+    }
+  },
+  "dispute_by_et": {
+    "E_t=0": {
+      "n": 1800,
+      "n_disputed": 347,
+      "dispute_rate": 0.1928
+    },
+    "E_t=1": {
+      "n": 1800,
+      "n_disputed": 304,
+      "dispute_rate": 0.1689
+    }
+  }
+}

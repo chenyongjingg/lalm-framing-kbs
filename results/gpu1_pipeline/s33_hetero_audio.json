@@ -1,0 +1,63 @@
+{
+  "stage": "S33",
+  "date": "2026-08-15",
+  "note": "S33b 抢救评分：S33 生成 344 格后评分阶段因 E4B≥10700 提前收尾（n_cells_scored=0），本脚本补评已生成格并产出完整报告",
+  "purpose": "解码温度鲁棒性：Qwen2-Audio-7B 以 temperature=1.0/top_p=0.9/do_sample=True 重生成 S28 同款 cells，检验 N/E_t 效应是否 greedy解码伪影",
+  "decode": {
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "top_k": 50,
+    "do_sample": true,
+    "seed": 20260815
+  },
+  "n_queries": 29,
+  "n_cells_target": 360,
+  "n_cells_generated": 344,
+  "n_cells_scored": 262,
+  "effects_sample": {
+    "N_effect_sample": {
+      "effect": 0.1046,
+      "ci95": [
+        -0.0119,
+        0.2361
+      ],
+      "excl_zero": false,
+      "n_query": 28
+    },
+    "Et_effect_sample": {
+      "effect": 0.0602,
+      "ci95": [
+        -0.0715,
+        0.2201
+      ],
+      "excl_zero": false,
+      "n_query": 26
+    }
+  },
+  "effects_greedy_samesub": {
+    "N_effect_greedy_samesub": {
+      "effect": 0.2009,
+      "ci95": [
+        0.0539,
+        0.3648
+      ],
+      "excl_zero": true,
+      "n_query": 20
+    },
+    "Et_effect_greedy_samesub": {
+      "effect": 0.121,
+      "ci95": [
+        -0.0678,
+        0.3218
+      ],
+      "excl_zero": false,
+      "n_query": 19
+    }
+  },
+  "decode_agreement_greedy_vs_sample": 0.9261,
+  "n_agreement_pairs": 163,
+  "stall_rate_sample": 0.032,
+  "mean_len_chars_sample": 355.4,
+  "coordination": "S33b 抢救评分：E4B 已达 10700，orchestrator 退出填充循环；stage_p1_pilot 仍跑至 10800，capstone 等其退出。GPU1 空闲窗口内完成评分，保留 GPU1 占用检测绝不并发抢。",
+  "disclosure": "覆盖率 n_cells_scored/n_cells_target=262/360；生成阶段因 E4B完成停在 344 格（未生成 16 格），评分经 S33b 补全。解码为采样（seed 固定可复现），与 S28 greedy 配对比较为'同格'设计。"
+}

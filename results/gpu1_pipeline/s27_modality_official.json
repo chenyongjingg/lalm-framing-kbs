@@ -1,0 +1,169 @@
+{
+  "stage": "S27",
+  "date": "2026-08-15",
+  "purpose": "模态效应在官方基准评分器（strongreject / harmbench）下的稳健性",
+  "authoritative": "E4B 完成后运行（E4B 全量 + S20d 文本 + S25 音频官方腿全覆盖）",
+  "design": "与 S24 同构：query 聚类 bootstrap 95%CI；两两模态 + text vs all_audio",
+  "coverage": {
+    "strongreject": {
+      "text_n": 3600,
+      "audio_n": 7200,
+      "text_coverage": 1.0,
+      "audio_coverage": 1.0
+    },
+    "harmbench": {
+      "text_n": 3600,
+      "audio_n": 7200,
+      "text_coverage": 1.0,
+      "audio_coverage": 1.0
+    }
+  },
+  "modality_rates": {
+    "strongreject": {
+      "text": {
+        "n": 3600,
+        "pos": 0.4683
+      },
+      "neutral_audio": {
+        "n": 3600,
+        "pos": 0.5525
+      },
+      "styled_audio": {
+        "n": 3600,
+        "pos": 0.5456
+      }
+    },
+    "harmbench": {
+      "text": {
+        "n": 3600,
+        "pos": 0.2806
+      },
+      "neutral_audio": {
+        "n": 3600,
+        "pos": 0.3469
+      },
+      "styled_audio": {
+        "n": 3600,
+        "pos": 0.3417
+      }
+    }
+  },
+  "modality_effects": {
+    "strongreject": {
+      "text_vs_neutral_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.4683,
+        "pos1": 0.5525,
+        "delta": 0.0842,
+        "ci95": [
+          0.0536,
+          0.1158
+        ],
+        "or_fisher": 1.4016,
+        "p_fisher": 0.0,
+        "name": "strongreject_text_vs_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.4683,
+        "pos1": 0.5456,
+        "delta": 0.0772,
+        "ci95": [
+          0.0467,
+          0.1108
+        ],
+        "or_fisher": 1.3628,
+        "p_fisher": 0.0,
+        "name": "strongreject_text_vs_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.5525,
+        "pos1": 0.5456,
+        "delta": -0.0069,
+        "ci95": [
+          -0.0195,
+          0.005
+        ],
+        "or_fisher": 0.9723,
+        "p_fisher": 0.56975,
+        "name": "strongreject_neutral_audio_vs_styled_audio"
+      },
+      "text_vs_all_audio": {
+        "n0": 3600,
+        "n1": 7200,
+        "pos0": 0.4683,
+        "pos1": 0.549,
+        "delta": 0.0807,
+        "ci95": [
+          0.0512,
+          0.1131
+        ],
+        "or_fisher": 1.3821,
+        "p_fisher": 0.0,
+        "name": "strongreject_text_vs_all_audio"
+      }
+    },
+    "harmbench": {
+      "text_vs_neutral_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.2806,
+        "pos1": 0.3469,
+        "delta": 0.0664,
+        "ci95": [
+          0.0397,
+          0.0942
+        ],
+        "or_fisher": 1.3623,
+        "p_fisher": 0.0,
+        "name": "harmbench_text_vs_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.2806,
+        "pos1": 0.3417,
+        "delta": 0.0611,
+        "ci95": [
+          0.0319,
+          0.0878
+        ],
+        "or_fisher": 1.3309,
+        "p_fisher": 0.0,
+        "name": "harmbench_text_vs_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.3469,
+        "pos1": 0.3417,
+        "delta": -0.0053,
+        "ci95": [
+          -0.0181,
+          0.0069
+        ],
+        "or_fisher": 0.9769,
+        "p_fisher": 0.655269,
+        "name": "harmbench_neutral_audio_vs_styled_audio"
+      },
+      "text_vs_all_audio": {
+        "n0": 3600,
+        "n1": 7200,
+        "pos0": 0.2806,
+        "pos1": 0.3443,
+        "delta": 0.0637,
+        "ci95": [
+          0.0378,
+          0.0896
+        ],
+        "or_fisher": 1.3465,
+        "p_fisher": 0.0,
+        "name": "harmbench_text_vs_all_audio"
+      }
+    }
+  }
+}

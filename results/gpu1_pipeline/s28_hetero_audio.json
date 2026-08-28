@@ -1,0 +1,59 @@
+{
+  "stage": "S28",
+  "date": "2026-08-14",
+  "purpose": "Qwen2-Audio-7B 异族生成器复现 N/E_t 效应（R0, neutral_audio, E4B 设计子集）",
+  "n_queries": 100,
+  "n_cells_target": 1200,
+  "n_cells_generated": 1200,
+  "n_fail": 0,
+  "batch_mode": "seq",
+  "batch_validated": false,
+  "time_budget_min": 420,
+  "effects": {
+    "N_effect_qwen2": {
+      "effect": 0.2033,
+      "ci95": [
+        0.1371,
+        0.2716
+      ],
+      "excl_zero": true,
+      "n_query": 97
+    },
+    "N_effect_gemma": {
+      "effect": 0.0796,
+      "ci95": [
+        0.0227,
+        0.1377
+      ],
+      "excl_zero": true,
+      "n_query": 78
+    },
+    "Et_effect_qwen2": {
+      "effect": 0.0782,
+      "ci95": [
+        0.021,
+        0.1435
+      ],
+      "excl_zero": true,
+      "n_query": 94
+    },
+    "Et_effect_gemma": {
+      "effect": -0.0066,
+      "ci95": [
+        -0.0686,
+        0.0561
+      ],
+      "excl_zero": false,
+      "n_query": 76
+    }
+  },
+  "stall_rate": {
+    "qwen2_audio": 0.0208,
+    "gemma_e4b_same_cells": 0.1792
+  },
+  "mean_len_chars": {
+    "qwen2_audio": 327.4,
+    "gemma_e4b_same_cells": 398.7
+  },
+  "disclosure": "生成吞吐用批量化（经 ≤4 格顺序/批量字节一致性校验，通过才用 batch 模式；此为独立新实验，不触及权威 E4B 数据）。候选仅含 12 格齐全的 query；n_queries 由 S31 功效校准。标签为预注册 dual_judge 共识口径。"
+}

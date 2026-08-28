@@ -12,6 +12,7 @@ paper/*.out
 paper/*.bbl
 paper/*.blg
 paper/*.spl
+paper/build/
 
 # OS / editor
 .DS_Store
@@ -22,3 +23,13 @@ nohup.out
 .env
 *.token
 **/secrets*
+
+# Internal server operational scripts (not part of the public reproducibility package)
+*_watchdog.sh
+*_watch.sh
+*watch_v*.sh
+p0c_audit*.py
+p2b_rep_audit.py
+run_*_recover.sh
+run_*_capstone.sh
+run_qwen32_delta_*.sh

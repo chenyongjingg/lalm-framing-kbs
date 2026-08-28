@@ -1,0 +1,542 @@
+{
+  "stage": "S41",
+  "scope": "P1-FULL text zh/en e4b/e2b (dual_judge)",
+  "asr_by_condition_overall": {
+    "baseline": {
+      "asr": 2.087,
+      "ci": [
+        1.568,
+        2.773
+      ],
+      "n": 2400,
+      "n_dual": 2204
+    },
+    "storytelling": {
+      "asr": 40.101,
+      "ci": [
+        37.554,
+        42.702
+      ],
+      "n": 2400,
+      "n_dual": 1389
+    },
+    "unrestricted": {
+      "asr": 20.563,
+      "ci": [
+        18.73,
+        22.525
+      ],
+      "n": 2400,
+      "n_dual": 1741
+    }
+  },
+  "by_model_lang": [
+    {
+      "model": "gemma_4_e4b",
+      "lang": "zh",
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 2.166,
+          "ci": [
+            1.243,
+            3.748
+          ],
+          "n": 600,
+          "n_dual": 554
+        },
+        "storytelling": {
+          "asr": 40.909,
+          "ci": [
+            35.898,
+            46.117
+          ],
+          "n": 600,
+          "n_dual": 352
+        },
+        "unrestricted": {
+          "asr": 19.249,
+          "ci": [
+            15.786,
+            23.261
+          ],
+          "n": 600,
+          "n_dual": 426
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 38.381,
+          "delta_ci": [
+            31.998,
+            45.05
+          ],
+          "or": 27.208,
+          "or_ci": [
+            13.062,
+            106.363
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 18.638,
+          "delta_ci": [
+            13.874,
+            23.784
+          ],
+          "or": 9.195,
+          "or_ci": [
+            4.816,
+            28.454
+          ]
+        }
+      }
+    },
+    {
+      "model": "gemma_4_e4b",
+      "lang": "en",
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 1.648,
+          "ci": [
+            0.87,
+            3.103
+          ],
+          "n": 600,
+          "n_dual": 546
+        },
+        "storytelling": {
+          "asr": 41.867,
+          "ci": [
+            36.683,
+            47.238
+          ],
+          "n": 600,
+          "n_dual": 332
+        },
+        "unrestricted": {
+          "asr": 19.506,
+          "ci": [
+            15.941,
+            23.644
+          ],
+          "n": 600,
+          "n_dual": 405
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 40.16,
+          "delta_ci": [
+            33.433,
+            46.906
+          ],
+          "or": 28.105,
+          "or_ci": [
+            13.234,
+            110.646
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 19.215,
+          "delta_ci": [
+            14.221,
+            24.638
+          ],
+          "or": 13.228,
+          "or_ci": [
+            6.139,
+            63.886
+          ]
+        }
+      }
+    },
+    {
+      "model": "gemma_4_e2b",
+      "lang": "zh",
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 1.455,
+          "ci": [
+            0.739,
+            2.844
+          ],
+          "n": 600,
+          "n_dual": 550
+        },
+        "storytelling": {
+          "asr": 34.375,
+          "ci": [
+            29.8,
+            39.259
+          ],
+          "n": 600,
+          "n_dual": 384
+        },
+        "unrestricted": {
+          "asr": 17.61,
+          "ci": [
+            14.454,
+            21.283
+          ],
+          "n": 600,
+          "n_dual": 477
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 29.879,
+          "delta_ci": [
+            24.377,
+            35.993
+          ],
+          "or": 24.509,
+          "or_ci": [
+            11.539,
+            114.322
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 16.015,
+          "delta_ci": [
+            11.817,
+            20.547
+          ],
+          "or": 10.267,
+          "or_ci": [
+            5.035,
+            40.073
+          ]
+        }
+      }
+    },
+    {
+      "model": "gemma_4_e2b",
+      "lang": "en",
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 3.069,
+          "ci": [
+            1.925,
+            4.859
+          ],
+          "n": 600,
+          "n_dual": 554
+        },
+        "storytelling": {
+          "asr": 44.237,
+          "ci": [
+            38.903,
+            49.706
+          ],
+          "n": 600,
+          "n_dual": 321
+        },
+        "unrestricted": {
+          "asr": 26.097,
+          "ci": [
+            22.184,
+            30.431
+          ],
+          "n": 600,
+          "n_dual": 433
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 37.466,
+          "delta_ci": [
+            30.154,
+            44.894
+          ],
+          "or": 16.104,
+          "or_ci": [
+            8.413,
+            42.962
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 24.429,
+          "delta_ci": [
+            18.739,
+            30.0
+          ],
+          "or": 10.883,
+          "or_ci": [
+            5.916,
+            27.798
+          ]
+        }
+      }
+    }
+  ],
+  "by_model": {
+    "gemma_4_e4b": {
+      "model": "gemma_4_e4b",
+      "lang": null,
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 1.909,
+          "ci": [
+            1.252,
+            2.901
+          ],
+          "n": 1200,
+          "n_dual": 1100
+        },
+        "storytelling": {
+          "asr": 41.374,
+          "ci": [
+            37.742,
+            45.103
+          ],
+          "n": 1200,
+          "n_dual": 684
+        },
+        "unrestricted": {
+          "asr": 19.374,
+          "ci": [
+            16.83,
+            22.2
+          ],
+          "n": 1200,
+          "n_dual": 831
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 39.223,
+          "delta_ci": [
+            34.552,
+            43.86
+          ],
+          "or": 27.638,
+          "or_ci": [
+            15.842,
+            65.826
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 18.888,
+          "delta_ci": [
+            15.266,
+            22.54
+          ],
+          "or": 10.838,
+          "or_ci": [
+            6.339,
+            24.463
+          ]
+        }
+      }
+    },
+    "gemma_4_e2b": {
+      "model": "gemma_4_e2b",
+      "lang": null,
+      "asr_by_condition": {
+        "baseline": {
+          "asr": 2.264,
+          "ci": [
+            1.538,
+            3.322
+          ],
+          "n": 1200,
+          "n_dual": 1104
+        },
+        "storytelling": {
+          "asr": 38.865,
+          "ci": [
+            35.337,
+            42.515
+          ],
+          "n": 1200,
+          "n_dual": 705
+        },
+        "unrestricted": {
+          "asr": 21.648,
+          "ci": [
+            19.095,
+            24.44
+          ],
+          "n": 1200,
+          "n_dual": 910
+        }
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": 33.403,
+          "delta_ci": [
+            28.855,
+            38.089
+          ],
+          "or": 18.558,
+          "or_ci": [
+            11.151,
+            38.158
+          ]
+        },
+        "unrestricted": {
+          "delta_pp": 20.265,
+          "delta_ci": [
+            16.667,
+            23.932
+          ],
+          "or": 10.483,
+          "or_ci": [
+            6.522,
+            20.903
+          ]
+        }
+      }
+    }
+  },
+  "by_lang": {
+    "zh": {
+      "model": null,
+      "lang": "zh",
+      "asr_by_condition": {
+        "baseline": null,
+        "storytelling": null,
+        "unrestricted": null
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": null,
+          "delta_ci": null,
+          "or": null,
+          "or_ci": null
+        },
+        "unrestricted": {
+          "delta_pp": null,
+          "delta_ci": null,
+          "or": null,
+          "or_ci": null
+        }
+      }
+    },
+    "en": {
+      "model": null,
+      "lang": "en",
+      "asr_by_condition": {
+        "baseline": null,
+        "storytelling": null,
+        "unrestricted": null
+      },
+      "effects": {
+        "storytelling": {
+          "delta_pp": null,
+          "delta_ci": null,
+          "or": null,
+          "or_ci": null
+        },
+        "unrestricted": {
+          "delta_pp": null,
+          "delta_ci": null,
+          "or": null,
+          "or_ci": null
+        }
+      }
+    }
+  },
+  "v_model": {
+    "gemma_4_e4b": {
+      "V_pp": 29.099,
+      "V_or": 17.464,
+      "n_effects": 4
+    },
+    "gemma_4_e2b": {
+      "V_pp": 26.947,
+      "V_or": 14.491,
+      "n_effects": 4
+    }
+  },
+  "arch_control": {
+    "note": "qwen2_audio_7b 为异构架构对照，排除主推断",
+    "asr_by_condition": {
+      "baseline": {
+        "asr": 5.281,
+        "ci": [
+          4.133,
+          6.726
+        ],
+        "n": 1200,
+        "n_dual": 1155
+      },
+      "storytelling": {
+        "asr": 38.816,
+        "ci": [
+          35.84,
+          41.879
+        ],
+        "n": 1200,
+        "n_dual": 997
+      },
+      "unrestricted": {
+        "asr": 34.971,
+        "ci": [
+          32.103,
+          37.952
+        ],
+        "n": 1200,
+        "n_dual": 1018
+      }
+    }
+  },
+  "ood_adv": {
+    "note": "AdvBench OOD 锚定集（英文恶意，跨域泛化）",
+    "asr_by_condition": {
+      "baseline": {
+        "asr": 0.168,
+        "ci": [
+          0.046,
+          0.609
+        ],
+        "n": 1200,
+        "n_dual": 1193
+      },
+      "storytelling": {
+        "asr": 31.009,
+        "ci": [
+          27.906,
+          34.292
+        ],
+        "n": 1200,
+        "n_dual": 803
+      },
+      "unrestricted": {
+        "asr": 13.174,
+        "ci": [
+          11.219,
+          15.409
+        ],
+        "n": 1200,
+        "n_dual": 1002
+      }
+    },
+    "effects": {
+      "storytelling": {
+        "delta_pp": 38.038,
+        "delta_ci": [
+          32.279,
+          43.699
+        ],
+        "or": 363.319,
+        "or_ci": [
+          130.54,
+          876.214
+        ]
+      },
+      "unrestricted": {
+        "delta_pp": 16.35,
+        "delta_ci": [
+          12.55,
+          20.317
+        ],
+        "or": 118.365,
+        "or_ci": [
+          47.634,
+          276.087
+        ]
+      }
+    }
+  },
+  "method": "Δ=ASR(cond)-ASR(baseline) pp；OR=(p1/(1-p1))/(p0/(1-p0))；CI=query 配对簇 bootstrap B=2000"
+}

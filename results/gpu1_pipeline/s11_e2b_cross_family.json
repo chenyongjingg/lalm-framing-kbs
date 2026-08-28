@@ -1,0 +1,210 @@
+{
+  "stage": "S11",
+  "model": "gemma_4_e2b_responses (text 3600)",
+  "n_responses": 3600,
+  "distribution": {
+    "judge_big": {
+      "pass": true,
+      "counts": {
+        "0": 3263,
+        "1": 337
+      },
+      "pos_rate": 0.0936
+    },
+    "judge_small": {
+      "pass": true,
+      "counts": {
+        "0": 2666,
+        "1": 907
+      },
+      "pos_rate": 0.2538
+    },
+    "qwen32": {
+      "pass": true,
+      "counts": {
+        "0": 3113,
+        "1": 487
+      },
+      "pos_rate": 0.1353
+    }
+  },
+  "overall": {
+    "criterion": {
+      "n_dual_consensus": 2922,
+      "agreement_dual_vs_qwen32": 0.9624,
+      "pass_0_80": true,
+      "verdict": "跨族收敛（测量可信）"
+    },
+    "dual_judge": {
+      "n_dual_judge": 3573,
+      "dispute_rate": 0.1822,
+      "n_disputed": 651
+    },
+    "pairwise": [
+      {
+        "scorer_a": "judge_big",
+        "scorer_b": "judge_small",
+        "n_valid": 3573,
+        "agreement": 0.8178,
+        "cohens_kappa": 0.3907207105498834
+      },
+      {
+        "scorer_a": "judge_big",
+        "scorer_b": "qwen32",
+        "n_valid": 3600,
+        "agreement": 0.9361,
+        "cohens_kappa": 0.6861451267966109
+      },
+      {
+        "scorer_a": "judge_small",
+        "scorer_b": "qwen32",
+        "n_valid": 3573,
+        "agreement": 0.82,
+        "cohens_kappa": 0.436625351428827
+      }
+    ],
+    "dawid_skene": {
+      "converged": true,
+      "n_iter": 38,
+      "per_scorer": {
+        "judge_big": {
+          "sensitivity": 0.7324,
+          "specificity": 0.9982,
+          "error_rate": 0.1347
+        },
+        "judge_small": {
+          "sensitivity": 0.9031,
+          "specificity": 0.8378,
+          "error_rate": 0.1295
+        },
+        "qwen32": {
+          "sensitivity": 0.8961,
+          "specificity": 0.974,
+          "error_rate": 0.0649
+        }
+      },
+      "latent_pos_rate": 0.1225
+    }
+  },
+  "by_et": {
+    "E_t=0": {
+      "n_responses": 1800,
+      "criterion": {
+        "n_dual_consensus": 1442,
+        "agreement_dual_vs_qwen32": 0.9806,
+        "pass_0_80": true,
+        "verdict": "跨族收敛（测量可信）"
+      },
+      "dual_judge": {
+        "n_dual_judge": 1789,
+        "dispute_rate": 0.194,
+        "n_disputed": 347
+      },
+      "pairwise": [
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "judge_small",
+          "n_valid": 3573,
+          "agreement": 0.8178,
+          "cohens_kappa": 0.3907207105498834
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "qwen32",
+          "n_valid": 3600,
+          "agreement": 0.9361,
+          "cohens_kappa": 0.6861451267966109
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "qwen32",
+          "n_valid": 3573,
+          "agreement": 0.82,
+          "cohens_kappa": 0.436625351428827
+        }
+      ],
+      "dawid_skene": {
+        "converged": true,
+        "n_iter": 75,
+        "per_scorer": {
+          "judge_big": {
+            "sensitivity": 0.7869,
+            "specificity": 0.9996,
+            "error_rate": 0.1067
+          },
+          "judge_small": {
+            "sensitivity": 0.9218,
+            "specificity": 0.8128,
+            "error_rate": 0.1327
+          },
+          "qwen32": {
+            "sensitivity": 0.8567,
+            "specificity": 0.9941,
+            "error_rate": 0.0746
+          }
+        },
+        "latent_pos_rate": 0.0928
+      }
+    },
+    "E_t=1": {
+      "n_responses": 1800,
+      "criterion": {
+        "n_dual_consensus": 1480,
+        "agreement_dual_vs_qwen32": 0.9446,
+        "pass_0_80": true,
+        "verdict": "跨族收敛（测量可信）"
+      },
+      "dual_judge": {
+        "n_dual_judge": 1784,
+        "dispute_rate": 0.1704,
+        "n_disputed": 304
+      },
+      "pairwise": [
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "judge_small",
+          "n_valid": 3573,
+          "agreement": 0.8178,
+          "cohens_kappa": 0.3907207105498834
+        },
+        {
+          "scorer_a": "judge_big",
+          "scorer_b": "qwen32",
+          "n_valid": 3600,
+          "agreement": 0.9361,
+          "cohens_kappa": 0.6861451267966109
+        },
+        {
+          "scorer_a": "judge_small",
+          "scorer_b": "qwen32",
+          "n_valid": 3573,
+          "agreement": 0.82,
+          "cohens_kappa": 0.436625351428827
+        }
+      ],
+      "dawid_skene": {
+        "converged": true,
+        "n_iter": 33,
+        "per_scorer": {
+          "judge_big": {
+            "sensitivity": 0.6933,
+            "specificity": 0.9965,
+            "error_rate": 0.1551
+          },
+          "judge_small": {
+            "sensitivity": 0.8912,
+            "specificity": 0.8655,
+            "error_rate": 0.1216
+          },
+          "qwen32": {
+            "sensitivity": 0.9236,
+            "specificity": 0.9544,
+            "error_rate": 0.061
+          }
+        },
+        "latent_pos_rate": 0.1533
+      }
+    }
+  },
+  "note": "E2B 生成响应在 dual_judge（judge_big E4B + judge_small E2B 一致）口径下 vs Qwen2.5-32B-AWQ 强异构锚点的一致率；≥0.80 跨族收敛 补全 S9 缺失的 judge_small(E2B) 侧证据。"
+}

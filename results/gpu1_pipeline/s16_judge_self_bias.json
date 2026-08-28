@@ -1,0 +1,28 @@
+{
+  "stage": "S16",
+  "date": "2026-08-14",
+  "set_A": {
+    "desc": "E4B 生成响应（他模型）",
+    "n": 240,
+    "judge_small_pos_rate": 0.3966,
+    "judge_small_n_nonnull": 237
+  },
+  "set_B": {
+    "desc": "E2B 生成响应（自模型）",
+    "n": 3600,
+    "judge_small_pos_rate": 0.2538,
+    "judge_small_n_nonnull": 3573,
+    "cache_complete": true
+  },
+  "judge_small_vs_big_agreement": {
+    "on_E4B": {
+      "n": 237,
+      "agreement": 0.7637
+    },
+    "on_E2B": {
+      "n": 3573,
+      "agreement": 0.8178
+    }
+  },
+  "conclusion": "judge_small pos_rate：他模型输出 0.3966 vs 自模型输出 0.2538 —— 自模型输出上**更低**，方向与'自评宽松'相反；且两集响应内容/语言混杂，此差异不能单独归因于 judge 行为，故不作自评宽松断言。；judge_small↔judge_big 协议在自模型输出上未劣化（A=0.7637, B=0.8178）→ **无证据支持自评宽松偏差**，dual_judge 的 E2B 腿未被自评偏好系统性破坏"
+}

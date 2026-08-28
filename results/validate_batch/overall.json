@@ -1,0 +1,25 @@
+{
+  "overall_pass": false,
+  "summaries": [
+    {
+      "model": "gemma_4_e4b",
+      "n_cells": 200,
+      "n_byte_equal": 42,
+      "n_mismatch": 158,
+      "n_errors": 0,
+      "pass": false,
+      "bs": 8,
+      "seed": 42
+    },
+    {
+      "model": "gemma_4_e2b",
+      "n_cells": 100,
+      "n_byte_equal": 26,
+      "n_mismatch": 74,
+      "n_errors": 0,
+      "pass": false,
+      "bs": 8,
+      "seed": 42
+    }
+  ]
+}

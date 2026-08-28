@@ -1,0 +1,21 @@
+{
+  "stage": "S3",
+  "bench_rows": 602,
+  "n_labelled": 602,
+  "smoke": false,
+  "dry": false,
+  "scorers": [
+    "shieldgemma"
+  ],
+  "metrics": {
+    "shieldgemma": {
+      "acc": 0.7857,
+      "recall": 0.8388,
+      "fpr": 0.2584,
+      "fnr": 0.1612,
+      "n": 602,
+      "n_dropped": 0
+    }
+  },
+  "note": "Llama-Guard-3-8B / WildGuard 均 gated 不可用；ShieldGemma-9B 为唯一离线可用异构安全分类器，见 audit_reviews.md 预登记更正。"
+}

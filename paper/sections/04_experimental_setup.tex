@@ -9,9 +9,9 @@ run at BF16 with thinking disabled.
 
 Safety judgment uses an audited multi-scorer protocol. Four scorers
 (HarmBench-cls \citep{harmbench}, StrongREJECT \citep{strongreject}, and two
-Gemma-family judges) are validated on a public benchmark (JailBench,
-$n=602$)\footnote{JailBench is an internal validation set, not a public
-benchmark; it is reported here for reproducibility.}; the primary judge
+Gemma-family judges) are validated on an internal validation set (JailBench,
+$n=602$)\footnote{JailBench is not a public benchmark; it is reported here for
+reproducibility.}; the primary judge
 (judge\_big) reaches 0.8555 accuracy. We define three calibers: \emph{primary}
 (single best judge, full sample), \emph{dual-judge} (two judges agree, else
 abstain), and \emph{majority} (four-vote). We use the \textbf{primary}

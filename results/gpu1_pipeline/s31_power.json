@@ -1,0 +1,125 @@
+{
+  "stage": "S31",
+  "date": "2026-08-14",
+  "method": "真实 E4B 文本查询级聚类结构 + 注入效应 δ（叠加于 N1 真实 概率）→ Bernoulli cell 标签 → query 聚类 bootstrap（B=1000, N_sim=60）→ 功效 = CI 排除 0 比例",
+  "n_query_pool": 143,
+  "query_level_pos_var": {
+    "N0": 0.0178,
+    "N1": 0.0421
+  },
+  "results": [
+    {
+      "n_queries": 30,
+      "effect_delta": 0.0,
+      "power": 0.1833
+    },
+    {
+      "n_queries": 30,
+      "effect_delta": 0.02,
+      "power": 0.55
+    },
+    {
+      "n_queries": 30,
+      "effect_delta": 0.04,
+      "power": 0.8
+    },
+    {
+      "n_queries": 30,
+      "effect_delta": 0.06,
+      "power": 0.7
+    },
+    {
+      "n_queries": 30,
+      "effect_delta": 0.08,
+      "power": 0.8
+    },
+    {
+      "n_queries": 30,
+      "effect_delta": 0.1,
+      "power": 0.9
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.0,
+      "power": 0.5833
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.02,
+      "power": 0.7833
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.04,
+      "power": 0.8833
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.06,
+      "power": 0.9333
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.08,
+      "power": 0.9667
+    },
+    {
+      "n_queries": 60,
+      "effect_delta": 0.1,
+      "power": 1.0
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.0,
+      "power": 0.7333
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.02,
+      "power": 0.9167
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.04,
+      "power": 0.9833
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.06,
+      "power": 1.0
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.08,
+      "power": 1.0
+    },
+    {
+      "n_queries": 100,
+      "effect_delta": 0.1,
+      "power": 1.0
+    }
+  ],
+  "mde_80": [
+    {
+      "n_queries": 30,
+      "mde_0_80": 0.04,
+      "max_power_seen": 0.9
+    },
+    {
+      "n_queries": 60,
+      "mde_0_80": 0.04,
+      "max_power_seen": 1.0
+    },
+    {
+      "n_queries": 100,
+      "mde_0_80": 0.02,
+      "max_power_seen": 1.0
+    },
+    {
+      "n_queries": 150,
+      "mde_0_80": null,
+      "max_power_seen": null
+    }
+  ],
+  "note": "δ 为 N1 相对 N0 的真实 pos 差（叠加于真实 +0.06 效应之上）。δ=0 行反映'仅真实效应'下的检出功效（复现力上限）。"
+}

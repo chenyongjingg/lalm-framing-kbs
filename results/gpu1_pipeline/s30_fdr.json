@@ -1,0 +1,890 @@
+{
+  "stage": "S30",
+  "date": "2026-08-14",
+  "method": "收集 S19-S28 结果 JSON 中所有显式 p 值，Benjamini-Hochberg FDR 校正",
+  "n_p_values": 84,
+  "n_files_with_p": 12,
+  "n_raw_sig_0_05": 65,
+  "per_q": {
+    "0.05": {
+      "q": 0.05,
+      "n_survive": 65,
+      "raw_n_sig_0_05": 65
+    },
+    "0.1": {
+      "q": 0.1,
+      "n_survive": 65,
+      "raw_n_sig_0_05": 65
+    }
+  },
+  "coverage": [
+    {
+      "file": "s10_audio_stalling.json",
+      "n_p_values": 2
+    },
+    {
+      "file": "s10b_clarified_prompt.json",
+      "n_p_values": 1
+    },
+    {
+      "file": "s11_e2b_cross_family.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s12_text_clarified.json",
+      "n_p_values": 1
+    },
+    {
+      "file": "s12b_modality_stall.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s13_test_retest.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s14_len_harm.json",
+      "n_p_values": 4
+    },
+    {
+      "file": "s15_as_variants.json",
+      "n_p_values": 1
+    },
+    {
+      "file": "s16_judge_self_bias.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s18_dispute_stall.json",
+      "n_p_values": 1
+    },
+    {
+      "file": "s19_e2b_sweep.json",
+      "n_p_values": 8
+    },
+    {
+      "file": "s1_zh_convergence.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s20_e2b_r_n_interaction.json",
+      "n_p_values": 18
+    },
+    {
+      "file": "s20c_e4b_dual_crossgen.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s20e_template_strat.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s22_attack_family.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s23_e4b_template_strat.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s24_e4b_attack_family.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s24_modality_effect.json",
+      "n_p_values": 26
+    },
+    {
+      "file": "s25_hate_interaction.json",
+      "n_p_values": 4
+    },
+    {
+      "file": "s26_modality_family.json",
+      "n_p_values": 10
+    },
+    {
+      "file": "s2_determinism.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s3_shieldgemma_bench.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s4_convergence_full.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s5_zh_audio.json",
+      "n_p_values": 0
+    },
+    {
+      "file": "s7_ds_simulation.json",
+      "n_p_values": 8
+    },
+    {
+      "file": "s9_cross_family.json",
+      "n_p_values": 0
+    }
+  ],
+  "dropped_by_fdr_q0_05": [],
+  "all_tests": [
+    {
+      "src": "s10_audio_stalling.json",
+      "path": "fisher_plotstall_et1_vs_et0.p_value",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s10_audio_stalling.json",
+      "path": "fisher_plotstall_audio_vs_text.p_value",
+      "p": 0.815125,
+      "q_0.05": 0.8249,
+      "survive_q0.05": false,
+      "q_0.1": 0.8249,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s10b_clarified_prompt.json",
+      "path": "part3_stall.fisher_orig_vs_clarified.p_value",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s12_text_clarified.json",
+      "path": "part3_stall.fisher_orig_vs_clarified.p_value",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s14_len_harm.json",
+      "path": "s4_480.pointbiserial_len_harm_dj.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s14_len_harm.json",
+      "path": "e2b_3600.pointbiserial_len_harm_dj.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s14_len_harm.json",
+      "path": "conclusion.[0].p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s14_len_harm.json",
+      "path": "conclusion.[1].p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s15_as_variants.json",
+      "path": "paired_len_wilcoxon.p_value",
+      "p": 0.235428,
+      "q_0.05": 0.2908,
+      "survive_q0.05": false,
+      "q_0.1": 0.2908,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s18_dispute_stall.json",
+      "path": "stall_vs_nonstall_dispute.fisher.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.dual_judge_consensus.fisher_p",
+      "p": 0.013604,
+      "q_0.05": 0.0181,
+      "survive_q0.05": true,
+      "q_0.1": 0.0181,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.judge_big.fisher_p",
+      "p": 0.000241,
+      "q_0.05": 0.0004,
+      "survive_q0.05": true,
+      "q_0.1": 0.0004,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.judge_small.fisher_p",
+      "p": 0.672442,
+      "q_0.05": 0.6973,
+      "survive_q0.05": false,
+      "q_0.1": 0.6973,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.qwen32.fisher_p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.cross_check.fisher_p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.DS3_b_s_qw.fisher_p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.DS4_b_s_qw_cc.fisher_p",
+      "p": 0.022088,
+      "q_0.05": 0.0285,
+      "survive_q0.05": true,
+      "q_0.1": 0.0285,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s19_e2b_sweep.json",
+      "path": "protocols.majority_3of4.fisher_p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.E_t.dual_judge.p",
+      "p": 0.013604,
+      "q_0.05": 0.0181,
+      "survive_q0.05": true,
+      "q_0.1": 0.0181,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.E_t.judge_big.p",
+      "p": 0.000241,
+      "q_0.05": 0.0004,
+      "survive_q0.05": true,
+      "q_0.1": 0.0004,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.E_t.judge_small.p",
+      "p": 0.672442,
+      "q_0.05": 0.6973,
+      "survive_q0.05": false,
+      "q_0.1": 0.6973,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.E_t.qwen32.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.N.dual_judge.p",
+      "p": 1e-06,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.N.judge_big.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.N.judge_small.p",
+      "p": 0.002716,
+      "q_0.05": 0.0039,
+      "survive_q0.05": true,
+      "q_0.1": 0.0039,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.N.qwen32.p",
+      "p": 1.1e-05,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.R.dual_judge.p",
+      "p": 0.578384,
+      "q_0.05": 0.6229,
+      "survive_q0.05": false,
+      "q_0.1": 0.6229,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.R.judge_big.p",
+      "p": 0.085943,
+      "q_0.05": 0.1094,
+      "survive_q0.05": false,
+      "q_0.1": 0.1094,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.R.judge_small.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "main_effects.R.qwen32.p",
+      "p": 0.004671,
+      "q_0.05": 0.0067,
+      "survive_q0.05": true,
+      "q_0.1": 0.0067,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "length_confound.logit_adjusted_dual.E_t.p_dim",
+      "p": 0.00011,
+      "q_0.05": 0.0002,
+      "survive_q0.05": true,
+      "q_0.1": 0.0002,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "length_confound.logit_adjusted_dual.N.p_dim",
+      "p": 0.021062,
+      "q_0.05": 0.0276,
+      "survive_q0.05": true,
+      "q_0.1": 0.0276,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "length_confound.logit_adjusted_dual.R.p_dim",
+      "p": 2e-06,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "cross_generator.e4b_text_effects_qwen32.E_t.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "cross_generator.e4b_text_effects_qwen32.N.p",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s20_e2b_r_n_interaction.json",
+      "path": "cross_generator.e4b_text_effects_qwen32.R.p",
+      "p": 0.009399,
+      "q_0.05": 0.0132,
+      "survive_q0.05": true,
+      "q_0.1": 0.0132,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.dual.text_vs_neutral_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.dual.text_vs_styled_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.dual.neutral_audio_vs_styled_audio.p_fisher",
+      "p": 0.631517,
+      "q_0.05": 0.6715,
+      "survive_q0.05": false,
+      "q_0.1": 0.6715,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.qwen32.text_vs_neutral_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.qwen32.text_vs_styled_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.qwen32.neutral_audio_vs_styled_audio.p_fisher",
+      "p": 0.280746,
+      "q_0.05": 0.3418,
+      "survive_q0.05": false,
+      "q_0.1": 0.3418,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_big.text_vs_neutral_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_big.text_vs_styled_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_big.neutral_audio_vs_styled_audio.p_fisher",
+      "p": 0.915307,
+      "q_0.05": 0.9153,
+      "survive_q0.05": false,
+      "q_0.1": 0.9153,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_small.text_vs_neutral_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_small.text_vs_styled_audio.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_main_effect.judge_small.neutral_audio_vs_styled_audio.p_fisher",
+      "p": 0.342749,
+      "q_0.05": 0.4113,
+      "survive_q0.05": false,
+      "q_0.1": 0.4113,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.dual.low.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.dual.mid.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.dual.high.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.qwen32.low.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.qwen32.mid.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_len_tercile.qwen32.high.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.dual.t0.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.dual.t1.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.dual.t2.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.dual.t01_clean.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.qwen32.t0.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.qwen32.t1.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.qwen32.t2.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s24_modality_effect.json",
+      "path": "modality_by_template.qwen32.t01_clean.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s25_hate_interaction.json",
+      "path": "interactions.E2B.N.p_two_sided",
+      "p": 0.011,
+      "q_0.05": 0.0151,
+      "survive_q0.05": true,
+      "q_0.1": 0.0151,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s25_hate_interaction.json",
+      "path": "interactions.E2B.E_t.p_two_sided",
+      "p": 0.808,
+      "q_0.05": 0.8249,
+      "survive_q0.05": false,
+      "q_0.1": 0.8249,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s25_hate_interaction.json",
+      "path": "interactions.E4B_text.N.p_two_sided",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s25_hate_interaction.json",
+      "path": "interactions.E4B_text.E_t.p_two_sided",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.dual.仇恨言论.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.dual.欺诈.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.dual.虚假信息.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.dual.违法操作.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.dual.隐私侵犯.p_fisher",
+      "p": 0.000467,
+      "q_0.05": 0.0007,
+      "survive_q0.05": true,
+      "q_0.1": 0.0007,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.qwen32.仇恨言论.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.qwen32.欺诈.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.qwen32.虚假信息.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.qwen32.违法操作.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s26_modality_family.json",
+      "path": "family_modality_effect.qwen32.隐私侵犯.p_fisher",
+      "p": 0.0,
+      "q_0.05": 0.0,
+      "survive_q0.05": true,
+      "q_0.1": 0.0,
+      "survive_q0.1": true
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[0].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[1].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[2].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[3].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[4].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[5].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[6].p_pos",
+      "p": 0.2,
+      "q_0.05": 0.2507,
+      "survive_q0.05": false,
+      "q_0.1": 0.2507,
+      "survive_q0.1": false
+    },
+    {
+      "src": "s7_ds_simulation.json",
+      "path": "results.[7].p_pos",
+      "p": 0.5,
+      "q_0.05": 0.5455,
+      "survive_q0.05": false,
+      "q_0.1": 0.5455,
+      "survive_q0.1": false
+    }
+  ],
+  "disclosure": "BH 假定独立检验；本结果存在天然相关（同一实验多维度），相关结构未调整，属保守-激进边界问题，如实披露。仅含 CI 无显式 p 值的结果未纳入校正。"
+}

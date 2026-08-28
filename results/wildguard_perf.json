@@ -1,0 +1,8 @@
+{
+  "model": "allenai/wildguard",
+  "n_measured": 16150,
+  "latency_mean_s": 1.04,
+  "latency_median_s": 1.04,
+  "latency_p95_s": 1.099,
+  "peak_vram_gb": 4.84
+}

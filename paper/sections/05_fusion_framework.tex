@@ -1,8 +1,3 @@
-% ============================================================================
-% 05_fusion_framework.tex — MSRF 独立方法章（新 §5）
-% 新版提示词 P1：将 MSRF 提升为独立方法章节，形式化 + 算法框 + 架构图。
-% 全部数字与结构取自 stage_p2_msrf.py 与结果产物（见 REVISION_LOG R28）。
-% ============================================================================
 \section{A Knowledge-Driven Multi-Source Fusion Framework (MSRF)}
 \label{sec:msrf}
 
@@ -30,7 +25,6 @@ Figure~\ref{fig:msrf-framework} summarizes the architecture.
   aux/.style={-{Stealth[length=1.8mm]}, draw=gray!60, line width=0.8pt},
   bus/.style={draw=gray!70, line width=1.1pt},
 ]
-% ---- swimlane bands (labels anchored top-left in reserved strip, inner margin >= 14pt) ----
 \draw[bb] (0.08,0.12) rectangle (2.32,7.70);
 \draw[bb] (2.42,0.12) rectangle (6.30,7.70);
 \draw[bb] (6.40,0.12) rectangle (10.66,7.70);
@@ -40,7 +34,6 @@ Figure~\ref{fig:msrf-framework} summarizes the architecture.
 \node[lbl, anchor=west] at (6.62,6.95) {CALIB \& FUSION};
 \node[lbl, anchor=west] at (10.91,6.95) {DECISION};
 
-% ---- input: LALM response (title above box, >=6pt; text/audio dual channel) ----
 \node[box, rounded corners=3pt, minimum width=2.2cm, minimum height=0.7cm] at (1.2,3.30) {};
 \node[font=\scriptsize\bfseries] at (1.2,4.10) {LALM resp.};
 \fill[intentC!10] (0.12,2.95) rectangle (1.20,3.55);
@@ -49,43 +42,35 @@ Figure~\ref{fig:msrf-framework} summarizes the architecture.
 \node[font=\footnotesize] at (0.66,3.25) {text};
 \node[font=\footnotesize] at (1.74,3.25) {audio};
 
-% ---- knowledge sources (semantic colors + feature dims from Eqs.~1--4; d=3/4/5/1) ----
-% Intent (blue, d=3)
 \node[box, rounded corners=3pt, minimum width=3.35cm, minimum height=1.0cm,
       fill=intentC!12, draw=intentC] at (4.6,6.05) {};
 \fill[intentC] (2.94,5.67) rectangle ++(0.14,0.76);
 \node[right, font=\footnotesize\bfseries, text=intentC!85!black] at (3.16,6.30) {Intent};
 \node[right, font=\scriptsize, text=black!85] at (3.16,5.78) {LoRA prob. (d=3)};
-% Narrative (orange, d=4)
 \node[box, rounded corners=3pt, minimum width=3.35cm, minimum height=1.0cm,
       fill=narrativeC!12, draw=narrativeC] at (4.6,4.80) {};
 \fill[narrativeC] (2.94,4.42) rectangle ++(0.14,0.76);
 \node[right, font=\footnotesize\bfseries, text=narrativeC!85!black] at (3.16,5.05) {Narrative};
 \node[right, font=\scriptsize, text=black!85] at (3.16,4.53) {discourse feats (d=4)};
-% Acoustic (green, d=5)
 \node[box, rounded corners=3pt, minimum width=3.35cm, minimum height=1.0cm,
       fill=acousticC!12, draw=acousticC] at (4.6,3.55) {};
 \fill[acousticC] (2.94,3.17) rectangle ++(0.14,0.76);
 \node[right, font=\footnotesize\bfseries, text=acousticC!85!black] at (3.16,3.80) {Acoustic};
 \node[right, font=\scriptsize, text=black!85] at (3.16,3.28) {prosody (d=5)};
-% Uncertainty (purple, d=1)
 \node[box, rounded corners=3pt, minimum width=3.35cm, minimum height=1.0cm,
       fill=uncertaintyC!12, draw=uncertaintyC] at (4.6,2.30) {};
 \fill[uncertaintyC] (2.94,1.92) rectangle ++(0.14,0.76);
 \node[right, font=\footnotesize\bfseries, text=uncertaintyC!85!black] at (3.16,2.55) {Uncertainty};
 \node[right, font=\scriptsize, text=black!85] at (3.16,2.03) {disagreement (d=1)};
 
-% ---- fusion chain ----
 \node[box, rounded corners=3pt, minimum width=2.4cm, minimum height=1.0cm] at (9.35,6.05) {};
 \node[font=\footnotesize\bfseries] at (9.35,6.30) {out-of-fold};
 \node[font=\scriptsize, text=black!80] at (9.35,5.78) {group-aware cv};
 \node[box, rounded corners=3pt, minimum width=2.4cm, minimum height=1.0cm] at (9.35,4.85) {};
 \node[font=\footnotesize\bfseries] at (9.35,5.10) {isotonic};
 \node[font=\scriptsize, text=black!80] at (9.35,4.58) {$\sigma_i$ on train folds};
-% fusion MLP (title as first in-box line; 4 stacked layer boxes 4->16->8->1)
 \node[box, rounded corners=3pt, minimum width=3.3cm, minimum height=2.7cm] at (8.9,2.55) {};
 \node[font=\footnotesize\bfseries] at (8.9,3.55) {225-param MLP};
-% layer 1: input (4) — left edge carries the four source colours
 \draw[rounded corners=1pt, fill=white, draw=gray!70, line width=1pt]
   (8.05,2.86) rectangle (9.65,3.24);
 \fill[intentC]      (8.18,3.145) rectangle (8.30,3.24);
@@ -93,24 +78,19 @@ Figure~\ref{fig:msrf-framework} summarizes the architecture.
 \fill[acousticC]    (8.18,2.955) rectangle (8.30,3.05);
 \fill[uncertaintyC] (8.18,2.86)  rectangle (8.30,2.955);
 \node[font=\scriptsize] at (8.85,3.05) {\textbf{4} input};
-% layer 2: hidden 16 (ReLU)
 \draw[rounded corners=1pt, fill=white, draw=gray!70, line width=1pt]
   (8.05,2.36) rectangle (9.65,2.74);
 \node[font=\scriptsize] at (8.85,2.55) {\textbf{16} ReLU};
-% layer 3: hidden 8 (ReLU)
 \draw[rounded corners=1pt, fill=white, draw=gray!70, line width=1pt]
   (8.05,1.86) rectangle (9.65,2.24);
 \node[font=\scriptsize] at (8.85,2.05) {\textbf{8} ReLU};
-% layer 4: output 1 (logistic)
 \draw[rounded corners=1pt, fill=white, draw=gray!70, line width=1pt]
   (8.05,1.36) rectangle (9.65,1.74);
 \node[font=\scriptsize] at (8.85,1.55) {\textbf{1} logistic};
-% inter-layer arrows (main style, >= 1pt)
 \draw[main] (8.85,2.86) -- (8.85,2.74);
 \draw[main] (8.85,2.36) -- (8.85,2.24);
 \draw[main] (8.85,1.86) -- (8.85,1.74);
 
-% ---- decision ----
 \node[box, rounded corners=3pt, minimum width=2.5cm, minimum height=1.1cm] at (12.05,3.20) {};
 \node[font=\footnotesize\bfseries] at (12.05,3.47) {Risk score};
 \node[font=\footnotesize] at (12.05,2.94) {$\hat{y}(r)$};
@@ -124,24 +104,18 @@ Figure~\ref{fig:msrf-framework} summarizes the architecture.
 \node[font=\scriptsize\bfseries, text=passGreen!90!black] at (12.79,0.90) {accept};
 \node[flw] at (12.05,0.36) {5\% FPR target};
 
-% ---- data-flow labels ----
 \node[font=\scriptsize\itshape, text=black!85, anchor=west] at (6.48,6.28) {OOF scores};
 \node[font=\scriptsize\itshape, text=black!85, anchor=east] at (9.28,4.13) {calibrated $\sigma_i$};
 
-% ---- arrows ----
-% input -> sources (fan-out bus)
 \draw[main] (2.30,3.25) -- (2.55,3.25);
 \draw[bus] (2.55,3.25) -- (2.55,6.05);
 \draw[bus] (2.55,3.25) -- (2.55,2.30);
 \foreach \y in {6.05,4.80,3.55,2.30} \draw[aux] (2.55,\y) -- (2.90,\y);
-% sources -> fusion (converge bus; OOF scores annotated)
 \foreach \y in {6.05,4.80,3.55,2.30} \draw[aux] (6.25,\y) -- (6.36,\y);
 \draw[bus] (6.36,2.30) -- (6.36,6.05);
 \draw[main] (6.36,6.05) -- (8.15,6.05);
-% fusion chain
 \draw[main] (9.35,5.55) -- (9.35,5.35);
 \draw[main] (9.35,4.35) -- (9.35,3.90);
-% fusion -> decision
 \draw[main] (10.55,3.20) -- (10.80,3.20);
 \draw[main] (12.05,2.65) -- (12.05,2.50);
 \draw[main] (12.05,1.50) -- (11.42,1.25);

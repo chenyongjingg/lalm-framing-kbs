@@ -1,0 +1,52 @@
+{
+  "stage": "P1FULL-decay-legs",
+  "n_rows": 7200,
+  "n_dual_agree": 5334,
+  "overall_detection_rate_pct": {
+    "dual_judge": 18.0,
+    "shieldgemma_unsafe": 1.6,
+    "wildguard_harmresp": 9.0
+  },
+  "agreement_with_dual_on_dual_rows": {
+    "shieldgemma": 82.9,
+    "wildguard": 88.3
+  },
+  "kappa": {
+    "sg_vs_dual": 0.105,
+    "wg_vs_dual": 0.498
+  },
+  "per_condition": {
+    "baseline": {
+      "dual_judge": 2.1,
+      "shieldgemma": 0.8,
+      "wildguard": 1.1,
+      "n": 2400
+    },
+    "storytelling": {
+      "dual_judge": 40.1,
+      "shieldgemma": 2.5,
+      "wildguard": 14.2,
+      "n": 2400
+    },
+    "unrestricted": {
+      "dual_judge": 20.6,
+      "shieldgemma": 1.4,
+      "wildguard": 11.6,
+      "n": 2400
+    }
+  },
+  "per_model": {
+    "gemma_4_e4b": {
+      "dual_judge": 17.8,
+      "shieldgemma": 1.1,
+      "wildguard": 7.2,
+      "n": 3600
+    },
+    "gemma_4_e2b": {
+      "dual_judge": 18.2,
+      "shieldgemma": 2.1,
+      "wildguard": 10.7,
+      "n": 3600
+    }
+  }
+}

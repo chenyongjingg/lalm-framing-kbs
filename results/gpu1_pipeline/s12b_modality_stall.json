@@ -1,0 +1,172 @@
+{
+  "stage": "S12b",
+  "date": "2026-08-14",
+  "data": "gemma_4_e4b_responses.jsonl",
+  "rows_total": 7492,
+  "rows_text": 3600,
+  "rows_audio_snapshot": 3892,
+  "audio_authoritative": false,
+  "note_audio": "音频仍在生成（文本已 100% 完成）。本表音频列为 当前快照，E4B 完成后重跑本脚本获得权威值。",
+  "by_modality": {
+    "text": {
+      "n_rows": 3600,
+      "by_et": {
+        "E_t=0": {
+          "n": 1800,
+          "plot_stall": 7,
+          "plot_stall_rate": 0.0039,
+          "by_template": {
+            "t0": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 2,
+                "data_clarify": 65,
+                "refusal": 429,
+                "other": 104
+              },
+              "plot_stall_rate": 0.0033
+            },
+            "t1": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 3,
+                "data_clarify": 100,
+                "refusal": 389,
+                "other": 108
+              },
+              "plot_stall_rate": 0.005
+            },
+            "t2": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 2,
+                "data_clarify": 80,
+                "refusal": 429,
+                "other": 89
+              },
+              "plot_stall_rate": 0.0033
+            }
+          }
+        },
+        "E_t=1": {
+          "n": 1800,
+          "plot_stall": 392,
+          "plot_stall_rate": 0.2178,
+          "by_template": {
+            "t0": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 37,
+                "data_clarify": 71,
+                "refusal": 370,
+                "other": 122
+              },
+              "plot_stall_rate": 0.0617
+            },
+            "t1": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 17,
+                "data_clarify": 19,
+                "refusal": 408,
+                "other": 156
+              },
+              "plot_stall_rate": 0.0283
+            },
+            "t2": {
+              "n": 600,
+              "counts": {
+                "plot_stall": 338,
+                "data_clarify": 12,
+                "refusal": 199,
+                "other": 51
+              },
+              "plot_stall_rate": 0.5633
+            }
+          }
+        }
+      },
+      "odds_ratio_Et1_vs_Et0": 71.31
+    },
+    "audio": {
+      "n_rows": 3892,
+      "by_et": {
+        "E_t=0": {
+          "n": 1948,
+          "plot_stall": 11,
+          "plot_stall_rate": 0.0056,
+          "by_template": {
+            "t0": {
+              "n": 650,
+              "counts": {
+                "plot_stall": 3,
+                "data_clarify": 72,
+                "refusal": 367,
+                "other": 208
+              },
+              "plot_stall_rate": 0.0046
+            },
+            "t1": {
+              "n": 649,
+              "counts": {
+                "plot_stall": 6,
+                "data_clarify": 75,
+                "refusal": 268,
+                "other": 300
+              },
+              "plot_stall_rate": 0.0092
+            },
+            "t2": {
+              "n": 649,
+              "counts": {
+                "plot_stall": 2,
+                "data_clarify": 91,
+                "refusal": 341,
+                "other": 215
+              },
+              "plot_stall_rate": 0.0031
+            }
+          }
+        },
+        "E_t=1": {
+          "n": 1944,
+          "plot_stall": 222,
+          "plot_stall_rate": 0.1142,
+          "by_template": {
+            "t0": {
+              "n": 648,
+              "counts": {
+                "plot_stall": 41,
+                "data_clarify": 25,
+                "refusal": 285,
+                "other": 297
+              },
+              "plot_stall_rate": 0.0633
+            },
+            "t1": {
+              "n": 648,
+              "counts": {
+                "plot_stall": 11,
+                "data_clarify": 14,
+                "refusal": 368,
+                "other": 255
+              },
+              "plot_stall_rate": 0.017
+            },
+            "t2": {
+              "n": 648,
+              "counts": {
+                "plot_stall": 170,
+                "data_clarify": 19,
+                "refusal": 176,
+                "other": 283
+              },
+              "plot_stall_rate": 0.2623
+            }
+          }
+        }
+      },
+      "odds_ratio_Et1_vs_Et0": 22.7
+    }
+  }
+}

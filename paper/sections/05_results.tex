@@ -16,7 +16,6 @@ comparisons are reported as exploratory.
   main/.style={-{Stealth[length=2mm]}, draw=gray!70, line width=1.1pt},
   aux/.style={-{Stealth[length=1.8mm]}, draw=gray!60, line width=0.8pt},
 ]
-% ---- stage blocks (top layer, RQ1/RQ2/RQ3) ----
 \node[stage, fill=intentC!15, draw=intentC, text width=4.0cm, align=center,
       font=\footnotesize\bfseries, text=intentC!90!black] at (2.5,6.0) {RQ1: Causal\\Attribution};
 \node[stage, fill=narrativeC!15, draw=narrativeC, text width=4.0cm, align=center,
@@ -26,29 +25,24 @@ comparisons are reported as exploratory.
 \draw[main] (4.62,6.0) -- (4.78,6.0);
 \draw[main] (9.02,6.0) -- (9.18,6.0);
 
-% ---- step nodes (middle layer, same-hue shades) ----
-% RQ1 (blue shades)
 \node[stnode, fill=intentC!8, draw=intentC!60] at (2.5,4.30) {};
 \node[font=\footnotesize\bfseries, text=intentC!85!black] at (2.5,4.50) {factorial design};
 \node[font=\scriptsize, text=black!85] at (2.5,4.10) {24 cells, 3 models};
 \node[stnode, fill=intentC!8, draw=intentC!60] at (2.5,3.15) {};
 \node[font=\footnotesize\bfseries, text=intentC!85!black] at (2.5,3.35) {decomposition};
 \node[font=\scriptsize, text=black!85] at (2.5,2.95) {E / N / R / A factors};
-% RQ2 (orange shades)
 \node[stnode, fill=narrativeC!8, draw=narrativeC!60] at (6.9,4.30) {};
 \node[font=\footnotesize\bfseries, text=narrativeC!85!black] at (6.9,4.50) {paired text/audio};
 \node[font=\scriptsize, text=black!85] at (6.9,4.10) {same-query renderings};
 \node[stnode, fill=narrativeC!8, draw=narrativeC!60] at (6.9,3.15) {};
 \node[font=\footnotesize\bfseries, text=narrativeC!85!black] at (6.9,3.35) {response-level PCSD};
 \node[font=\scriptsize, text=black!85] at (6.9,2.95) {agreement score};
-% RQ3 (green shades)
 \node[stnode, fill=acousticC!8, draw=acousticC!60] at (11.3,4.30) {};
 \node[font=\footnotesize\bfseries, text=acousticC!85!black] at (11.3,4.50) {4 knowledge sources};
 \node[font=\scriptsize, text=black!85] at (11.3,4.10) {out-of-fold scoring};
 \node[stnode, fill=acousticC!8, draw=acousticC!60] at (11.3,3.15) {};
 \node[font=\footnotesize\bfseries, text=acousticC!85!black] at (11.3,3.35) {225-param fusion};
 \node[font=\scriptsize, text=black!85] at (11.3,2.95) {auditable, interpretable};
-% step arrows (within each stage)
 \draw[aux] (2.5,5.40) -- (2.5,4.80);
 \draw[aux] (2.5,3.80) -- (2.5,3.65);
 \draw[aux] (6.9,5.40) -- (6.9,4.80);
@@ -56,7 +50,6 @@ comparisons are reported as exploratory.
 \draw[aux] (11.3,5.40) -- (11.3,4.80);
 \draw[aux] (11.3,3.80) -- (11.3,3.65);
 
-% ---- gate band (bottom layer, G1/G2 timeline) ----
 \node[rounded corners=4pt, draw=gray!50, dashed, fill=white,
       minimum width=12.9cm, minimum height=1.2cm] at (6.7,1.15) {};
 \draw[aux, dash pattern=on 2.5pt off 2pt, draw=gray!55] (3.90,1.15) -- (9.70,1.15);
@@ -67,7 +60,6 @@ comparisons are reported as exploratory.
 \node[rounded corners=2pt, fill=failRed!10, draw=failRed,
       minimum width=2.9cm, minimum height=0.75cm] at (11.3,1.15) {};
 \node[font=\footnotesize\bfseries, text=failRed!90!black] at (11.3,1.15) {\ding{55} G2 NOT PASS};
-% gate connectors
 \draw[gray!40, line width=0.5pt, dashed] (2.5,2.65) -- (2.5,1.80);
 \draw[gray!40, line width=0.5pt, dashed] (11.3,2.65) -- (11.3,1.80);
 \end{tikzpicture}
@@ -82,9 +74,6 @@ Section~\ref{sec:fusion-boundary}).}
 \label{fig:overview}
 \end{figure}
 
-% ======================================================================
-% RQ1 — Attribution
-% ======================================================================
 \subsection{Attribution (RQ1)}
 \label{sec:attribution}
 
@@ -106,8 +95,9 @@ agreement-conditioning selection bias rather than smoothing it. The
 unrestricted-creativity condition produces an intermediate effect ($\Delta$18.5~pp
 on the dual robustness caliber), and the out-of-distribution AdvBench anchor
 reproduces the storytelling effect under the same dual robustness caliber
-($\Delta$38.0~pp; its odds ratio of 363 is inflated by the near-zero baseline and
-is reported alongside the percentage-point effect).
+($\Delta$38.0~pp, computed on paired dual-judge-eligible cells versus 30.8~pp
+pooled over the full sample; its odds ratio of 363 is inflated by the
+near-zero baseline and is reported alongside the percentage-point effect).
 
 \begin{figure}[t]
 \centering
@@ -182,9 +172,6 @@ $+31.2$~pp on E4B); coverage excludes network attacks and benign requests. Of 84
 pre-registered comparisons, 65 are significant, all surviving BH-FDR correction
 \citep{benjamini1995} at $q=0.10$.
 
-% ======================================================================
-% RQ2 — Cross-modal consistency
-% ======================================================================
 \subsection{Cross-modal consistency (RQ2)}
 \label{sec:crossmodal}
 
@@ -222,9 +209,6 @@ $n$ as labeled.}
 \label{fig:pcsd-heatmap}
 \end{figure}
 
-% ======================================================================
-% RQ3 — Fusion framework
-% ======================================================================
 \subsection{A knowledge-driven fusion framework (RQ3)}
 \label{sec:fusion}
 
@@ -374,9 +358,6 @@ discrimination (AUC), not fixed-threshold hit rate on attacks.}
 \label{fig:benign-fpr}
 \end{figure}
 
-% ======================================================================
-% Robustness
-% ======================================================================
 \subsection{Robustness and adaptive attack}
 \label{sec:robustness}
 

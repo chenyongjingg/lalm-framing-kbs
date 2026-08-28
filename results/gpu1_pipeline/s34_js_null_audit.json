@@ -1,0 +1,145 @@
+{
+  "stage": "S34",
+  "date": "2026-08-15",
+  "purpose": "judge_small 格式违规 null 格系统性审计：根因 + 5 阶段偏置量化 + E2B 主效应 null 赋值敏感性（query 聚类 bootstrap B=2000）",
+  "root_cause": "GemmaJudgeScorer(max_new_tokens=8)：E2B 对叙事型响应输出英文解说而未在 8 token 内输出判定数字，regex \b([01])\b 无匹配 → label=None。延长预算重评经全文核验不可靠（末尾数字与 E2B 自身 prose 分析矛盾）。",
+  "null_counts_by_stage": {
+    "E2B_main_text": {
+      "null": 27,
+      "total": 3600,
+      "coverage": 0.9925
+    },
+    "S17_E4B_audio": {
+      "null": 23,
+      "total": 7200,
+      "coverage": 0.9968055555555555
+    },
+    "S17_E4B_text": {
+      "null": 19,
+      "total": 3600,
+      "coverage": 0.9947222222222222
+    },
+    "S28_hetero_audio": {
+      "null": 11,
+      "total": 1200,
+      "coverage": 0.9908333333333333
+    },
+    "S33_hetero_audio": {
+      "null": 3,
+      "total": 344,
+      "coverage": 0.9912790697674418
+    }
+  },
+  "bias_null_vs_nonnull_judge_big_harmful_rate": {
+    "E2B_main_text": {
+      "null": 0.333,
+      "nonnull": 0.092,
+      "ratio": 3.62
+    },
+    "S17_E4B_audio": {
+      "null": 0.435,
+      "nonnull": 0.234,
+      "ratio": 1.86
+    },
+    "S17_E4B_text": {
+      "null": 0.158,
+      "nonnull": 0.069,
+      "ratio": 2.29
+    },
+    "S28_hetero_audio": {
+      "null": 0.455,
+      "nonnull": 0.33,
+      "ratio": 1.38
+    },
+    "S33_hetero_audio": {
+      "null": 0.0,
+      "nonnull": 0.232,
+      "ratio": 0.0
+    }
+  },
+  "E2B_main_null_condition_dist": {
+    "by_N": {
+      "N0": 23,
+      "N1": 4
+    },
+    "by_Et": {
+      "E0": 11,
+      "E1": 16
+    },
+    "note": "null 格 85% 集中在 N=0；N=0 的 dual_judge 有害率被低估最多，但仅 23 格，效应影响 <1pp"
+  },
+  "E2B_main_sensitivity_5_scenarios": {
+    "exclude_27": {
+      "N_effect": 0.0568,
+      "N_ci95": [
+        0.0333,
+        0.0823
+      ],
+      "N_excl_zero": true,
+      "Et_effect": 0.0282,
+      "Et_ci95": [
+        0.0019,
+        0.057
+      ],
+      "Et_excl_zero": true
+    },
+    "null_by_judge_big": {
+      "N_effect": 0.0559,
+      "N_ci95": [
+        0.0317,
+        0.0829
+      ],
+      "N_excl_zero": true,
+      "Et_effect": 0.0341,
+      "Et_ci95": [
+        0.0093,
+        0.0611
+      ],
+      "Et_excl_zero": true
+    },
+    "null_by_strongreject": {
+      "N_effect": 0.0463,
+      "N_ci95": [
+        0.0198,
+        0.0743
+      ],
+      "N_excl_zero": true,
+      "Et_effect": 0.0326,
+      "Et_ci95": [
+        0.0065,
+        0.0619
+      ],
+      "Et_excl_zero": true
+    },
+    "null_all_harmful": {
+      "N_effect": 0.0422,
+      "N_ci95": [
+        0.0162,
+        0.0715
+      ],
+      "N_excl_zero": true,
+      "Et_effect": 0.0286,
+      "Et_ci95": [
+        0.0022,
+        0.0576
+      ],
+      "Et_excl_zero": true
+    },
+    "null_all_safe": {
+      "N_effect": 0.0572,
+      "N_ci95": [
+        0.0327,
+        0.0843
+      ],
+      "N_excl_zero": true,
+      "Et_effect": 0.0275,
+      "Et_ci95": [
+        0.0025,
+        0.0551
+      ],
+      "Et_excl_zero": true
+    }
+  },
+  "conclusion": "judge_small-null 格系统性偏有害（E2B 主文本 3.6×、S17 1.9-2.3×），但 5 场景敏感性下 E2B 主 N/E_t 效应全部显著同向（最差 CI 下界 0.016）→ 结论稳健，null 排除不翻转任何主效应。",
+  "disclosure": "零人工标注；只读各阶段 scorers_cache + E2B 响应；未触碰 E4B jsonl/checkpoint/R101 账本；GPU1 串行纪律。S34 为 CPU 审计。"
+}

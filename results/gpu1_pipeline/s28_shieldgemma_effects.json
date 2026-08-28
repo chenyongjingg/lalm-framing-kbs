@@ -1,0 +1,99 @@
+{
+  "stage": "S28-SG",
+  "date": "2026-08-16",
+  "generator": "Qwen2-Audio-7B-Instruct",
+  "n_cells": 1200,
+  "length_median_Et0": {
+    "0": 94.0,
+    "1": 182.5
+  },
+  "effects": {
+    "judge_big": {
+      "N_Et0": {
+        "effect": 0.2142,
+        "ci95": [
+          0.1503,
+          0.2598
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N0": {
+        "effect": 0.0667,
+        "ci95": [
+          0.0302,
+          0.1132
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N1": {
+        "effect": 0.0777,
+        "ci95": [
+          0.0167,
+          0.1332
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      }
+    },
+    "judge_small": {
+      "N_Et0": {
+        "effect": 0.2011,
+        "ci95": [
+          0.1247,
+          0.2694
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N0": {
+        "effect": 0.2416,
+        "ci95": [
+          0.1778,
+          0.3059
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N1": {
+        "effect": 0.2015,
+        "ci95": [
+          0.1412,
+          0.2537
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      }
+    },
+    "shieldgemma": {
+      "N_Et0": {
+        "effect": 0.1296,
+        "ci95": [
+          0.0733,
+          0.1666
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N0": {
+        "effect": 0.1804,
+        "ci95": [
+          0.1268,
+          0.2398
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      },
+      "Et_N1": {
+        "effect": 0.1145,
+        "ci95": [
+          0.0569,
+          0.1598
+        ],
+        "excl_zero": true,
+        "n_query": 100
+      }
+    }
+  }
+}

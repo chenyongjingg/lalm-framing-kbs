@@ -1,0 +1,706 @@
+{
+  "stage": "S24",
+  "date": "2026-08-14",
+  "purpose": "E4B 模态效应（text/neutral/styled）＋模态内 N/E_t/R 效应；G1 C2 闸门可行性",
+  "snapshot": {
+    "note": "audio 为 E4B 生成中快照（4872/7200），E4B 完成后重跑获得权威值",
+    "text": 3600,
+    "neutral_audio": 3600,
+    "styled_audio": 3600
+  },
+  "modality_main_effect": {
+    "dual": {
+      "text_vs_neutral_audio": {
+        "n0": 2912,
+        "n1": 2799,
+        "pos0": 0.0718,
+        "pos1": 0.2422,
+        "delta": 0.1705,
+        "ci95": [
+          0.1373,
+          0.2075
+        ],
+        "or_fisher": 4.1342,
+        "p_fisher": 0.0,
+        "name": "dual_text_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 2912,
+        "n1": 2828,
+        "pos0": 0.0718,
+        "pos1": 0.2412,
+        "delta": 0.1694,
+        "ci95": [
+          0.1366,
+          0.2045
+        ],
+        "or_fisher": 4.1101,
+        "p_fisher": 0.0,
+        "name": "dual_text_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 2799,
+        "n1": 2828,
+        "pos0": 0.2422,
+        "pos1": 0.2412,
+        "delta": -0.0011,
+        "ci95": [
+          -0.0138,
+          0.011
+        ],
+        "or_fisher": 0.9942,
+        "p_fisher": 0.925609,
+        "name": "dual_neutral_audio_styled_audio"
+      }
+    },
+    "qwen32": {
+      "text_vs_neutral_audio": {
+        "n0": 3600,
+        "n1": 3558,
+        "pos0": 0.1064,
+        "pos1": 0.3446,
+        "delta": 0.2382,
+        "ci95": [
+          0.2035,
+          0.2738
+        ],
+        "or_fisher": 4.4158,
+        "p_fisher": 0.0,
+        "name": "qwen32_text_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3558,
+        "pos0": 0.1064,
+        "pos1": 0.3361,
+        "delta": 0.2298,
+        "ci95": [
+          0.1972,
+          0.2631
+        ],
+        "or_fisher": 4.2531,
+        "p_fisher": 0.0,
+        "name": "qwen32_text_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 3558,
+        "n1": 3558,
+        "pos0": 0.3446,
+        "pos1": 0.3361,
+        "delta": -0.0084,
+        "ci95": [
+          -0.0204,
+          0.0034
+        ],
+        "or_fisher": 0.9631,
+        "p_fisher": 0.468129,
+        "name": "qwen32_neutral_audio_styled_audio"
+      }
+    },
+    "judge_big": {
+      "text_vs_neutral_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.0692,
+        "pos1": 0.2331,
+        "delta": 0.1639,
+        "ci95": [
+          0.1372,
+          0.1917
+        ],
+        "or_fisher": 4.0895,
+        "p_fisher": 0.0,
+        "name": "judge_big_text_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.0692,
+        "pos1": 0.2356,
+        "delta": 0.1664,
+        "ci95": [
+          0.1386,
+          0.1942
+        ],
+        "or_fisher": 4.1469,
+        "p_fisher": 0.0,
+        "name": "judge_big_text_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 3600,
+        "n1": 3600,
+        "pos0": 0.2331,
+        "pos1": 0.2356,
+        "delta": 0.0025,
+        "ci95": [
+          -0.0092,
+          0.0136
+        ],
+        "or_fisher": 1.014,
+        "p_fisher": 0.82386,
+        "name": "judge_big_neutral_audio_styled_audio"
+      }
+    },
+    "judge_small": {
+      "text_vs_neutral_audio": {
+        "n0": 3581,
+        "n1": 3591,
+        "pos0": 0.2349,
+        "pos1": 0.3659,
+        "delta": 0.1311,
+        "ci95": [
+          0.1001,
+          0.1631
+        ],
+        "or_fisher": 1.8801,
+        "p_fisher": 0.0,
+        "name": "judge_small_text_neutral_audio"
+      },
+      "text_vs_styled_audio": {
+        "n0": 3581,
+        "n1": 3586,
+        "pos0": 0.2349,
+        "pos1": 0.3567,
+        "delta": 0.1218,
+        "ci95": [
+          0.0907,
+          0.1547
+        ],
+        "or_fisher": 1.8062,
+        "p_fisher": 0.0,
+        "name": "judge_small_text_styled_audio"
+      },
+      "neutral_audio_vs_styled_audio": {
+        "n0": 3591,
+        "n1": 3586,
+        "pos0": 0.3659,
+        "pos1": 0.3567,
+        "delta": -0.0092,
+        "ci95": [
+          -0.0223,
+          0.0042
+        ],
+        "or_fisher": 0.9607,
+        "p_fisher": 0.417523,
+        "name": "judge_small_neutral_audio_styled_audio"
+      }
+    }
+  },
+  "within_modality_framing": {
+    "dual": {
+      "text": {
+        "N": {
+          "n0": 1484,
+          "n1": 1428,
+          "pos0": 0.0425,
+          "pos1": 0.1022,
+          "delta": 0.0598,
+          "ci95": [
+            0.038,
+            0.084
+          ],
+          "name": "dual_text"
+        },
+        "E_t": {
+          "n0": 1452,
+          "n1": 1460,
+          "pos0": 0.0503,
+          "pos1": 0.0932,
+          "delta": 0.0429,
+          "ci95": [
+            0.0197,
+            0.0674
+          ],
+          "name": "dual_text"
+        },
+        "R": {
+          "n0": 1533,
+          "n1": 1379,
+          "pos0": 0.0698,
+          "pos1": 0.074,
+          "delta": 0.0042,
+          "ci95": [
+            -0.0142,
+            0.0225
+          ],
+          "name": "dual_text"
+        }
+      },
+      "neutral_audio": {
+        "N": {
+          "n0": 1441,
+          "n1": 1358,
+          "pos0": 0.1728,
+          "pos1": 0.3159,
+          "delta": 0.1431,
+          "ci95": [
+            0.1068,
+            0.1805
+          ],
+          "name": "dual_neutral_audio"
+        },
+        "E_t": {
+          "n0": 1412,
+          "n1": 1387,
+          "pos0": 0.2118,
+          "pos1": 0.2733,
+          "delta": 0.0615,
+          "ci95": [
+            0.0274,
+            0.0958
+          ],
+          "name": "dual_neutral_audio"
+        },
+        "R": {
+          "n0": 1438,
+          "n1": 1361,
+          "pos0": 0.265,
+          "pos1": 0.2182,
+          "delta": -0.0467,
+          "ci95": [
+            -0.0745,
+            -0.0204
+          ],
+          "name": "dual_neutral_audio"
+        }
+      },
+      "styled_audio": {
+        "N": {
+          "n0": 1439,
+          "n1": 1389,
+          "pos0": 0.1696,
+          "pos1": 0.3153,
+          "delta": 0.1458,
+          "ci95": [
+            0.1103,
+            0.1832
+          ],
+          "name": "dual_styled_audio"
+        },
+        "E_t": {
+          "n0": 1440,
+          "n1": 1388,
+          "pos0": 0.2167,
+          "pos1": 0.2666,
+          "delta": 0.0499,
+          "ci95": [
+            0.0156,
+            0.0842
+          ],
+          "name": "dual_styled_audio"
+        },
+        "R": {
+          "n0": 1425,
+          "n1": 1403,
+          "pos0": 0.2568,
+          "pos1": 0.2252,
+          "delta": -0.0316,
+          "ci95": [
+            -0.0593,
+            -0.0043
+          ],
+          "name": "dual_styled_audio"
+        }
+      }
+    },
+    "qwen32": {
+      "text": {
+        "N": {
+          "n0": 1800,
+          "n1": 1800,
+          "pos0": 0.0767,
+          "pos1": 0.1361,
+          "delta": 0.0594,
+          "ci95": [
+            0.0406,
+            0.0783
+          ],
+          "name": "qwen32_text"
+        },
+        "E_t": {
+          "n0": 1800,
+          "n1": 1800,
+          "pos0": 0.05,
+          "pos1": 0.1628,
+          "delta": 0.1128,
+          "ci95": [
+            0.0822,
+            0.1456
+          ],
+          "name": "qwen32_text"
+        },
+        "R": {
+          "n0": 1800,
+          "n1": 1800,
+          "pos0": 0.12,
+          "pos1": 0.0928,
+          "delta": -0.0272,
+          "ci95": [
+            -0.0456,
+            -0.01
+          ],
+          "name": "qwen32_text"
+        }
+      },
+      "neutral_audio": {
+        "N": {
+          "n0": 1782,
+          "n1": 1776,
+          "pos0": 0.312,
+          "pos1": 0.3773,
+          "delta": 0.0652,
+          "ci95": [
+            0.0343,
+            0.0973
+          ],
+          "name": "qwen32_neutral_audio"
+        },
+        "E_t": {
+          "n0": 1782,
+          "n1": 1776,
+          "pos0": 0.266,
+          "pos1": 0.4234,
+          "delta": 0.1574,
+          "ci95": [
+            0.1164,
+            0.198
+          ],
+          "name": "qwen32_neutral_audio"
+        },
+        "R": {
+          "n0": 1779,
+          "n1": 1779,
+          "pos0": 0.3665,
+          "pos1": 0.3227,
+          "delta": -0.0438,
+          "ci95": [
+            -0.068,
+            -0.0189
+          ],
+          "name": "qwen32_neutral_audio"
+        }
+      },
+      "styled_audio": {
+        "N": {
+          "n0": 1782,
+          "n1": 1776,
+          "pos0": 0.3064,
+          "pos1": 0.366,
+          "delta": 0.0596,
+          "ci95": [
+            0.0309,
+            0.0896
+          ],
+          "name": "qwen32_styled_audio"
+        },
+        "E_t": {
+          "n0": 1782,
+          "n1": 1776,
+          "pos0": 0.257,
+          "pos1": 0.4155,
+          "delta": 0.1585,
+          "ci95": [
+            0.1129,
+            0.2036
+          ],
+          "name": "qwen32_styled_audio"
+        },
+        "R": {
+          "n0": 1779,
+          "n1": 1779,
+          "pos0": 0.3648,
+          "pos1": 0.3075,
+          "delta": -0.0573,
+          "ci95": [
+            -0.0839,
+            -0.0307
+          ],
+          "name": "qwen32_styled_audio"
+        }
+      }
+    }
+  },
+  "length_by_modality": {
+    "text": {
+      "n": 3600,
+      "median": 722,
+      "mean": 567.8,
+      "q25": 237,
+      "q75": 857
+    },
+    "neutral_audio": {
+      "n": 3600,
+      "median": 290,
+      "mean": 470.4,
+      "q25": 23,
+      "q75": 821
+    },
+    "styled_audio": {
+      "n": 3600,
+      "median": 264,
+      "mean": 471.9,
+      "q25": 22,
+      "q75": 823
+    }
+  },
+  "modality_by_len_tercile": {
+    "dual": {
+      "low": {
+        "n0": 503,
+        "n1": 1373,
+        "pos0": 0.0159,
+        "pos1": 0.1194,
+        "delta": 0.1035,
+        "ci95": [
+          0.0731,
+          0.1394
+        ],
+        "or_fisher": 8.3933,
+        "p_fisher": 0.0,
+        "name": "dual_len_low"
+      },
+      "mid": {
+        "n0": 1503,
+        "n1": 717,
+        "pos0": 0.0313,
+        "pos1": 0.2008,
+        "delta": 0.1696,
+        "ci95": [
+          0.1214,
+          0.2201
+        ],
+        "or_fisher": 7.7852,
+        "p_fisher": 0.0,
+        "name": "dual_len_mid"
+      },
+      "high": {
+        "n0": 906,
+        "n1": 738,
+        "pos0": 0.17,
+        "pos1": 0.5068,
+        "delta": 0.3368,
+        "ci95": [
+          0.2843,
+          0.3864
+        ],
+        "or_fisher": 5.0173,
+        "p_fisher": 0.0,
+        "name": "dual_len_high"
+      }
+    },
+    "qwen32": {
+      "low": {
+        "n0": 521,
+        "n1": 1533,
+        "pos0": 0.048,
+        "pos1": 0.2909,
+        "delta": 0.2429,
+        "ci95": [
+          0.2005,
+          0.2876
+        ],
+        "or_fisher": 8.1404,
+        "p_fisher": 0.0,
+        "name": "qwen32_len_low"
+      },
+      "mid": {
+        "n0": 1700,
+        "n1": 955,
+        "pos0": 0.0653,
+        "pos1": 0.2733,
+        "delta": 0.208,
+        "ci95": [
+          0.1611,
+          0.2575
+        ],
+        "or_fisher": 5.3837,
+        "p_fisher": 0.0,
+        "name": "qwen32_len_mid"
+      },
+      "high": {
+        "n0": 1379,
+        "n1": 1070,
+        "pos0": 0.1791,
+        "pos1": 0.457,
+        "delta": 0.2779,
+        "ci95": [
+          0.2285,
+          0.3281
+        ],
+        "or_fisher": 3.8573,
+        "p_fisher": 0.0,
+        "name": "qwen32_len_high"
+      }
+    }
+  },
+  "modality_by_template": {
+    "dual": {
+      "t0": {
+        "n0": 924,
+        "n1": 920,
+        "pos0": 0.0898,
+        "pos1": 0.2435,
+        "delta": 0.1537,
+        "ci95": [
+          0.1135,
+          0.194
+        ],
+        "or_fisher": 3.261,
+        "p_fisher": 0.0,
+        "name": "dual_t0"
+      },
+      "t1": {
+        "n0": 965,
+        "n1": 914,
+        "pos0": 0.1005,
+        "pos1": 0.3173,
+        "delta": 0.2168,
+        "ci95": [
+          0.1733,
+          0.2644
+        ],
+        "or_fisher": 4.1587,
+        "p_fisher": 0.0,
+        "name": "dual_t1"
+      },
+      "t2": {
+        "n0": 1023,
+        "n1": 994,
+        "pos0": 0.0283,
+        "pos1": 0.169,
+        "delta": 0.1407,
+        "ci95": [
+          0.106,
+          0.1778
+        ],
+        "or_fisher": 6.9714,
+        "p_fisher": 0.0,
+        "name": "dual_t2"
+      },
+      "t01_clean": {
+        "n0": 1889,
+        "n1": 1834,
+        "pos0": 0.0953,
+        "pos1": 0.2803,
+        "delta": 0.185,
+        "ci95": [
+          0.1482,
+          0.2237
+        ],
+        "or_fisher": 3.6971,
+        "p_fisher": 0.0,
+        "name": "dual_t01"
+      }
+    },
+    "qwen32": {
+      "t0": {
+        "n0": 1200,
+        "n1": 1186,
+        "pos0": 0.115,
+        "pos1": 0.328,
+        "delta": 0.213,
+        "ci95": [
+          0.1733,
+          0.2525
+        ],
+        "or_fisher": 3.7561,
+        "p_fisher": 0.0,
+        "name": "qwen32_t0"
+      },
+      "t1": {
+        "n0": 1200,
+        "n1": 1186,
+        "pos0": 0.1533,
+        "pos1": 0.4039,
+        "delta": 0.2505,
+        "ci95": [
+          0.2116,
+          0.2929
+        ],
+        "or_fisher": 3.741,
+        "p_fisher": 0.0,
+        "name": "qwen32_t1"
+      },
+      "t2": {
+        "n0": 1200,
+        "n1": 1186,
+        "pos0": 0.0508,
+        "pos1": 0.2766,
+        "delta": 0.2257,
+        "ci95": [
+          0.1879,
+          0.2642
+        ],
+        "or_fisher": 7.1381,
+        "p_fisher": 0.0,
+        "name": "qwen32_t2"
+      },
+      "t01_clean": {
+        "n0": 2400,
+        "n1": 2372,
+        "pos0": 0.1342,
+        "pos1": 0.3659,
+        "delta": 0.2318,
+        "ci95": [
+          0.1957,
+          0.2675
+        ],
+        "or_fisher": 3.7244,
+        "p_fisher": 0.0,
+        "name": "qwen32_t01"
+      }
+    }
+  },
+  "coverage": {
+    "text": {
+      "n": 3600,
+      "dual_n": 2912,
+      "dual_coverage": 0.8089,
+      "qwen32_n": 3600,
+      "dispute": 669,
+      "dispute_rate": 0.1868
+    },
+    "neutral_audio": {
+      "n": 3600,
+      "dual_n": 2799,
+      "dual_coverage": 0.7775,
+      "qwen32_n": 3558,
+      "dispute": 792,
+      "dispute_rate": 0.2206
+    },
+    "styled_audio": {
+      "n": 3600,
+      "dual_n": 2828,
+      "dual_coverage": 0.7856,
+      "qwen32_n": 3558,
+      "dispute": 758,
+      "dispute_rate": 0.2114
+    }
+  },
+  "g1_c2_projection": {
+    "text": {
+      "N_delta": 0.0598,
+      "N_ci95": [
+        0.038,
+        0.084
+      ],
+      "ge_10pp": false
+    },
+    "neutral_audio": {
+      "N_delta": 0.1431,
+      "N_ci95": [
+        0.1068,
+        0.1805
+      ],
+      "ge_10pp": true
+    },
+    "styled_audio": {
+      "N_delta": 0.1458,
+      "N_ci95": [
+        0.1103,
+        0.1832
+      ],
+      "ge_10pp": true
+    }
+  }
+}

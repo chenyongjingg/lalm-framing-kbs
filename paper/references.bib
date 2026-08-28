@@ -1,27 +1,4 @@
-% ============================================================================
-% references.bib — LALM Framing 论文（KBS 投稿）参考列表
-%
-% 核验基准：report/citation_verification.md (2026-08-27) + phase5a_citation_audit.md
-% + 2026-08-27 元数据补齐（arXiv API / Crossref API / ACL Anthology 逐条核验）。
-% 2026-08-28 第四轮扩引后共 34 条（30 既有 + 4 新：冯×2/吴梦玥/Li Liu），
-% 全部 title/year/venue/作者/arXiv ID/DOI 均已核实，无占位符
-% （R27 融合谱系 4 条 + R28 收件学者 4 条）。
-% 2026-08-28 全量核验（_verify_refs.py，Crossref + arXiv API 逐条比对）修正 3 处：
-%   - gradsafe 作者更正为 Xie/Fang/Pi/Gong（原误作 Bhardwaj & Poria）；
-%   - lin2026sarsteer 标题补连字符（Large Audio-Language Models）；
-%   - pjbreak DOI 移除（10.1145/3767308.3835306 doi.org+Crossref 双 404，ACM MM 2026
-%     proceedings 未注册；arXiv 2607.26541 为锚点）。
-% 另确认 cohen1968/bates2015/feng2026emotional/feng2026audiojailbreaks 四条的 DIFF
-% 均为数据怪癖或排版差异（详见 report/citation_verification_r2.md）。
-% - chen2025 原标 PENDING，已于 2026-08-27 通过 ACL Anthology
-%   (2025.findings-emnlp.309) 确认元数据并补齐。
-% - wei2024 原 arXiv 号 2311.06615 有误（为无关论文），已更正为 2401.06373
-%   （Zeng et al., persuasion taxonomy / PAP）。
-% 注意：bibtex 不支持行内 % 注释；说明一律放整行 % 注释或 note 字段。
-% ============================================================================
 
-% --- 必引①：音频叙事攻击（delivery 单因子 vs 本文语义成分全析因；EACL 2026）
-%     2026-08-28 R3 核验修正：EACL 2026 官方为第 19 届（原误作 21st）---
 @inproceedings{nyhm,
   title        = {Now You Hear Me: Audio Narrative Attacks Against Large Audio-Language Models},
   author       = {Yu, Ye and Jin, Haibo and Yu, Yaoning and Zhuang, Jun and Wang, Haohan},
@@ -31,9 +8,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 必引：prosody 驱动 jailbreak（单因子 vs 全析因）
-%     2026-08-28 全量核验修正：DOI 10.1145/3767308.3835306 经 doi.org/Crossref 双查 404（ACM MM 2026
-%     会议 2026-11 举行，proceedings 尚未注册 DOI）→ 移除 DOI 字段，arXiv 2607.26541 为可靠锚点 ---
 @inproceedings{pjbreak,
   title        = {Prosody-driven Jailbreaks in Audio {LLMs}: A Controlled Study and Mechanistic Analysis},
   author       = {Qian, Jiachen and Li, Junyu},
@@ -43,8 +17,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 必引③：style-aware 音频 jailbreak（攻击方法导向；AAAI 2026）
-%     2026-08-28 R3 核验修正：AAAI 2026 为第 40 届（Crossref v40，原误作 36th）---
 @inproceedings{stylebreak,
   title        = {{StyleBreak}: Revealing Alignment Vulnerabilities in Large Audio-Language Models via Style-Aware Audio Jailbreak},
   author       = {Li, Hongyi and Zhou, Chengxuan and Wang, Chu and Liang, Sicheng and Chen, Yanting and Xie, Qinlin and Ye, Jiawei and Wu, Jie},
@@ -56,7 +28,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 必引②：benchmark-level 静态一致性（vs 本文 PCSD response-level）---
 @misc{omnisafetybench,
   title        = {{Omni-SafetyBench}: A Benchmark for Safety Evaluation of Audio-Visual Large Language Models},
   author       = {Pan, Leyi and Fu, Zheyu and Zhai, Yunpeng and Tao, Shuchang and Guan, Sheng and Huang, Shiyu and Zhang, Lingzhe and Liu, Zhaoyang and Ding, Bolin and Henry, Felix and Liu, Aiwei and Wen, Lijie},
@@ -65,8 +36,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 红队评估框架（评分器 HarmBench-cls 出处；§2.2 基准；ICML 2024）
-%     2026-08-28 R3 核验修正：dblp 确认为 ICML 2024（PMLR v235, mazeika24a），原误标 ICLR 2025 ---
 @inproceedings{harmbench,
   title        = {{HarmBench}: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal},
   author       = {Mazeika, Mantas and Phan, Long and Yin, Xuwang and Zou, Andy and Wang, Zifan and Mu, Norman and Sakhaee, Elham and Li, Nathaniel and Basart, Steven and Li, Bo and Forsyth, David and Hendrycks, Dan},
@@ -76,7 +45,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 音频 jailbreak 开放基准（AJailBench）---
 @misc{audio-jailbreak,
   title        = {Audio Jailbreak: An Open Comprehensive Benchmark for Jailbreaking Large Audio-Language Models},
   author       = {Song, Zirui and Jiang, Qian and Cui, Mingxuan and Li, Mingzhe and Gao, Lang and Zhang, Zeyu and Xu, Zixiang and Wang, Yanbo and Wang, Chenxi and Ouyang, Guangxian and Chen, Zhenhao and Chen, Xiuying},
@@ -85,9 +53,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 防御基线（安全关键梯度分析；已复现；ACL 2024）
-%     2026-08-28 全量核验修正：原 author 误作 Bhardwaj & Poria（另一论文）；
-%     据 arXiv 2402.13494 修正为 Xie Yueqi / Fang Minghong / Pi Renjie / Gong Neil ---
 @inproceedings{gradsafe,
   title        = {{GradSafe}: Detecting Jailbreak Prompts for {LLMs} via Safety-Critical Gradient Analysis},
   author       = {Xie, Yueqi and Fang, Minghong and Pi, Renjie and Gong, Neil Zhenqiang},
@@ -97,7 +62,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- LLM 输入输出安全护栏（Meta）---
 @misc{llamaguard,
   title        = {Llama Guard: {LLM}-based Input-Output Safeguard for Human-AI Conversations},
   author       = {Inan, Hakan and Upasani, Kartikeya and Chi, Jianfeng and Rungta, Rashi and Iyer, Krithika and Mao, Yuning and Tontchev, Michael and Hu, Qing and Fuller, Brian and Testuggine, Davide and Khabsa, Madian},
@@ -106,7 +70,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 多模态内容审核护栏（Google / Gemma Team）---
 @misc{shieldgemma,
   title        = {ShieldGemma: Generative AI Content Moderation Based on Gemma},
   author       = {Zeng, Wenjun and Liu, Yuchi and Mullins, Ryan and Peran, Ludovic and Fernandez, Joe and Harkous, Hamza and Narasimhan, Karthik and Proud, Drew and Kumar, Piyush and Radharapu, Bhaktipriya and Sturman, Olivia and Wahltinez, Oscar},
@@ -115,7 +78,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 一站式安全护栏（NeurIPS 2024）---
 @inproceedings{wildguard,
   title        = {WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of {LLMs}},
   author       = {Han, Seungju and Rao, Kavel and Ettinger, Allyson and Jiang, Liwei and Lin, Bill Yuchen and Lambert, Nathan and Choi, Yejin and Dziri, Nouha},
@@ -125,7 +87,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 必引④：跨模态一致性检测先驱（Findings of EMNLP 2024）---
 @inproceedings{crossmodal-info,
   title        = {Cross-modality Information Check for Detecting Jailbreaking in Multimodal Large Language Models},
   author       = {Xu, Yue and Qi, Xiuyuan and Qin, Zhan and Wang, Wenjie},
@@ -135,8 +96,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 必引⑤：首 token 置信度单一信号检测（Findings of EMNLP 2025）
-%     PENDING 已解除：ACL Anthology 2025.findings-emnlp.309 确认，pp. 5777--5807 ---
 @inproceedings{chen2025,
   title        = {{LLM} Jailbreak Detection for (Almost) Free!},
   author       = {Chen, Guorui and Xia, Yifan and Jia, Xiaojun and Li, Zhijiang and Torr, Philip and Gu, Jindong},
@@ -145,7 +104,6 @@
   pages        = {5777--5807},
 }
 
-% --- 必引⑥：跨语言语义 codebook 检测（vs 本文跨语言机制复现定位）---
 @misc{codebooks,
   title        = {Cross-Lingual Jailbreak Detection via Semantic Codebooks},
   author       = {Alanova, Shirin and Minko, Bogdan and Sadiekh, Sabrina and Kokuykin, Evgeniy},
@@ -154,7 +112,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 安全训练失败模式（competing objectives / mismatched generalization；NeurIPS 2023）---
 @inproceedings{jailbroken,
   title        = {Jailbroken: How Does {LLM} Safety Training Fail?},
   author       = {Wei, Alexander and Haghtalab, Nika and Steinhardt, Jacob},
@@ -164,10 +121,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 评分器（StrongREJECT-cls 出处；§3.3 四评分器之一；ICLR 2024 Workshops: R2-FM）
-%     2026-08-28 R3 核验修正：作者名单按 arXiv 2402.10260v2 + MLA Anthology 更正
-%     （原名单第 4 起错为 Trinbler/Galperin/Poliak/Wilf/Wu/Pan/Basu/Sharma/Salleb-Aouissi，
-%     实为 Trinh/Hsieh/Pandey/Abbeel/Svegliato/Emmons/Watkins/Toyer）；venue 标 R2-FM ---
 @inproceedings{strongreject,
   title        = {A StrongREJECT for Empty Jailbreaks},
   author       = {Souly, Alexandra and Lu, Qingyuan and Bowen, Dillon and Trinh, Tu and Hsieh, Elvis and Pandey, Sana and Abbeel, Pieter and Svegliato, Justin and Emmons, Scott and Watkins, Olivia and Toyer, Sam},
@@ -177,7 +130,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- KBS 同刊先例：模型无关语义化 jailbreak 缓解（2026，CAS1 区）---
 @article{srd,
   title   = {{SRD}: A model-agnostic semantic framework for jailbreak mitigation in large language models},
   author  = {Shi, Can and Zhang, Zhiyong and Quan, Gaoyuan and Pan, Junyan and Yue, Xinxin},
@@ -188,7 +140,6 @@
   doi     = {10.1016/j.knosys.2026.116560},
 }
 
-% --- KBS 同刊先例：子空间安全对齐（模型融合目标）---
 @article{realignment,
   title   = {A safety realignment framework via subspace-oriented model fusion for large language models},
   author  = {Yi, Xin and Zheng, Shunfan and Wang, Linlin and Wang, Xiaoling and He, Liang},
@@ -199,8 +150,6 @@
   doi     = {10.1016/j.knosys.2024.112701},
 }
 
-% --- 说服学策略分类法（PAP / persuasion taxonomy；E_t / N framing 理论背景）
-%     2026-08-27 更正：原 arXiv 2311.06615 有误（无关论文），改为 2401.06373 ---
 @misc{wei2024,
   title        = {How Johnny Can Persuade {LLMs} to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing {LLMs}},
   author       = {Zeng, Yi and Lin, Hongpeng and Zhang, Jingwen and Yang, Diyi and Jia, Ruoxi and Shi, Weiyan},
@@ -209,8 +158,6 @@
   archiveprefix = {arXiv},
 }
 
-% --- 2026-08-27 扩引：经典方法论（逐条核验，见 REVISION_LOG R22）---
-% 析因实验设计（§3.2 配对析因设计经典出处）
 @book{fisher1935,
   title     = {The Design of Experiments},
   author    = {Fisher, Ronald Aylmer},
@@ -219,7 +166,6 @@
   address   = {Edinburgh},
 }
 
-% 非参数 bootstrap 置信区间（§3.4 cluster bootstrap 经典出处）
 @book{efron1993,
   title     = {An Introduction to the Bootstrap},
   author    = {Efron, Bradley and Tibshirani, Robert J.},
@@ -230,7 +176,6 @@
   volume    = {57},
 }
 
-% 配对比例差分的显著性检验（§3.4 McNemar 检验出处）
 @article{mcnemar1947,
   title   = {Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages},
   author  = {McNemar, Quinn},
@@ -242,7 +187,6 @@
   doi     = {10.1007/BF02295996},
 }
 
-% 加权 kappa 名义量表一致性（§4.7.4 scorer agreement 出处）
 @article{cohen1968,
   title   = {Weighted Kappa: Nominal Scale Agreement with Provision for Scaled Disagreement or Partial Credit},
   author  = {Cohen, Jacob},
@@ -254,7 +198,6 @@
   doi     = {10.1037/h0026256},
 }
 
-% 错误发现率控制（§4.1 BH-FDR 多重比较校正出处）
 @article{benjamini1995,
   title   = {Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing},
   author  = {Benjamini, Yoav and Hochberg, Yosef},
@@ -266,7 +209,6 @@
   doi     = {10.1111/j.2517-6161.1995.tb02031.x},
 }
 
-% 线性混合效应模型估计（§3.4 mixed-effects model 出处）
 @article{bates2015,
   title   = {Fitting Linear Mixed-Effects Models Using {lme4}},
   author  = {Bates, Douglas and M{\"a}chler, Martin and Bolker, Ben and Walker, Steve},
@@ -278,7 +220,6 @@
   doi     = {10.18637/jss.v067.i01},
 }
 
-% 证据理论/多源证据组合（§4.5.1 四信号族融合的知识背景）
 @book{shafer1976,
   title     = {A Mathematical Theory of Evidence},
   author    = {Shafer, Glenn},
@@ -287,7 +228,6 @@
   address   = {Princeton, NJ},
 }
 
-% TOST 等价检验（§3.4 TOST equivalence 出处）
 @article{lakens2018,
   title   = {Equivalence Testing for Psychological Research: A Tutorial},
   author  = {Lakens, Dani{\"e}l and Scheel, Anne M. and Isager, Peder M.},
@@ -299,13 +239,7 @@
   doi     = {10.1177/2515245918770963},
 }
 
-% ============================================================================
-% 2026-08-27 第三轮扩引：KBS/Information Fusion/ESWA 知识融合谱系（逐条 WebSearch
-% 核验，见 REVISION_LOG R27；红线③零虚构）
-% ============================================================================
 
-% KBS 同刊：多源信息融合 + 决策支持（PROMETHEE 多准则方法）
-% 核验：KBS 309 (2025) 112781，DOI 10.1016/j.knosys.2024.112781，Xu & Li（西南大学）
 @article{xu2025promethee,
   title   = {Enhancing Information Fusion and Feature Selection Efficiency via the {PROMETHEE} Method for Multi-Source Dynamic Decision Data Sets},
   author  = {Xu, Weihua and Li, Yigao},
@@ -316,8 +250,6 @@
   doi     = {10.1016/j.knosys.2024.112781},
 }
 
-% Information Fusion：信念理论不确定性推理/量化综述（知识表征与 DL 决策衔接）
-% 核验：Information Fusion 101 (2024) 101987，DOI 10.1016/j.inffus.2023.101987
 @article{guo2024survey,
   title   = {A Survey on Uncertainty Reasoning and Quantification in Belief Theory and Its Application to Deep Learning},
   author  = {Guo, Zhen and Wan, Zelin and Zhang, Qisheng and Zhao, Xujiang and Zhang, Qi and Kaplan, Lance M. and J{\o}sang, Audun and Jeong, Dong Hyun and Chen, Feng and Cho, Jin-Hee},
@@ -328,8 +260,6 @@
   doi     = {10.1016/j.inffus.2023.101987},
 }
 
-% Information Fusion：双层深度证据融合（DST 多模态融合 + 不确定性，决策可靠性）
-% 核验：Information Fusion 103 (2024) 102113，DOI 10.1016/j.inffus.2023.102113
 @article{shao2024duallevel,
   title   = {Dual-Level Deep Evidential Fusion: Integrating Multimodal Information for Enhanced Reliable Decision-Making in Deep Learning},
   author  = {Shao, Zhimin and Dou, Weibei and Pan, Yu},
@@ -340,8 +270,6 @@
   doi     = {10.1016/j.inffus.2023.102113},
 }
 
-% ESWA：多模态数据不确定决策（集成学习 + 决策信息系统；作者名仅以缩写核验）
-% 核验：ESWA 265 (2025) 125983，DOI 10.1016/j.eswa.2024.125983
 @article{zhao2025ensemble,
   title   = {A Decision-Making Approach under Uncertainty Based on Ensemble Learning Model with Multimodal Data and Its Application in Medical Diagnosis},
   author  = {Zhao, X. and Sun, B. and Chu, X. and Wu, D. and Jiang, G. and Zhou, H. and Cai, J.},
@@ -352,14 +280,7 @@
   doi     = {10.1016/j.eswa.2024.125983},
 }
 
-% ============================================================================
-% 2026-08-28 第四轮扩引：邮件收件学者成果（逐条 WebSearch 核验，红线③零虚构）
-% 拟致函：Bo-Han Feng（NTU）/ 吴梦玥（SJTU X-LANCE）/ Li Liu（SARSteer）。
-% 李兵（CASIA）暂未收录——未找到贴合本文范围的学术论文，待作者指定。
-% ============================================================================
 
-% 音频越狱 taxonomy：narrative framing 列为语义层威胁（§2.1；arXiv 2026-05）
-% 核验：gist.science + ArxivLens + arxiv.gg，作者序 Feng/Li Liang/Liu/Chang/Chen
 @misc{feng2026audiojailbreaks,
   title        = {Audio Jailbreaks in Large Audio-Language Models: Taxonomy, Attack--Defense Analysis, and Cost-Aware Evaluation},
   author       = {Feng, Bo-Han and Li Liang, Yu-Hsuan and Liu, Chien-Feng and Chang, You-Hsuan and Chen, Yun-Nung},
@@ -368,8 +289,6 @@
   archiveprefix = {arXiv},
 }
 
-% 说话人情感变化→LALM 安全不一致（§2.1/§6.2；ICASSP 2026, pp. 17792--17796）
-% 核验：cmsworkshops.com ICASSP 2026 程序 + NVIDIA Research 页，12 作者全序
 @inproceedings{feng2026emotional,
   title        = {Emotional Damage: Investigating Safety Vulnerabilities of Large Audio-Language Models Under Speaker Emotional Variations},
   author       = {Feng, Bo-Han and Liu, Chien-Feng and Li Liang, Yu-Hsuan and Yang, Chih-Kai and Fu, Szu-Wei and Chen, Zhehuai and Lu, Ke-Han and Huang, Sung-Feng and Yang, Chao-Han Huck and Wang, Yu-Chiang Frank and Chen, Yun-Nung and Lee, Hung-yi},
@@ -380,8 +299,6 @@
   archiveprefix = {arXiv},
 }
 
-% 通用音频深度伪造检测（§2.3；INTERSPEECH 2024）
-% 核验：ISCA archive xie24d_interspeech + DOI 10.21437/Interspeech.2024-1703
 @inproceedings{xie2024fakesound,
   title        = {FakeSound: Deepfake General Audio Detection},
   author       = {Xie, Zeyu and Li, Baihan and Xu, Xuenan and Liang, Zheng and Yu, Kai and Wu, Mengyue},
@@ -392,9 +309,6 @@
   archiveprefix = {arXiv},
 }
 
-% LALM 推理期安全防御（§2.3；ICML 2026 poster / arXiv 2025-10）
-% 核验：icml.cc/virtual/2026/poster/66551 + Semantic Scholar；作者序 Lin/Li/Xiong/Liu
-% 2026-08-28 全量核验：标题补连字符（arXiv 原题 "Large Audio-Language Models"）
 @inproceedings{lin2026sarsteer,
   title        = {{SARSteer}: Safeguarding Large Audio-Language Models via Safe-Ablated Refusal Steering},
   author       = {Lin, Weilin and Li, Jianze and Xiong, Hui and Liu, Li},

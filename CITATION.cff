@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code, data, or paper, please cite it as below."
+type: software
+title: "Cross-Modal Safety Inconsistency in Large Audio-Language Models: Measurement, Mechanism, and Knowledge-Driven Multi-Source Fusion"
+authors:
+  - family-names: Chen
+    given-names: Yongjin
+    affiliation: "People's Public Security University of China"
+  - family-names: Zhu
+    given-names: Songze
+    affiliation: "People's Public Security University of China"
+identifiers:
+  - type: url
+    value: "https://github.com/chenyongjingg/lalm-framing-kbs"
+    description: "Source code and data repository"
+keywords:
+  - "cross-modal consistency"
+  - "knowledge-driven fusion"
+  - "LALM safety"
+  - "framing attack"
+  - "causal attribution"
+license: MIT
+repository-code: "https://github.com/chenyongjingg/lalm-framing-kbs"
+preferred-citation:
+  type: article
+  title: "Cross-Modal Safety Inconsistency in Large Audio-Language Models: Measurement, Mechanism, and Knowledge-Driven Multi-Source Fusion"
+  authors:
+    - family-names: Chen
+      given-names: Yongjin
+    - family-names: Zhu
+      given-names: Songze
+  journal: "Knowledge-Based Systems"
+  year: 2026
+  note: "Manuscript under review."

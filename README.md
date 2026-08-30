@@ -5,6 +5,7 @@
 [![code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![data/paper: CC BY 4.0](https://img.shields.io/badge/data%2Fpaper-CC_BY_4.0-lightgrey.svg)](LICENSE-CC-BY-4.0)
 [![status: submitted](https://img.shields.io/badge/status-submitted-blue.svg)](#citation)
+[![🤗 Dataset: lalm-framing](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-lalm--framing-FF9D00)](https://huggingface.co/datasets/sjdioqjdio/lalm-framing)
 
 Official code, data, and results for the manuscript submitted to
 *Knowledge-Based Systems* (Elsevier). This repository contains the full experiment
@@ -93,6 +94,8 @@ number and to re-run any single stage on your own hardware.
 All pipeline artifacts, configurations, frozen seeds, and result files are released in
 this public repository; no pre-trained guard weights are redistributed. The intent-classifier
 training data is synthetic.
+
+A curated **Hugging Face dataset** — [`sjdioqjdio/lalm-framing`](https://huggingface.co/datasets/sjdioqjdio/lalm-framing) — packages the bilingual attack queries, benign controls, framing templates, and the 500-response multi-scorer stratum for direct `load_dataset` use.
 
 ## Companion benchmark
 

@@ -97,9 +97,10 @@ training data is synthetic.
 
 A curated **Hugging Face dataset** — [`sjdioqjdio/lalm-framing`](https://huggingface.co/datasets/sjdioqjdio/lalm-framing) — packages the bilingual attack queries, benign controls, framing templates, and the 500-response multi-scorer stratum for direct `load_dataset` use.
 
-## Companion benchmark
+## Companion resources
 
 - [`FramingBench`](https://github.com/chenyongjingg/FramingBench) — a standalone, pluggable benchmark extracted from this repository. It quantifies any LALM/LLM's robustness to framing attacks (ASR per condition, factor main effects, per-category breakdown) and ships a live [leaderboard](https://github.com/chenyongjingg/FramingBench/blob/main/results/leaderboard.md).
+- [`jailbreak-arcade`](https://github.com/chenyongjingg/jailbreak-arcade) — an interactive Gradio demo ("framing attack arcade") that replays frozen Qwen2-Audio-7B responses so readers can toggle the framing switches hands-on and watch the model refuse or comply. Zero GPU / API needed.
 
 ## Notes for reviewers
 

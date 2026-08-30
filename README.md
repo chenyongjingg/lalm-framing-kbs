@@ -94,6 +94,10 @@ All pipeline artifacts, configurations, frozen seeds, and result files are relea
 this public repository; no pre-trained guard weights are redistributed. The intent-classifier
 training data is synthetic.
 
+## Companion benchmark
+
+- [`FramingBench`](https://github.com/chenyongjingg/FramingBench) — a standalone, pluggable benchmark extracted from this repository. It quantifies any LALM/LLM's robustness to framing attacks (ASR per condition, factor main effects, per-category breakdown) and ships a live [leaderboard](https://github.com/chenyongjingg/FramingBench/blob/main/results/leaderboard.md).
+
 ## Notes for reviewers
 
 - `paper/main.pdf` is the compiled manuscript; `paper/main.tex` + `paper/sections/` are

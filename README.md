@@ -4,7 +4,7 @@
 
 [![code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![data/paper: CC BY 4.0](https://img.shields.io/badge/data%2Fpaper-CC_BY_4.0-lightgrey.svg)](LICENSE-CC-BY-4.0)
-[![status: under review](https://img.shields.io/badge/status-under_review-orange.svg)](#citation)
+[![status: submitted](https://img.shields.io/badge/status-submitted-blue.svg)](#citation)
 
 Official code, data, and results for the manuscript submitted to
 *Knowledge-Based Systems* (Elsevier). This repository contains the full experiment
@@ -16,7 +16,7 @@ understand and reproduce the reported findings.
 - **Title:** Cross-Modal Safety Inconsistency in Large Audio-Language Models: Measurement, Mechanism, and Knowledge-Driven Multi-Source Fusion
 - **Manuscript (compiled PDF):** [`paper/main.pdf`](paper/main.pdf)
 - **LaTeX source:** [`paper/main.tex`](paper/main.tex) + [`paper/sections/`](paper/sections)
-- **Status:** under review at *Knowledge-Based Systems*
+- **Status:** submitted to *Knowledge-Based Systems*
 
 ## Overview
 
@@ -110,7 +110,7 @@ training data is synthetic.
 
 ## Citation
 
-The manuscript is under review. If you use this work, please cite:
+The manuscript is submitted to *Knowledge-Based Systems*. If you use this work, please cite:
 
 ```bibtex
 @article{chen2026crossmodal,
@@ -119,7 +119,7 @@ The manuscript is under review. If you use this work, please cite:
   author  = {Chen, Yongjin and Zhu, Songze},
   journal = {Knowledge-Based Systems},
   year    = {2026},
-  note    = {Under review}
+  note    = {Submitted to Knowledge-Based Systems}
 }
 ```
 
